@@ -1,0 +1,157 @@
+{
+  "$defs": {
+    "Operation": {
+      "enum": [
+        "probe",
+        "normalize",
+        "vad",
+        "loudness",
+        "denoise",
+        "transcribe",
+        "diarize",
+        "classify",
+        "synthesize"
+      ],
+      "title": "Operation",
+      "type": "string"
+    },
+    "ToolRunStatus": {
+      "enum": [
+        "pending",
+        "running",
+        "succeeded",
+        "failed"
+      ],
+      "title": "ToolRunStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "tool_name": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Tool Name",
+      "type": "string"
+    },
+    "tool_version": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Tool Version",
+      "type": "string"
+    },
+    "operation": {
+      "$ref": "#/$defs/Operation"
+    },
+    "status": {
+      "$ref": "#/$defs/ToolRunStatus",
+      "default": "pending"
+    },
+    "input_asset_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Input Asset Ids",
+      "type": "array"
+    },
+    "output_asset_ids": {
+      "items": {
+        "format": "uuid",
+        "type": "string"
+      },
+      "title": "Output Asset Ids",
+      "type": "array"
+    },
+    "parameters": {
+      "additionalProperties": true,
+      "title": "Parameters",
+      "type": "object"
+    },
+    "metrics": {
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "boolean"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      },
+      "title": "Metrics",
+      "type": "object"
+    },
+    "started_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Started At"
+    },
+    "finished_at": {
+      "anyOf": [
+        {
+          "format": "date-time",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Finished At"
+    },
+    "error_code": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error Code"
+    },
+    "error_message": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Error Message"
+    }
+  },
+  "required": [
+    "tool_name",
+    "tool_version",
+    "operation"
+  ],
+  "title": "ToolRun",
+  "type": "object"
+}

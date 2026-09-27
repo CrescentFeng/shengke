@@ -1,0 +1,637 @@
+{
+  "$defs": {
+    "AudioAsset": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "uri": {
+          "minLength": 1,
+          "title": "Uri",
+          "type": "string"
+        },
+        "filename": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Filename"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sha256"
+        },
+        "size_bytes": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Size Bytes"
+        },
+        "probe": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/AudioProbe"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_asset_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Asset Id"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        }
+      },
+      "required": [
+        "uri"
+      ],
+      "title": "AudioAsset",
+      "type": "object"
+    },
+    "AudioProbe": {
+      "additionalProperties": false,
+      "properties": {
+        "codec_name": {
+          "title": "Codec Name",
+          "type": "string"
+        },
+        "codec_long_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Codec Long Name"
+        },
+        "sample_rate_hz": {
+          "exclusiveMinimum": 0,
+          "title": "Sample Rate Hz",
+          "type": "integer"
+        },
+        "channels": {
+          "exclusiveMinimum": 0,
+          "title": "Channels",
+          "type": "integer"
+        },
+        "channel_layout": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Channel Layout"
+        },
+        "duration_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration Seconds"
+        },
+        "bit_rate": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bit Rate"
+        },
+        "sample_format": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Format"
+        },
+        "media_format": {
+          "$ref": "#/$defs/MediaFormat"
+        }
+      },
+      "required": [
+        "codec_name",
+        "sample_rate_hz",
+        "channels",
+        "media_format"
+      ],
+      "title": "AudioProbe",
+      "type": "object"
+    },
+    "AudioSegment": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "asset_id": {
+          "format": "uuid",
+          "title": "Asset Id",
+          "type": "string"
+        },
+        "slice_asset_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Slice Asset Id"
+        },
+        "start_ms": {
+          "minimum": 0,
+          "title": "Start Ms",
+          "type": "integer"
+        },
+        "end_ms": {
+          "exclusiveMinimum": 0,
+          "title": "End Ms",
+          "type": "integer"
+        },
+        "speaker": {
+          "anyOf": [
+            {
+              "maxLength": 128,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker"
+        },
+        "language": {
+          "anyOf": [
+            {
+              "maxLength": 32,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Language"
+        },
+        "transcript": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Transcript"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "labels": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Labels",
+          "type": "object"
+        }
+      },
+      "required": [
+        "asset_id",
+        "start_ms",
+        "end_ms"
+      ],
+      "title": "AudioSegment",
+      "type": "object"
+    },
+    "Finding": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "category": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Category",
+          "type": "string"
+        },
+        "severity": {
+          "$ref": "#/$defs/FindingSeverity"
+        },
+        "message": {
+          "minLength": 1,
+          "title": "Message",
+          "type": "string"
+        },
+        "segment_id": {
+          "anyOf": [
+            {
+              "format": "uuid",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Segment Id"
+        },
+        "confidence": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Confidence"
+        },
+        "evidence": {
+          "additionalProperties": true,
+          "title": "Evidence",
+          "type": "object"
+        }
+      },
+      "required": [
+        "category",
+        "severity",
+        "message"
+      ],
+      "title": "Finding",
+      "type": "object"
+    },
+    "FindingSeverity": {
+      "enum": [
+        "info",
+        "warning",
+        "high",
+        "critical"
+      ],
+      "title": "FindingSeverity",
+      "type": "string"
+    },
+    "MediaFormat": {
+      "additionalProperties": false,
+      "properties": {
+        "format_name": {
+          "minLength": 1,
+          "title": "Format Name",
+          "type": "string"
+        },
+        "format_long_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Format Long Name"
+        },
+        "duration_seconds": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Duration Seconds"
+        },
+        "bit_rate": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Bit Rate"
+        }
+      },
+      "required": [
+        "format_name"
+      ],
+      "title": "MediaFormat",
+      "type": "object"
+    },
+    "Operation": {
+      "enum": [
+        "probe",
+        "normalize",
+        "vad",
+        "loudness",
+        "denoise",
+        "transcribe",
+        "diarize",
+        "classify",
+        "synthesize"
+      ],
+      "title": "Operation",
+      "type": "string"
+    },
+    "ToolRun": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "format": "uuid",
+          "title": "Id",
+          "type": "string"
+        },
+        "tool_name": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Tool Name",
+          "type": "string"
+        },
+        "tool_version": {
+          "maxLength": 128,
+          "minLength": 1,
+          "title": "Tool Version",
+          "type": "string"
+        },
+        "operation": {
+          "$ref": "#/$defs/Operation"
+        },
+        "status": {
+          "$ref": "#/$defs/ToolRunStatus",
+          "default": "pending"
+        },
+        "input_asset_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Input Asset Ids",
+          "type": "array"
+        },
+        "output_asset_ids": {
+          "items": {
+            "format": "uuid",
+            "type": "string"
+          },
+          "title": "Output Asset Ids",
+          "type": "array"
+        },
+        "parameters": {
+          "additionalProperties": true,
+          "title": "Parameters",
+          "type": "object"
+        },
+        "metrics": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Metrics",
+          "type": "object"
+        },
+        "started_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Started At"
+        },
+        "finished_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Finished At"
+        },
+        "error_code": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error Code"
+        },
+        "error_message": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error Message"
+        }
+      },
+      "required": [
+        "tool_name",
+        "tool_version",
+        "operation"
+      ],
+      "title": "ToolRun",
+      "type": "object"
+    },
+    "ToolRunStatus": {
+      "enum": [
+        "pending",
+        "running",
+        "succeeded",
+        "failed"
+      ],
+      "title": "ToolRunStatus",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "format": "uuid",
+      "title": "Id",
+      "type": "string"
+    },
+    "job_id": {
+      "format": "uuid",
+      "title": "Job Id",
+      "type": "string"
+    },
+    "input_asset_id": {
+      "format": "uuid",
+      "title": "Input Asset Id",
+      "type": "string"
+    },
+    "processing_chain_id": {
+      "maxLength": 256,
+      "minLength": 1,
+      "title": "Processing Chain Id",
+      "type": "string"
+    },
+    "assets": {
+      "items": {
+        "$ref": "#/$defs/AudioAsset"
+      },
+      "title": "Assets",
+      "type": "array"
+    },
+    "segments": {
+      "items": {
+        "$ref": "#/$defs/AudioSegment"
+      },
+      "title": "Segments",
+      "type": "array"
+    },
+    "tool_runs": {
+      "items": {
+        "$ref": "#/$defs/ToolRun"
+      },
+      "title": "Tool Runs",
+      "type": "array"
+    },
+    "findings": {
+      "items": {
+        "$ref": "#/$defs/Finding"
+      },
+      "title": "Findings",
+      "type": "array"
+    },
+    "summary": {
+      "additionalProperties": true,
+      "title": "Summary",
+      "type": "object"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "job_id",
+    "input_asset_id",
+    "processing_chain_id"
+  ],
+  "title": "AudioReport",
+  "type": "object"
+}

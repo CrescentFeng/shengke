@@ -1,0 +1,135 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: audio_platform
+      POSTGRES_USER: audio
+      POSTGRES_PASSWORD: audio
+    ports:
+      - "${AUDIO_PLATFORM_POSTGRES_PORT:-55433}:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/001-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U audio -d audio_platform"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  migrate:
+    image: postgres:16-alpine
+    environment:
+      PGPASSWORD: audio
+    volumes:
+      - ./postgres/migrations:/migrations:ro
+    command:
+      - sh
+      - -c
+      - for migration_file in /migrations/*.sql; do psql -h postgres -U audio -d audio_platform -v ON_ERROR_STOP=1 -f "$$migration_file"; done
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: "no"
+
+  minio:
+    build:
+      context: ..
+      dockerfile: infra/minio/Dockerfile
+      args:
+        MINIO_VERSION: RELEASE.2025-10-15T17-29-55Z
+    command: ["server", "/data", "--console-address", ":9001"]
+    environment:
+      MINIO_ROOT_USER: audioadmin
+      MINIO_ROOT_PASSWORD: change-me-now
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio-data:/data
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  platform-api:
+    build:
+      context: ..
+      dockerfile: apps/platform-api/Dockerfile
+      args:
+        HTTP_PROXY: ${AUDIO_PLATFORM_HTTP_PROXY:-}
+        HTTPS_PROXY: ${AUDIO_PLATFORM_HTTPS_PROXY:-}
+    ports:
+      - "8000:8000"
+    environment: &platform-environment
+      AUDIO_PLATFORM_DATABASE_URL: postgresql://audio:audio@postgres:5432/audio_platform
+      AUDIO_PLATFORM_S3_ENDPOINT: http://minio:9000
+      AUDIO_PLATFORM_S3_REGION: us-east-1
+      AUDIO_PLATFORM_S3_ACCESS_KEY: audioadmin
+      AUDIO_PLATFORM_S3_SECRET_KEY: change-me-now
+      AUDIO_PLATFORM_S3_ARTIFACT_BUCKET: audio-artifacts
+      AUDIO_PLATFORM_S3_INPUT_BUCKET: audio-input
+      AUDIO_PLATFORM_S3_USE_SSL: "false"
+      AUDIO_PLATFORM_ALLOWED_INPUT_ROOT: /data/input
+    volumes:
+      - ../data/input:/data/input:ro
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz')"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+
+  ingest-worker:
+    build:
+      context: ..
+      dockerfile: apps/ingest-worker/Dockerfile
+      args:
+        AUDIO_PLATFORM_EXTRAS: ${AUDIO_PLATFORM_EXTRAS:-asr-whisper}
+        HTTP_PROXY: ${AUDIO_PLATFORM_HTTP_PROXY:-}
+        HTTPS_PROXY: ${AUDIO_PLATFORM_HTTPS_PROXY:-}
+    command: ["audio-ingest-worker"]
+    environment:
+      <<: *platform-environment
+      AUDIO_PLATFORM_WORKER_ID: compose-ingest-1
+      AUDIO_PLATFORM_WORKER_POLL_SECONDS: "2"
+      AUDIO_PLATFORM_ASR_BACKEND: ${AUDIO_PLATFORM_ASR_BACKEND:-faster-whisper}
+      AUDIO_PLATFORM_ASR_MODEL: ${AUDIO_PLATFORM_ASR_MODEL:-small}
+      AUDIO_PLATFORM_ASR_DEVICE: ${AUDIO_PLATFORM_ASR_DEVICE:-cpu}
+      AUDIO_PLATFORM_ASR_COMPUTE_TYPE: ${AUDIO_PLATFORM_ASR_COMPUTE_TYPE:-int8}
+      AUDIO_PLATFORM_ASR_BEAM_SIZE: ${AUDIO_PLATFORM_ASR_BEAM_SIZE:-5}
+      AUDIO_PLATFORM_ASR_LANGUAGE: ${AUDIO_PLATFORM_ASR_LANGUAGE:-}
+      AUDIO_PLATFORM_DIARIZATION_BACKEND: ${AUDIO_PLATFORM_DIARIZATION_BACKEND:-disabled}
+      AUDIO_PLATFORM_DIARIZATION_MODEL: ${AUDIO_PLATFORM_DIARIZATION_MODEL:-pyannote/speaker-diarization-community-1}
+      AUDIO_PLATFORM_DIARIZATION_DEVICE: ${AUDIO_PLATFORM_DIARIZATION_DEVICE:-cpu}
+      HTTP_PROXY: ${AUDIO_PLATFORM_HTTP_PROXY:-}
+      HTTPS_PROXY: ${AUDIO_PLATFORM_HTTPS_PROXY:-}
+      NO_PROXY: postgres,minio,platform-api,localhost,127.0.0.1
+      HF_HOME: /data/model-cache/huggingface
+      HF_TOKEN_PATH: /run/secrets/huggingface-token
+      MODELSCOPE_CACHE: /data/model-cache/modelscope
+    volumes:
+      - ../data/input:/data/input:ro
+      - ../data/diarization-eval:/data/diarization-eval:ro
+      - ../artifacts/diarization-eval:/artifacts/diarization-eval
+      - model-cache:/data/model-cache
+      - type: bind
+        source: ${AUDIO_PLATFORM_HF_TOKEN_HOST_PATH:-/dev/null}
+        target: /run/secrets/huggingface-token
+        read_only: true
+    depends_on:
+      postgres:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+      minio:
+        condition: service_healthy
+
+volumes:
+  postgres-data:
+  minio-data:
+  model-cache:

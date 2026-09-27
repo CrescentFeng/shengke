@@ -1,0 +1,412 @@
+{
+  "$defs": {
+    "RuntimeInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "title": "Platform",
+          "type": "string"
+        },
+        "python_version": {
+          "title": "Python Version",
+          "type": "string"
+        },
+        "machine": {
+          "title": "Machine",
+          "type": "string"
+        }
+      },
+      "required": [
+        "platform",
+        "python_version",
+        "machine"
+      ],
+      "title": "RuntimeInfo",
+      "type": "object"
+    },
+    "VadCandidateSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate": {
+          "title": "Candidate",
+          "type": "string"
+        },
+        "backend": {
+          "title": "Backend",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "string"
+              },
+              {
+                "type": "boolean"
+              }
+            ]
+          },
+          "title": "Parameters",
+          "type": "object"
+        },
+        "sample_count": {
+          "minimum": 0,
+          "title": "Sample Count",
+          "type": "integer"
+        },
+        "succeeded_count": {
+          "minimum": 0,
+          "title": "Succeeded Count",
+          "type": "integer"
+        },
+        "failed_count": {
+          "minimum": 0,
+          "title": "Failed Count",
+          "type": "integer"
+        },
+        "precision": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Precision"
+        },
+        "recall": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recall"
+        },
+        "f1": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "F1"
+        },
+        "iou": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Iou"
+        },
+        "boundary_mae_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Mae Ms"
+        },
+        "mean_rtf": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean Rtf"
+        }
+      },
+      "required": [
+        "candidate",
+        "backend",
+        "parameters",
+        "sample_count",
+        "succeeded_count",
+        "failed_count"
+      ],
+      "title": "VadCandidateSummary",
+      "type": "object"
+    },
+    "VadSampleEvaluation": {
+      "additionalProperties": false,
+      "properties": {
+        "candidate": {
+          "title": "Candidate",
+          "type": "string"
+        },
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "audio": {
+          "title": "Audio",
+          "type": "string"
+        },
+        "success": {
+          "title": "Success",
+          "type": "boolean"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "duration_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Duration Ms",
+          "type": "integer"
+        },
+        "inference_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Inference Seconds",
+          "type": "number"
+        },
+        "rtf": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rtf"
+        },
+        "reference_segments": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Reference Segments",
+          "type": "integer"
+        },
+        "predicted_segments": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Predicted Segments",
+          "type": "integer"
+        },
+        "reference_speech_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Reference Speech Ms",
+          "type": "integer"
+        },
+        "predicted_speech_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Predicted Speech Ms",
+          "type": "integer"
+        },
+        "true_positive_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "True Positive Ms",
+          "type": "integer"
+        },
+        "false_positive_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "False Positive Ms",
+          "type": "integer"
+        },
+        "false_negative_ms": {
+          "default": 0,
+          "minimum": 0,
+          "title": "False Negative Ms",
+          "type": "integer"
+        },
+        "precision": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Precision"
+        },
+        "recall": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recall"
+        },
+        "f1": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "F1"
+        },
+        "iou": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Iou"
+        },
+        "boundary_mae_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Mae Ms"
+        },
+        "boundary_pairs": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Pairs",
+          "type": "integer"
+        },
+        "tags": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "object"
+        }
+      },
+      "required": [
+        "candidate",
+        "id",
+        "audio",
+        "success"
+      ],
+      "title": "VadSampleEvaluation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "manifest": {
+      "title": "Manifest",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "runtime": {
+      "$ref": "#/$defs/RuntimeInfo"
+    },
+    "best_candidate": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Best Candidate"
+    },
+    "candidates": {
+      "items": {
+        "$ref": "#/$defs/VadCandidateSummary"
+      },
+      "title": "Candidates",
+      "type": "array"
+    },
+    "samples": {
+      "items": {
+        "$ref": "#/$defs/VadSampleEvaluation"
+      },
+      "title": "Samples",
+      "type": "array"
+    }
+  },
+  "required": [
+    "manifest",
+    "runtime",
+    "candidates",
+    "samples"
+  ],
+  "title": "VadBenchmarkReport",
+  "type": "object"
+}

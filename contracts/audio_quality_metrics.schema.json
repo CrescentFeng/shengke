@@ -1,0 +1,101 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "integrated_lufs": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Integrated Lufs"
+    },
+    "loudness_range_lu": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Loudness Range Lu"
+    },
+    "true_peak_dbtp": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "True Peak Dbtp"
+    },
+    "peak_dbfs": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Peak Dbfs"
+    },
+    "rms_dbfs": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Rms Dbfs"
+    },
+    "clipping_ratio": {
+      "default": 0.0,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Clipping Ratio",
+      "type": "number"
+    },
+    "silence_duration_seconds": {
+      "default": 0.0,
+      "minimum": 0.0,
+      "title": "Silence Duration Seconds",
+      "type": "number"
+    },
+    "silence_ratio": {
+      "default": 0.0,
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Silence Ratio",
+      "type": "number"
+    },
+    "sample_count": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sample Count"
+    }
+  },
+  "title": "AudioQualityMetrics",
+  "type": "object"
+}

@@ -1,0 +1,22 @@
+{
+  "dataset": "VoxConverse",
+  "dataset_version": "0.3",
+  "split": "dev",
+  "license": "CC-BY-4.0 for research; original video copyright remains with owners",
+  "retrieved_at": "2026-09-27",
+  "audio": {
+    "url": "https://www.robots.ox.ac.uk/~vgg/data/voxconverse/data/voxconverse_dev_wav.zip",
+    "content_length": 1988647478,
+    "sha256": "e83a68b5df3bc945a3cf4544102038792ae79972753c585769e58ea677c523a8"
+  },
+  "annotations": {
+    "repository": "https://github.com/joonson/voxconverse",
+    "commit": "24bf60be297701cd7e4ef18550c6d390c1b87365",
+    "archive_url": "https://codeload.github.com/joonson/voxconverse/zip/24bf60be297701cd7e4ef18550c6d390c1b87365",
+    "archive_sha256": "c340d2cd9da2f19eff8a3adc55b0818ec45cd0770ef72c6926c4de6efe9e9a1d"
+  },
+  "counts": {
+    "audio_files": 216,
+    "rttm_files": 216
+  }
+}

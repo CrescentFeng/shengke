@@ -1,0 +1,883 @@
+{
+  "$defs": {
+    "ConfigurationAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "use_exclusive": {
+          "title": "Use Exclusive",
+          "type": "boolean"
+        },
+        "speaker_constraint": {
+          "title": "Speaker Constraint",
+          "type": "string"
+        },
+        "aggregate_der": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aggregate Der"
+        },
+        "mean_jer": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean Jer"
+        },
+        "speaker_count_accuracy": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Count Accuracy"
+        },
+        "boundary_p95_ms": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary P95 Ms"
+        },
+        "mean_rtf": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean Rtf"
+        },
+        "failed_count": {
+          "minimum": 0,
+          "title": "Failed Count",
+          "type": "integer"
+        },
+        "meets_metric_thresholds": {
+          "title": "Meets Metric Thresholds",
+          "type": "boolean"
+        },
+        "failures": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Failures",
+          "type": "array"
+        }
+      },
+      "required": [
+        "name",
+        "use_exclusive",
+        "speaker_constraint",
+        "failed_count",
+        "meets_metric_thresholds"
+      ],
+      "title": "ConfigurationAssessment",
+      "type": "object"
+    },
+    "DatasetAudit": {
+      "additionalProperties": false,
+      "properties": {
+        "sample_count": {
+          "minimum": 0,
+          "title": "Sample Count",
+          "type": "integer"
+        },
+        "total_duration_seconds": {
+          "minimum": 0.0,
+          "title": "Total Duration Seconds",
+          "type": "number"
+        },
+        "real_audio_count": {
+          "minimum": 0,
+          "title": "Real Audio Count",
+          "type": "integer"
+        },
+        "human_annotation_count": {
+          "minimum": 0,
+          "title": "Human Annotation Count",
+          "type": "integer"
+        },
+        "verified_real_human": {
+          "title": "Verified Real Human",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "sample_count",
+        "total_duration_seconds",
+        "real_audio_count",
+        "human_annotation_count",
+        "verified_real_human"
+      ],
+      "title": "DatasetAudit",
+      "type": "object"
+    },
+    "DiarizationBenchmarkReport": {
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "default": "2.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "backend": {
+          "title": "Backend",
+          "type": "string"
+        },
+        "model": {
+          "title": "Model",
+          "type": "string"
+        },
+        "backend_version": {
+          "title": "Backend Version",
+          "type": "string"
+        },
+        "manifest": {
+          "title": "Manifest",
+          "type": "string"
+        },
+        "frame_ms": {
+          "exclusiveMinimum": 0,
+          "title": "Frame Ms",
+          "type": "integer"
+        },
+        "collar_ms": {
+          "minimum": 0,
+          "title": "Collar Ms",
+          "type": "integer"
+        },
+        "skip_overlap": {
+          "title": "Skip Overlap",
+          "type": "boolean"
+        },
+        "use_exclusive": {
+          "title": "Use Exclusive",
+          "type": "boolean"
+        },
+        "speaker_constraint": {
+          "default": "manifest",
+          "enum": [
+            "manifest",
+            "oracle_num",
+            "bounded",
+            "unconstrained"
+          ],
+          "title": "Speaker Constraint",
+          "type": "string"
+        },
+        "speaker_bound_padding": {
+          "default": 1,
+          "maximum": 99,
+          "minimum": 0,
+          "title": "Speaker Bound Padding",
+          "type": "integer"
+        },
+        "boundary_tolerance_ms": {
+          "default": 250,
+          "minimum": 0,
+          "title": "Boundary Tolerance Ms",
+          "type": "integer"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "runtime": {
+          "$ref": "#/$defs/RuntimeInfo"
+        },
+        "summary": {
+          "$ref": "#/$defs/DiarizationBenchmarkSummary"
+        },
+        "samples": {
+          "items": {
+            "$ref": "#/$defs/DiarizationSampleEvaluation"
+          },
+          "title": "Samples",
+          "type": "array"
+        }
+      },
+      "required": [
+        "backend",
+        "model",
+        "backend_version",
+        "manifest",
+        "frame_ms",
+        "collar_ms",
+        "skip_overlap",
+        "use_exclusive",
+        "runtime",
+        "summary",
+        "samples"
+      ],
+      "title": "DiarizationBenchmarkReport",
+      "type": "object"
+    },
+    "DiarizationBenchmarkSummary": {
+      "additionalProperties": false,
+      "properties": {
+        "sample_count": {
+          "minimum": 0,
+          "title": "Sample Count",
+          "type": "integer"
+        },
+        "succeeded_count": {
+          "minimum": 0,
+          "title": "Succeeded Count",
+          "type": "integer"
+        },
+        "failed_count": {
+          "minimum": 0,
+          "title": "Failed Count",
+          "type": "integer"
+        },
+        "aggregate_der": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Aggregate Der"
+        },
+        "mean_jer": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean Jer"
+        },
+        "mean_rtf": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean Rtf"
+        },
+        "speaker_count_accuracy": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Count Accuracy"
+        },
+        "mean_absolute_speaker_count_error": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Mean Absolute Speaker Count Error"
+        },
+        "boundary_reference_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Reference Count",
+          "type": "integer"
+        },
+        "boundary_matched_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Matched Count",
+          "type": "integer"
+        },
+        "boundary_within_tolerance_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Within Tolerance Count",
+          "type": "integer"
+        },
+        "boundary_mae_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Mae Ms"
+        },
+        "boundary_p95_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary P95 Ms"
+        },
+        "boundary_recall": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Recall"
+        },
+        "false_alarm_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "False Alarm Seconds",
+          "type": "number"
+        },
+        "missed_detection_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Missed Detection Seconds",
+          "type": "number"
+        },
+        "confusion_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Confusion Seconds",
+          "type": "number"
+        },
+        "reference_speaker_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Reference Speaker Seconds",
+          "type": "number"
+        }
+      },
+      "required": [
+        "sample_count",
+        "succeeded_count",
+        "failed_count"
+      ],
+      "title": "DiarizationBenchmarkSummary",
+      "type": "object"
+    },
+    "DiarizationSampleEvaluation": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "audio": {
+          "title": "Audio",
+          "type": "string"
+        },
+        "timeline": {
+          "enum": [
+            "regular",
+            "exclusive"
+          ],
+          "title": "Timeline",
+          "type": "string"
+        },
+        "success": {
+          "title": "Success",
+          "type": "boolean"
+        },
+        "error": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Error"
+        },
+        "duration_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Duration Seconds",
+          "type": "number"
+        },
+        "inference_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Inference Seconds",
+          "type": "number"
+        },
+        "rtf": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rtf"
+        },
+        "reference_speakers": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Reference Speakers",
+          "type": "integer"
+        },
+        "hypothesis_speakers": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Hypothesis Speakers",
+          "type": "integer"
+        },
+        "reference_turns": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Reference Turns",
+          "type": "integer"
+        },
+        "hypothesis_turns": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Hypothesis Turns",
+          "type": "integer"
+        },
+        "effective_num_speakers": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective Num Speakers"
+        },
+        "effective_min_speakers": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective Min Speakers"
+        },
+        "effective_max_speakers": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Effective Max Speakers"
+        },
+        "speaker_count_correct": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Count Correct"
+        },
+        "speaker_count_error": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Speaker Count Error"
+        },
+        "scored_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Scored Seconds",
+          "type": "number"
+        },
+        "reference_speaker_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Reference Speaker Seconds",
+          "type": "number"
+        },
+        "false_alarm_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "False Alarm Seconds",
+          "type": "number"
+        },
+        "missed_detection_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Missed Detection Seconds",
+          "type": "number"
+        },
+        "confusion_seconds": {
+          "default": 0.0,
+          "minimum": 0.0,
+          "title": "Confusion Seconds",
+          "type": "number"
+        },
+        "der": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Der"
+        },
+        "jer": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Jer"
+        },
+        "boundary_reference_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Reference Count",
+          "type": "integer"
+        },
+        "boundary_matched_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Matched Count",
+          "type": "integer"
+        },
+        "boundary_within_tolerance_count": {
+          "default": 0,
+          "minimum": 0,
+          "title": "Boundary Within Tolerance Count",
+          "type": "integer"
+        },
+        "boundary_errors_ms": {
+          "items": {
+            "type": "number"
+          },
+          "title": "Boundary Errors Ms",
+          "type": "array"
+        },
+        "boundary_mae_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Mae Ms"
+        },
+        "boundary_p95_ms": {
+          "anyOf": [
+            {
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary P95 Ms"
+        },
+        "boundary_recall": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Boundary Recall"
+        },
+        "tags": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "audio",
+        "timeline",
+        "success"
+      ],
+      "title": "DiarizationSampleEvaluation",
+      "type": "object"
+    },
+    "ProductionRecommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "accepted",
+            "rejected",
+            "insufficient_data"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "candidate_configuration": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Candidate Configuration"
+        },
+        "reasons": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Reasons",
+          "type": "array"
+        },
+        "thresholds": {
+          "$ref": "#/$defs/ProductionThresholds"
+        }
+      },
+      "required": [
+        "status",
+        "thresholds"
+      ],
+      "title": "ProductionRecommendation",
+      "type": "object"
+    },
+    "ProductionThresholds": {
+      "additionalProperties": false,
+      "properties": {
+        "minimum_samples": {
+          "default": 20,
+          "minimum": 1,
+          "title": "Minimum Samples",
+          "type": "integer"
+        },
+        "minimum_duration_seconds": {
+          "default": 1800.0,
+          "exclusiveMinimum": 0.0,
+          "title": "Minimum Duration Seconds",
+          "type": "number"
+        },
+        "maximum_der": {
+          "default": 0.25,
+          "minimum": 0.0,
+          "title": "Maximum Der",
+          "type": "number"
+        },
+        "maximum_jer": {
+          "default": 0.35,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Maximum Jer",
+          "type": "number"
+        },
+        "minimum_speaker_count_accuracy": {
+          "default": 0.9,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Minimum Speaker Count Accuracy",
+          "type": "number"
+        },
+        "maximum_boundary_p95_ms": {
+          "default": 500.0,
+          "minimum": 0.0,
+          "title": "Maximum Boundary P95 Ms",
+          "type": "number"
+        },
+        "maximum_mean_rtf": {
+          "default": 0.75,
+          "minimum": 0.0,
+          "title": "Maximum Mean Rtf",
+          "type": "number"
+        }
+      },
+      "title": "ProductionThresholds",
+      "type": "object"
+    },
+    "RuntimeInfo": {
+      "additionalProperties": false,
+      "properties": {
+        "platform": {
+          "title": "Platform",
+          "type": "string"
+        },
+        "python_version": {
+          "title": "Python Version",
+          "type": "string"
+        },
+        "machine": {
+          "title": "Machine",
+          "type": "string"
+        }
+      },
+      "required": [
+        "platform",
+        "python_version",
+        "machine"
+      ],
+      "title": "RuntimeInfo",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "backend": {
+      "title": "Backend",
+      "type": "string"
+    },
+    "model": {
+      "title": "Model",
+      "type": "string"
+    },
+    "manifest": {
+      "title": "Manifest",
+      "type": "string"
+    },
+    "created_at": {
+      "format": "date-time",
+      "title": "Created At",
+      "type": "string"
+    },
+    "dataset": {
+      "$ref": "#/$defs/DatasetAudit"
+    },
+    "reports": {
+      "additionalProperties": {
+        "$ref": "#/$defs/DiarizationBenchmarkReport"
+      },
+      "title": "Reports",
+      "type": "object"
+    },
+    "assessments": {
+      "items": {
+        "$ref": "#/$defs/ConfigurationAssessment"
+      },
+      "title": "Assessments",
+      "type": "array"
+    },
+    "recommendation": {
+      "$ref": "#/$defs/ProductionRecommendation"
+    }
+  },
+  "required": [
+    "backend",
+    "model",
+    "manifest",
+    "dataset",
+    "reports",
+    "assessments",
+    "recommendation"
+  ],
+  "title": "DiarizationBenchmarkMatrixReport",
+  "type": "object"
+}

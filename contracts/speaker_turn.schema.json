@@ -1,0 +1,42 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "start_ms": {
+      "minimum": 0,
+      "title": "Start Ms",
+      "type": "integer"
+    },
+    "end_ms": {
+      "exclusiveMinimum": 0,
+      "title": "End Ms",
+      "type": "integer"
+    },
+    "speaker": {
+      "maxLength": 128,
+      "minLength": 1,
+      "title": "Speaker",
+      "type": "string"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Confidence"
+    }
+  },
+  "required": [
+    "start_ms",
+    "end_ms",
+    "speaker"
+  ],
+  "title": "SpeakerTurn",
+  "type": "object"
+}

@@ -1,0 +1,44 @@
+{
+  "algorithm": "stratified-speaker-duration-v1",
+  "candidate_count": 194,
+  "duration_quartile_distribution": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5
+  },
+  "minimum_speakers": 2,
+  "seed": "voxconverse-0.3-acceptance-v1",
+  "selected_count": 20,
+  "selected_duration_seconds": 6951.861063,
+  "selected_ids": [
+    "ahnss",
+    "asxwr",
+    "dhorc",
+    "eqttu",
+    "ggvel",
+    "gpjne",
+    "gzvkx",
+    "iqtde",
+    "iwdjy",
+    "jcako",
+    "kctgl",
+    "kklpv",
+    "mevkw",
+    "mkrcv",
+    "mpvoh",
+    "qvtia",
+    "tcwsn",
+    "uvnmy",
+    "vbjlx",
+    "yuzyu"
+  ],
+  "source_manifest": "voxconverse-dev-v0.3-full.jsonl",
+  "source_sample_count": 216,
+  "speaker_count_distribution": {
+    "2": 8,
+    "3": 4,
+    "4": 4,
+    "5+": 4
+  }
+}
