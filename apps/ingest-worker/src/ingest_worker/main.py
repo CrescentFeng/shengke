@@ -3,8 +3,10 @@ from __future__ import annotations
 import argparse
 import signal
 import threading
+from contextlib import contextmanager
+from uuid import uuid4
 
-from audio_core.contracts import TERMINAL_STATES, JobState
+from audio_core.contracts import Operation
 from platform_api.postgres_store import PostgresJobStore
 
 from .asr import build_asr_backend
@@ -12,6 +14,29 @@ from .diarization import build_diarization_backend
 from .processor import IngestProcessor
 from .s3_store import S3ArtifactStore
 from .settings import WorkerSettings
+from .tts import TtsProcessor
+
+
+@contextmanager
+def maintain_lease(metadata, job_id, worker_id, interval):
+    done = threading.Event()
+
+    def refresh():
+        while not done.wait(interval):
+            try:
+                if not metadata.heartbeat(job_id, worker_id):
+                    break
+            except Exception:
+                # Completion still checks ownership under a database row lock.
+                break
+
+    thread = threading.Thread(target=refresh, daemon=True)
+    thread.start()
+    try:
+        yield
+    finally:
+        done.set()
+        thread.join(timeout=2)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -58,24 +83,23 @@ def run() -> None:
     signal.signal(signal.SIGINT, request_stop)
 
     while not stop.is_set():
-        job = metadata.claim_next(settings.worker_id)
+        claim_id = f"{settings.worker_id}:{uuid4()}"
+        job = metadata.claim_next(claim_id)
         if job is None:
             if args.once:
                 return
             stop.wait(settings.poll_seconds)
             continue
         try:
-            processor.process(job)
+            with maintain_lease(
+                metadata, job.id, claim_id, min(30, settings.stale_after_seconds / 3)
+            ):
+                if Operation.SYNTHESIZE in job.operations:
+                    TtsProcessor(metadata, artifacts, worker_id=claim_id).process(job)
+                else:
+                    processor.process(job)
         except Exception as exc:
-            current = metadata.get(job.id)
-            if current.state not in TERMINAL_STATES:
-                metadata.transition(
-                    job.id,
-                    JobState.FAILED,
-                    message="ingest pipeline failed",
-                    error_code=type(exc).__name__,
-                    error_message=str(exc)[:2000],
-                )
+            metadata.fail_claimed(job.id, claim_id, type(exc).__name__, str(exc)[:2000])
         if args.once:
             return
 

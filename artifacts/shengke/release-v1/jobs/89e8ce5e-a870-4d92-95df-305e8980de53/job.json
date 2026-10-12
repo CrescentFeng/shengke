@@ -1,0 +1,53 @@
+{
+  "id": "89e8ce5e-a870-4d92-95df-305e8980de53",
+  "input_uri": "s3://audio-artifacts/tts/voices/c96637f6-3e88-4bef-9e7d-62b18e876c30/b6d52ece95c82ff1e849f24c3e622f789a2cba0ca202a9a3e90e0df6c7ad5f75.wav",
+  "operations": [
+    "synthesize"
+  ],
+  "policy_id": "default",
+  "idempotency_key": "ab5a0cbe-5e5c-4a35-9e8c-62c2fa8548b4",
+  "parameters": {
+    "tts": {
+      "text": "你终于回来了，我一直在这里等你。",
+      "model": "cosyvoice2",
+      "emotion": "happy",
+      "language": "zh",
+      "voice_id": "c96637f6-3e88-4bef-9e7d-62b18e876c30",
+      "reference_text": "好容易盼来一位望望这一片荒芜又扭身而去",
+      "inference_profile": "cosy_rhythm_v5"
+    }
+  },
+  "state": "succeeded",
+  "progress": 1.0,
+  "error_code": null,
+  "error_message": null,
+  "created_at": "2026-10-12T04:23:46.210368Z",
+  "updated_at": "2026-10-12T04:23:53.231378Z",
+  "events": [
+    {
+      "state": "pending",
+      "at": "2026-10-12T04:23:46.210368Z",
+      "message": "job created"
+    },
+    {
+      "state": "validating",
+      "at": "2026-10-12T04:23:46.216965Z",
+      "message": "request validated"
+    },
+    {
+      "state": "queued",
+      "at": "2026-10-12T04:23:46.223928Z",
+      "message": "job queued"
+    },
+    {
+      "state": "running",
+      "at": "2026-10-12T04:23:47.743958Z",
+      "message": "claimed by CrescentFdeMacBook-Pro-822.local-33280:738ea50a-3d76-4421-8c9e-8821ffb58c18"
+    },
+    {
+      "state": "succeeded",
+      "at": "2026-10-12T04:23:53.231378Z",
+      "message": "Shengke synthesis completed"
+    }
+  ]
+}

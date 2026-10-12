@@ -1,0 +1,76 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "model": {
+      "default": "cosyvoice2",
+      "enum": [
+        "cosyvoice2",
+        "gpt-sovits-v2",
+        "vits-csmsc",
+        "transformer-csmsc"
+      ],
+      "title": "Model",
+      "type": "string"
+    },
+    "text": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Text",
+      "type": "string"
+    },
+    "reference_text": {
+      "default": "",
+      "maxLength": 500,
+      "title": "Reference Text",
+      "type": "string"
+    },
+    "language": {
+      "const": "zh",
+      "default": "zh",
+      "title": "Language",
+      "type": "string"
+    },
+    "emotion": {
+      "default": "neutral",
+      "enum": [
+        "neutral",
+        "happy",
+        "sad",
+        "angry"
+      ],
+      "title": "Emotion",
+      "type": "string"
+    },
+    "inference_profile": {
+      "default": "baseline",
+      "enum": [
+        "baseline",
+        "pilot_v2",
+        "gpt_pause_v3",
+        "cosy_happy_v4",
+        "cosy_rhythm_v5",
+        "gpt_rhythm_v6"
+      ],
+      "title": "Inference Profile",
+      "type": "string"
+    },
+    "voice_id": {
+      "anyOf": [
+        {
+          "format": "uuid",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Voice Id"
+    }
+  },
+  "required": [
+    "text"
+  ],
+  "title": "TtsSynthesisSpec",
+  "type": "object"
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="声刻：少样本语音克隆与情绪 TTS 开发项目。试听真实预生成样本，了解模型对比与评测进展。">
+<title>声刻 · 让声音有自己的表达</title>
+<style>
+:root{color-scheme:light;--ink:#202d28;--paper:#f6f5ef;--accent:#245b48;--line:#d9ddd2}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.8 system-ui,-apple-system,sans-serif}a{color:inherit}header,main,footer{max-width:1100px;margin:auto;padding:26px 32px}header{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);font-size:13px}header a{text-decoration:none}.tag{font-size:12px;letter-spacing:.14em;color:var(--accent)}.hero{padding:58px 0 38px;display:grid;grid-template-columns:1.4fr 1fr;gap:52px;align-items:center}h1{font-size:clamp(48px,7vw,86px);line-height:1.1;letter-spacing:-.05em;margin:16px 0 22px;font-weight:550}h1 small{display:block;font-size:clamp(22px,3vw,34px);letter-spacing:0;margin-top:20px}p{margin:12px 0;color:#526159}.lead{max-width:570px}.button{display:inline-block;margin-top:18px;padding:11px 20px;border-radius:5px;background:var(--accent);color:white;text-decoration:none}.wave{height:210px;display:flex;align-items:center;justify-content:center;gap:7px;border:1px solid var(--line);border-radius:100%;background:#edf0e7}.wave i{display:block;width:5px;border-radius:5px;background:var(--accent);height:var(--h);opacity:.7}.facts{display:flex;flex-wrap:wrap;gap:12px 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;font-size:14px}.facts b{font-size:22px;margin-right:7px}section{padding:34px 0}h2{font-size:25px;font-weight:550;margin:0 0 18px}h3{font-size:17px;margin:0 0 9px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#fffefa;border:1px solid var(--line);border-radius:12px;padding:26px}.card p{font-size:14px}.quote{font-size:21px;line-height:1.8;color:var(--ink);margin:24px 0}audio{width:100%;margin:8px 0}.note{font-size:13px;color:#637168}.badge{display:inline-block;border:1px solid #c7d4c8;border-radius:20px;padding:2px 10px;font-size:12px;color:var(--accent)}ol{padding-left:23px}li{margin:9px 0}footer{font-size:12px;border-top:1px solid var(--line);color:#637168}a:focus-visible{outline:3px solid #bc861f;outline-offset:5px}[hidden]{display:none!important}@media(max-width:650px){header,main,footer{padding-left:22px;padding-right:22px}.hero{grid-template-columns:1fr;gap:20px;padding-top:32px}.wave{display:none}.grid{grid-template-columns:1fr}.card{padding:21px}.facts{gap:10px 20px}}
+</style>
+</head>
+<body>
+<header><a href="/">← Crescent Feng · 作品集</a><span>SHENGKE / 声刻</span></header>
+<main>
+<div class="hero"><div><span class="tag">VOICE CLONING & EMOTIONAL TTS</span><h1>声刻<small>让声音有自己的表达。</small></h1><p class="lead">从几秒参考录音出发，探索可定制音色与情绪的语音合成。以真实听评和模型对比，逐步改善语音的自然度。</p><span class="badge">MVP 本地试用</span><br><a class="button" href="#listen">试听生成样本 ↓</a></div><div class="wave" aria-hidden="true"><i style="--h:14px"></i><i style="--h:33px"></i><i style="--h:64px"></i><i style="--h:40px"></i><i style="--h:97px"></i><i style="--h:135px"></i><i style="--h:85px"></i><i style="--h:54px"></i><i style="--h:113px"></i><i style="--h:153px"></i><i style="--h:82px"></i><i style="--h:111px"></i><i style="--h:62px"></i><i style="--h:35px"></i><i style="--h:65px"></i><i style="--h:23px"></i></div></div>
+<div class="facts"><span><b>3–10 秒</b>参考录音</span><span><b>4</b>模型 CPU / GPU 对比</span><span><b>4 轮</b>个人评分</span></div>
+<section id="listen"><h2>先听，再评价。</h2><div class="grid"><article class="card"><span class="tag">01 / 预生成样本</span><p class="quote">“清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。”</p><audio controls preload="metadata" aria-label="GPT-SoVITS 中性语音预生成样本" src="audio/gpt-sovits-demo.wav">浏览器不支持音频播放。</audio><p>GPT-SoVITS v2 · 中性节奏调整版 · 5.76 秒<br>参考素材：THCHS-30 / D12，10 秒录音</p><p class="note">本音频在 Mac 上预先生成并调整节奏。该样本的速度与停顿已获单人试听认可，其他文本仍需试听核对。</p></article><article class="card"><span class="tag">02 / 实时体验</span><h3 style="margin-top:20px">合成工作台</h3><p>选择模型与参考音色，输入文本，生成并试听语音。工作台目前在开发者的 Mac 上运行。</p><div id="local-entry" hidden><a class="button" href="http://127.0.0.1:7860/?view=synthesis" target="_blank" rel="noopener">打开本机工作台 ↗</a><p class="note">仅适用于正在运行声刻服务的这台电脑。若页面打不开，请先启动本地服务。</p></div><p id="public-status" class="note">在线生成暂未开放。当前可试听左侧样本；后续接入独立推理服务后，将在这里提供体验入口。</p></article></div></section>
+<section><h2>从音色，到表达。</h2><div class="grid"><article class="card"><h3>少样本克隆与情绪控制</h3><p>CosyVoice2 与 GPT-SoVITS 支持参考音色克隆。CosyVoice2 探索中性、开心、悲伤与愤怒的原生情绪指令；GPT-SoVITS 提供舒缓语速与停顿试用选项。</p><p>项目基于网易实习中的语音模型选型与评测经验展开。</p></article><article class="card"><h3>用评测记录每次变化</h3><p>VITS、Transformer TTS 作为固定音色基线，与两个克隆引擎比较合成质量、实时率及资源占用。四模型分别完成 144 次 CPU 和 144 次 RTX 4090D GPU 正式合成测试，均成功。</p><p>四轮试听共 21 份评分，另有节奏调整后的定性反馈，均来自同一位听众，属于 N=1 预评测，不代表多人 MOS 结论。GPU 实测已完成，性能指标不代表音质排名。</p></article></div></section>
+<section><h2>当前边界与下一步</h2><ol><li>继续在 Mac 上开发，检查发音、断句与情绪表达。</li><li>网站负责展示与试听；独立后端负责模型推理。</li><li>GPU 按小时实测已完成，本次共花费 2.34 元，实例已关机。</li></ol><p class="note">已知问题：开心情绪与部分中性样本仍有机械感；生成内容需要实际试听核对。</p></section>
+</main>
+<footer>声刻 · 开发预览 / 2026-10-12<br>参考语料来源：<a href="https://www.openslr.org/18/">THCHS-30（Apache-2.0）</a>。此处播放的是模型合成语音。</footer>
+<script>
+if (['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)) {
+  document.getElementById('local-entry').hidden = false;
+  document.getElementById('public-status').hidden = true;
+}
+</script>
+</body></html>

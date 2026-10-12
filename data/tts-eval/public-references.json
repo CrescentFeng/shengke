@@ -1,0 +1,26 @@
+[
+  {
+    "id": "D11_892",
+    "speaker": "D11",
+    "path": "data/raw/shengke/thchs30/audio/D11_892.wav",
+    "reference_text": "好容易盼来一位望望这一片荒芜又扭身而去",
+    "duration_s": 7.192,
+    "sha256": "6a18fbd11e97fc1a1d25e15d7798fa0a27736d6d0cf83aca66e569069e7ed883",
+    "source": "https://www.openslr.org/18/",
+    "mirror_url": "https://huggingface.co/datasets/FluidInference/THCHS-30-tests/resolve/cb125be05c3059f5ef7ad796dfd460a026508dff/audio/D11_892.wav",
+    "license": "Apache-2.0",
+    "human_transcript_verification": "pending"
+  },
+  {
+    "id": "D12_892",
+    "speaker": "D12",
+    "path": "data/raw/shengke/thchs30/audio/D12_892.wav",
+    "reference_text": "好容易盼来一位望望这一片荒芜又扭身而去",
+    "duration_s": 4.73,
+    "sha256": "b6d52ece95c82ff1e849f24c3e622f789a2cba0ca202a9a3e90e0df6c7ad5f75",
+    "source": "https://www.openslr.org/18/",
+    "mirror_url": "https://huggingface.co/datasets/FluidInference/THCHS-30-tests/resolve/cb125be05c3059f5ef7ad796dfd460a026508dff/audio/D12_892.wav",
+    "license": "Apache-2.0",
+    "human_transcript_verification": "pending"
+  }
+]

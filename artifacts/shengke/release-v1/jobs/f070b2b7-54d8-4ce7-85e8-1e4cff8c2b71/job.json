@@ -1,0 +1,53 @@
+{
+  "id": "f070b2b7-54d8-4ce7-85e8-1e4cff8c2b71",
+  "input_uri": "s3://audio-artifacts/tts/voices/8345e91a-c0f1-4081-8fd4-2971bed93782/2fcb0b8fbe243fa5bc66bec5eab85f8329ca822f58410ab00d45c8303b914b49.wav",
+  "operations": [
+    "synthesize"
+  ],
+  "policy_id": "default",
+  "idempotency_key": "c806d46a-64e2-4bfd-b8ef-38344513760a",
+  "parameters": {
+    "tts": {
+      "text": "清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。",
+      "model": "gpt-sovits-v2",
+      "emotion": "neutral",
+      "language": "zh",
+      "voice_id": "8345e91a-c0f1-4081-8fd4-2971bed93782",
+      "reference_text": "发射约二十分钟后飞行样机打开降落伞降落在北纬二十八度五十一分东经一百四十三度四十分的太平洋海面上。",
+      "inference_profile": "gpt_rhythm_v6"
+    }
+  },
+  "state": "succeeded",
+  "progress": 1.0,
+  "error_code": null,
+  "error_message": null,
+  "created_at": "2026-10-12T05:06:22.132989Z",
+  "updated_at": "2026-10-12T05:06:32.697813Z",
+  "events": [
+    {
+      "state": "pending",
+      "at": "2026-10-12T05:06:22.132989Z",
+      "message": "job created"
+    },
+    {
+      "state": "validating",
+      "at": "2026-10-12T05:06:22.150571Z",
+      "message": "request validated"
+    },
+    {
+      "state": "queued",
+      "at": "2026-10-12T05:06:22.159651Z",
+      "message": "job queued"
+    },
+    {
+      "state": "running",
+      "at": "2026-10-12T05:06:23.539788Z",
+      "message": "claimed by CrescentFdeMacBook-Pro-822.local-37046:77674208-c764-4414-8a34-58f39d6926c8"
+    },
+    {
+      "state": "succeeded",
+      "at": "2026-10-12T05:06:32.697813Z",
+      "message": "Shengke synthesis completed"
+    }
+  ]
+}

@@ -74,6 +74,29 @@ class PostgresJobStore:
             ],
         )
 
+    def list_tts_jobs(self, limit: int, offset: int) -> dict:
+        from audio_core.shengke_release import job_summary
+
+        with self._connection() as conn:
+            # A consistent snapshot keeps the count/page coherent during new submissions.
+            conn.execute("SET TRANSACTION ISOLATION LEVEL REPEATABLE READ READ ONLY")
+            where = "parameters ? 'tts' AND operations @> '[\"synthesize\"]'::jsonb"
+            total = conn.execute("SELECT count(*) AS n FROM audio_jobs WHERE " + where).fetchone()[
+                "n"
+            ]
+            rows = conn.execute(
+                "SELECT * FROM audio_jobs WHERE "
+                + where
+                + " ORDER BY created_at DESC, id DESC LIMIT %s OFFSET %s",
+                (limit, offset),
+            ).fetchall()
+            return {
+                "items": [job_summary(self._row_to_job(r, [])) for r in rows],
+                "total": total,
+                "limit": limit,
+                "offset": offset,
+            }
+
     def _load_events(self, connection: Any, job_id: UUID) -> list[dict[str, Any]]:
         return connection.execute(
             """
@@ -225,6 +248,104 @@ class PostgresJobStore:
                 (row["id"], f"claimed by {worker_id}"),
             )
             return self._row_to_job(row, self._load_events(connection, row["id"]))
+
+    def heartbeat(self, job_id: UUID, worker_id: str) -> bool:
+        with self._connection() as connection:
+            return (
+                connection.execute(
+                    "UPDATE audio_jobs SET locked_at = now() "
+                    "WHERE id = %s AND locked_by = %s AND state = 'running' RETURNING id",
+                    (job_id, worker_id),
+                ).fetchone()
+                is not None
+            )
+
+    def fail_claimed(self, job_id, worker_id, error_code, error_message):
+        with self._connection() as connection:
+            row = connection.execute(
+                "UPDATE audio_jobs SET state='failed',error_code=%s,error_message=%s,"
+                "locked_by=NULL,locked_at=NULL,updated_at=now() "
+                "WHERE id=%s AND locked_by=%s AND state='running' RETURNING id",
+                (error_code, error_message, job_id, worker_id),
+            ).fetchone()
+            if row:
+                connection.execute(
+                    "INSERT INTO job_events(job_id,state,message) VALUES (%s,'failed',%s)",
+                    (job_id, error_message),
+                )
+
+    def complete_tts(self, job_id, worker_id, report, report_uri) -> None:
+        with self._connection() as connection:
+            row = connection.execute(
+                "SELECT state, locked_by FROM audio_jobs WHERE id = %s FOR UPDATE",
+                (job_id,),
+            ).fetchone()
+            if not row or row["state"] != "running" or row["locked_by"] != worker_id:
+                raise InvalidStateTransition("TTS job cancelled or worker lease lost")
+            for index, asset in enumerate(report.assets):
+                connection.execute(
+                    """INSERT INTO audio_assets
+                    (id, job_id, role, uri, filename, sha256, size_bytes, probe, source_asset_id)
+                    VALUES (%s,%s,%s,%s,%s,%s,%s,%s::jsonb,%s)
+                    ON CONFLICT (id) DO NOTHING""",
+                    (
+                        asset.id,
+                        job_id,
+                        "reference" if index == 0 else "synthesized",
+                        asset.uri,
+                        asset.filename,
+                        asset.sha256,
+                        asset.size_bytes,
+                        asset.probe.model_dump_json() if asset.probe else None,
+                        asset.source_asset_id,
+                    ),
+                )
+            for run in report.tool_runs:
+                connection.execute(
+                    """INSERT INTO tool_runs
+                    (id,job_id,tool_name,tool_version,operation,status,input_asset_ids,
+                     output_asset_ids,parameters,metrics,started_at,finished_at)
+                    VALUES (%s,%s,%s,%s,%s,%s,%s::jsonb,%s::jsonb,%s::jsonb,%s::jsonb,%s,%s)
+                    ON CONFLICT (id) DO NOTHING""",
+                    (
+                        run.id,
+                        job_id,
+                        run.tool_name,
+                        run.tool_version,
+                        run.operation.value,
+                        run.status.value,
+                        json.dumps([str(x) for x in run.input_asset_ids]),
+                        json.dumps([str(x) for x in run.output_asset_ids]),
+                        json.dumps(run.parameters),
+                        json.dumps(run.metrics),
+                        run.started_at,
+                        run.finished_at,
+                    ),
+                )
+            connection.execute(
+                """INSERT INTO audio_reports
+                (id,job_id,input_asset_id,processing_chain_id,report_uri,payload)
+                VALUES (%s,%s,%s,%s,%s,%s::jsonb)
+                ON CONFLICT (job_id) DO UPDATE SET
+                report_uri=EXCLUDED.report_uri, payload=EXCLUDED.payload, updated_at=now()""",
+                (
+                    report.id,
+                    job_id,
+                    report.input_asset_id,
+                    report.processing_chain_id,
+                    report_uri,
+                    report.model_dump_json(),
+                ),
+            )
+            connection.execute(
+                "UPDATE audio_jobs SET state='succeeded',progress=1,locked_at=NULL,"
+                "locked_by=NULL,updated_at=now() WHERE id=%s",
+                (job_id,),
+            )
+            connection.execute(
+                "INSERT INTO job_events(job_id,state,message) VALUES (%s,'succeeded',%s)",
+                (job_id, "Shengke synthesis completed"),
+            )
 
     def requeue_stale(self, stale_after_seconds: int) -> int:
         if stale_after_seconds <= 0:
@@ -398,9 +519,7 @@ class PostgresJobStore:
                 ),
             )
 
-    def save_diarization(
-        self, diarization: DiarizationDocument, diarization_uri: str
-    ) -> None:
+    def save_diarization(self, diarization: DiarizationDocument, diarization_uri: str) -> None:
         with self._connection() as connection:
             connection.execute(
                 """

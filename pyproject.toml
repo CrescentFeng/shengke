@@ -25,6 +25,7 @@ dev = [
 asr-whisper = ["faster-whisper>=1,<2"]
 asr-funasr = ["funasr>=1,<2"]
 vad-webrtc = ["webrtcvad-wheels>=2.0.14,<3"]
+shengke-ui = ["gradio>=5.4,<6"]
 diarization-pyannote = [
   "pyannote.audio>=4,<5",
   "torchcodec>=0.13,<0.14",
@@ -37,6 +38,8 @@ audio-ingest-worker = "ingest_worker.main:run"
 audio-asr-eval = "asr_eval.cli:main"
 audio-vad-eval = "vad_eval.cli:main"
 audio-diarization-eval = "diarization_eval.cli:main"
+shengke-ui = "shengke_ui.main:main"
+audio-tts-eval = "tts_eval.cli:main"
 
 [tool.setuptools.packages.find]
 where = [
@@ -46,6 +49,8 @@ where = [
   "apps/asr-eval/src",
   "apps/vad-eval/src",
   "apps/diarization-eval/src",
+  "apps/shengke-ui/src",
+  "apps/tts-eval/src",
 ]
 
 [tool.ruff]

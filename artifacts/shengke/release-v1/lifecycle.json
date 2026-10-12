@@ -1,0 +1,95 @@
+{
+  "jobs_before_restart": {
+    "items": [
+      {
+        "id": "f070b2b7-54d8-4ce7-85e8-1e4cff8c2b71",
+        "created_at": "2026-10-12T05:06:22.132989+00:00",
+        "state": "succeeded",
+        "text": "清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。",
+        "model": "gpt-sovits-v2",
+        "emotion": "neutral",
+        "inference_profile": "gpt_rhythm_v6",
+        "voice_id": "8345e91a-c0f1-4081-8fd4-2971bed93782",
+        "error_message": null
+      },
+      {
+        "id": "b4a81d95-f110-46e5-98f9-3c7b85cd8b56",
+        "created_at": "2026-10-12T05:02:33.041865+00:00",
+        "state": "succeeded",
+        "text": "清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。",
+        "model": "gpt-sovits-v2",
+        "emotion": "neutral",
+        "inference_profile": "gpt_rhythm_v6",
+        "voice_id": "8345e91a-c0f1-4081-8fd4-2971bed93782",
+        "error_message": null
+      },
+      {
+        "id": "31b444f0-4726-4880-8481-ee034c27671e",
+        "created_at": "2026-10-12T05:01:15.621700+00:00",
+        "state": "succeeded",
+        "text": "清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。",
+        "model": "cosyvoice2",
+        "emotion": "neutral",
+        "inference_profile": "baseline",
+        "voice_id": "8345e91a-c0f1-4081-8fd4-2971bed93782",
+        "error_message": null
+      },
+      {
+        "id": "89e8ce5e-a870-4d92-95df-305e8980de53",
+        "created_at": "2026-10-12T04:23:46.210368+00:00",
+        "state": "succeeded",
+        "text": "你终于回来了，我一直在这里等你。",
+        "model": "cosyvoice2",
+        "emotion": "happy",
+        "inference_profile": "cosy_rhythm_v5",
+        "voice_id": "c96637f6-3e88-4bef-9e7d-62b18e876c30",
+        "error_message": null
+      },
+      {
+        "id": "833d4c8f-4ede-4256-a86d-176db9523773",
+        "created_at": "2026-10-12T04:23:37.013338+00:00",
+        "state": "succeeded",
+        "text": "清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。",
+        "model": "gpt-sovits-v2",
+        "emotion": "neutral",
+        "inference_profile": "gpt_rhythm_v6",
+        "voice_id": "8345e91a-c0f1-4081-8fd4-2971bed93782",
+        "error_message": null
+      }
+    ],
+    "total": 423,
+    "limit": 5,
+    "offset": 0
+  },
+  "before": {
+    "root": "/Users/crescent/Documents/ChatGPT/音频项目开发",
+    "instance_id": "3233fd8e-76d4-4830-ad88-5b44fd44e761",
+    "pid": 37039,
+    "stage": "ready",
+    "url": "http://127.0.0.1:7860/?view=synthesis"
+  },
+  "reuse": "声刻已在后台运行，复用当前实例。\n",
+  "after_reuse": {
+    "root": "/Users/crescent/Documents/ChatGPT/音频项目开发",
+    "instance_id": "3233fd8e-76d4-4830-ad88-5b44fd44e761",
+    "pid": 37039,
+    "stage": "ready",
+    "url": "http://127.0.0.1:7860/?view=synthesis"
+  },
+  "stop": "声刻已停止；音频、评分、数据库及其他项目服务保留。\n",
+  "ports_closed": {
+    "7860": true,
+    "8000": true,
+    "9881": true,
+    "9882": true,
+    "9883": true,
+    "9884": true
+  },
+  "preserved_services": {
+    "55433": true,
+    "9000": true,
+    "7862": true,
+    "8769": false,
+    "4176": true
+  }
+}

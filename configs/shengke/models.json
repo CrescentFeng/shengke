@@ -1,0 +1,92 @@
+{
+  "cosyvoice2": {
+    "repository": "https://github.com/FunAudioLLM/CosyVoice",
+    "revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+    "weights": "iic/CosyVoice2-0.5B",
+    "status": "local_cpu_and_rtx4090d_fp32_verified",
+    "license": "Check repository and checkpoint licenses before redistribution",
+    "weights_lock": "configs/shengke/cosyvoice2-weights-lock.json",
+    "weights_revision": "unverified",
+    "gpu_validation": {
+      "date": "2026-10-12",
+      "model_requests": 36,
+      "model_succeeded": 36,
+      "summary": "artifacts/shengke/gpu-autodl-20261012/benchmark-summary.json",
+      "listening_acceptance": "not_implied_by_gpu_benchmark"
+    }
+  },
+  "gpt-sovits-v2": {
+    "repository": "https://github.com/RVC-Boss/GPT-SoVITS",
+    "revision": "a7e38f93f1ad8d263093ca26ce0dea3fb7080ea2",
+    "release": "20240821v2",
+    "weights": "lj1995/GPT-SoVITS",
+    "weights_revision": "8f8857563c040d542de108a2c18b0425abd6c9c5",
+    "weights_files": [
+      "gsv-v2final-pretrained/s1bert25hz-5kh-longer-epoch=12-step=369668.ckpt",
+      "gsv-v2final-pretrained/s2G2333k.pth",
+      "chinese-roberta-wwm-ext-large/*",
+      "chinese-hubert-base/*"
+    ],
+    "status": "local_cpu_and_rtx4090d_fp32_verified",
+    "gpu_validation": {
+      "date": "2026-10-12",
+      "model_requests": 36,
+      "model_succeeded": 36,
+      "summary": "artifacts/shengke/gpu-autodl-20261012/benchmark-summary.json",
+      "listening_acceptance": "not_implied_by_gpu_benchmark"
+    }
+  },
+  "vits-csmsc": {
+    "repository": "https://github.com/espnet/espnet",
+    "weights": "espnet/kan-bayashi_csmsc_vits",
+    "weights_revision": "951489e4d66d27dfde2b579d173598f95dea5dcf",
+    "weights_files": [
+      "README.md",
+      "meta.yaml",
+      "exp/tts_train_vits_raw_phn_pypinyin_g2p_phone/config.yaml",
+      "exp/tts_train_vits_raw_phn_pypinyin_g2p_phone/train.total_count.ave_10best.pth"
+    ],
+    "status": "local_cpu_and_rtx4090d_fp32_verified",
+    "original_archive": {
+      "url": "https://zenodo.org/api/records/5499120/files/tts_train_vits_raw_phn_pypinyin_g2p_phone_train.total_count.ave.zip/content",
+      "md5": "b7778e55ed340992fd9fb51f40cc9aa2",
+      "size": 373602292
+    },
+    "runtime": "espnet==202402",
+    "gpu_validation": {
+      "date": "2026-10-12",
+      "model_requests": 36,
+      "model_succeeded": 36,
+      "summary": "artifacts/shengke/gpu-autodl-20261012/benchmark-summary.json",
+      "listening_acceptance": "not_implied_by_gpu_benchmark"
+    }
+  },
+  "transformer-csmsc": {
+    "repository": "https://github.com/espnet/espnet",
+    "weights": "espnet/kan-bayashi_csmsc_transformer",
+    "weights_revision": "ab1031316539bcc26e31ce3ff7d923ee0db0a7c4",
+    "weights_files": [
+      "README.md",
+      "meta.yaml",
+      "exp/tts_train_transformer_raw_phn_pypinyin_g2p_phone/config.yaml",
+      "exp/tts_train_transformer_raw_phn_pypinyin_g2p_phone/train.loss.ave_5best.pth",
+      "exp/tts_stats_raw_phn_pypinyin_g2p_phone/train/feats_stats.npz"
+    ],
+    "vocoder": "CSMSC Parallel WaveGAN v1, checkpoint-400000steps.pkl",
+    "status": "local_cpu_and_rtx4090d_fp32_verified",
+    "runtime": "espnet==202402",
+    "original_archive": {
+      "url": "https://zenodo.org/api/records/4034125/files/tts_train_transformer_raw_phn_pypinyin_g2p_phone_train.loss.ave.zip/content",
+      "md5": "4701a0430cddf028c1be8b40d96ad50b",
+      "note": "Extracted weights also match the pinned Hugging Face SHA-256",
+      "size": 133471889
+    },
+    "gpu_validation": {
+      "date": "2026-10-12",
+      "model_requests": 36,
+      "model_succeeded": 36,
+      "summary": "artifacts/shengke/gpu-autodl-20261012/benchmark-summary.json",
+      "listening_acceptance": "not_implied_by_gpu_benchmark"
+    }
+  }
+}

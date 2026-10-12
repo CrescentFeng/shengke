@@ -1,0 +1,201 @@
+{
+  "report_uri": "s3://audio-artifacts/jobs/31b444f0-4726-4880-8481-ee034c27671e/tts/083d612716c1270cfbe7de6ccf07472582203bcd5a042b3bc7c1deee7a7564e1.json",
+  "report": {
+    "id": "7f1edec0-3d5c-54b8-8a92-97559130a205",
+    "job_id": "31b444f0-4726-4880-8481-ee034c27671e",
+    "input_asset_id": "accfb6ca-5cfe-50c8-a531-e31ce63441a6",
+    "processing_chain_id": "shengke-tts-v1",
+    "assets": [
+      {
+        "id": "accfb6ca-5cfe-50c8-a531-e31ce63441a6",
+        "uri": "s3://audio-artifacts/tts/voices/8345e91a-c0f1-4081-8fd4-2971bed93782/2fcb0b8fbe243fa5bc66bec5eab85f8329ca822f58410ab00d45c8303b914b49.wav",
+        "filename": "reference.wav",
+        "sha256": "2fcb0b8fbe243fa5bc66bec5eab85f8329ca822f58410ab00d45c8303b914b49",
+        "size_bytes": 320044,
+        "probe": {
+          "codec_name": "pcm_s16le",
+          "codec_long_name": "PCM signed 16-bit little-endian",
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "channel_layout": null,
+          "duration_seconds": 10.0,
+          "bit_rate": 256000,
+          "sample_format": "s16",
+          "media_format": {
+            "format_name": "wav",
+            "format_long_name": "WAV / WAVE (Waveform Audio)",
+            "duration_seconds": 10.0,
+            "bit_rate": 256035
+          }
+        },
+        "source_asset_id": null,
+        "created_at": "2026-10-12T05:01:16.170421Z"
+      },
+      {
+        "id": "9a3681dc-34bc-5eab-9504-7c3b7f24b8f2",
+        "uri": "s3://audio-artifacts/jobs/31b444f0-4726-4880-8481-ee034c27671e/tts/941875b0d277e00b79a8cfefc61ef773138b02e504a21c7c7811934015e4ef8a.wav",
+        "filename": "speech.wav",
+        "sha256": "941875b0d277e00b79a8cfefc61ef773138b02e504a21c7c7811934015e4ef8a",
+        "size_bytes": 243884,
+        "probe": {
+          "codec_name": "pcm_s16le",
+          "codec_long_name": "PCM signed 16-bit little-endian",
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "channel_layout": null,
+          "duration_seconds": 5.08,
+          "bit_rate": 384000,
+          "sample_format": "s16",
+          "media_format": {
+            "format_name": "wav",
+            "format_long_name": "WAV / WAVE (Waveform Audio)",
+            "duration_seconds": 5.08,
+            "bit_rate": 384069
+          }
+        },
+        "source_asset_id": "accfb6ca-5cfe-50c8-a531-e31ce63441a6",
+        "created_at": "2026-10-12T05:01:33.226648Z"
+      }
+    ],
+    "segments": [],
+    "tool_runs": [
+      {
+        "id": "352e0632-69c0-5973-838e-37acfecd1382",
+        "tool_name": "cosyvoice2",
+        "tool_version": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+        "operation": "synthesize",
+        "status": "succeeded",
+        "input_asset_ids": [
+          "accfb6ca-5cfe-50c8-a531-e31ce63441a6"
+        ],
+        "output_asset_ids": [
+          "9a3681dc-34bc-5eab-9504-7c3b7f24b8f2"
+        ],
+        "parameters": {
+          "text": "清晨的阳光穿过窗帘，落在书桌旁的一杯热茶上。",
+          "model": "cosyvoice2",
+          "emotion": "neutral",
+          "language": "zh",
+          "voice_id": "8345e91a-c0f1-4081-8fd4-2971bed93782",
+          "reference_text": "发射约二十分钟后飞行样机打开降落伞降落在北纬二十八度五十一分东经一百四十三度四十分的太平洋海面上。",
+          "weights_sha256": {
+            "llm.pt": "b144ef55b51ce8cfb79a73c90dbba0bdaba4e451c0ebcfab20f769264f84a608",
+            "flow.pt": "ff4c2f867674411e0a08cee702996df13fa67c1cd864c06108da88d16d088541",
+            "hift.pt": "3386cc880324d4e98e05987b99107f49e40ed925b8ecc87c1f4939432d429879",
+            "campplus.onnx": "a6ac6a63997761ae2997373e2ee1c47040854b4b759ea41ec48e4e42df0f4d73",
+            "flow.cache.pt": "3ebde248652c6eed855e08bb6a263af3847039a1361f8019bdb27f5f680a1dc4",
+            "speech_tokenizer_v2.onnx": "d43342aa12163a80bf07bffb94c9de2e120a8df2f9917cd2f642e7f4219c6f71",
+            "speech_tokenizer_v2.batch.onnx": "5b45a98572ed21e3a3ebf50201f3020567f7db40e9a57509b790b2982f5c07b7",
+            "flow.decoder.estimator.fp32.onnx": "cd54e4281701e6630730da64502d77b7e8b6e5c057cca65128bffb50f85cbf98",
+            "CosyVoice-BlankEN/model.safetensors": "130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96"
+          },
+          "inference_profile": "baseline"
+        },
+        "metrics": {
+          "rtf": 3.2839192994059005,
+          "seed": 42,
+          "model": "cosyvoice2",
+          "torch": "2.3.1",
+          "device": "cpu",
+          "python": "3.10.21",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+          "precision": "fp32",
+          "device_name": "arm",
+          "inference_s": 16.682310040981974,
+          "cuda_version": null,
+          "load_seconds": 8.103524457954336,
+          "peak_rss_bytes": 3525574656,
+          "runtime_sha256": "c0e610532d558b37ffd181e81b6b49e64ef7a6107b61bf5696b80ebb7f42b118",
+          "sample_rate_hz": 24000,
+          "audio_duration_s": 5.08,
+          "includes_vocoder": true,
+          "request_elapsed_s": 16.80301358300494,
+          "text_split_method": null,
+          "peak_cuda_reserved_bytes": null,
+          "peak_cuda_allocated_bytes": null
+        },
+        "started_at": "2026-10-12T05:01:15.812891Z",
+        "finished_at": "2026-10-12T05:01:33.226700Z",
+        "error_code": null,
+        "error_message": null
+      }
+    ],
+    "findings": [],
+    "summary": {
+      "tts": {
+        "rtf": 3.2839192994059005,
+        "seed": 42,
+        "model": "cosyvoice2",
+        "torch": "2.3.1",
+        "device": "cpu",
+        "python": "3.10.21",
+        "delivery": {
+          "speed": 1.0,
+          "instruction": null,
+          "inference_profile": "baseline"
+        },
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+        "precision": "fp32",
+        "device_name": "arm",
+        "inference_s": 16.682310040981974,
+        "cuda_version": null,
+        "load_seconds": 8.103524457954336,
+        "peak_rss_bytes": 3525574656,
+        "runtime_sha256": "c0e610532d558b37ffd181e81b6b49e64ef7a6107b61bf5696b80ebb7f42b118",
+        "sample_rate_hz": 24000,
+        "weights_sha256": {
+          "llm.pt": "b144ef55b51ce8cfb79a73c90dbba0bdaba4e451c0ebcfab20f769264f84a608",
+          "flow.pt": "ff4c2f867674411e0a08cee702996df13fa67c1cd864c06108da88d16d088541",
+          "hift.pt": "3386cc880324d4e98e05987b99107f49e40ed925b8ecc87c1f4939432d429879",
+          "campplus.onnx": "a6ac6a63997761ae2997373e2ee1c47040854b4b759ea41ec48e4e42df0f4d73",
+          "flow.cache.pt": "3ebde248652c6eed855e08bb6a263af3847039a1361f8019bdb27f5f680a1dc4",
+          "speech_tokenizer_v2.onnx": "d43342aa12163a80bf07bffb94c9de2e120a8df2f9917cd2f642e7f4219c6f71",
+          "speech_tokenizer_v2.batch.onnx": "5b45a98572ed21e3a3ebf50201f3020567f7db40e9a57509b790b2982f5c07b7",
+          "flow.decoder.estimator.fp32.onnx": "cd54e4281701e6630730da64502d77b7e8b6e5c057cca65128bffb50f85cbf98",
+          "CosyVoice-BlankEN/model.safetensors": "130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96"
+        },
+        "audio_duration_s": 5.08,
+        "includes_vocoder": true,
+        "request_elapsed_s": 16.80301358300494,
+        "text_split_method": null,
+        "configuration_sha256": {
+          "cosyvoice2.yaml": "0af2c0d010c477187c39f3e8fd5f1ae2e4e6f90ad03ba37c10ed6c6a87b05959",
+          "configuration.json": "c502b6328c67638b401df8dd05de89e9e8d1cff9cd0ada10dfbdbe13556c20de",
+          "CosyVoice-BlankEN/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "CosyVoice-BlankEN/config.json": "168aa1bd401abc3bc262ba15ba4e499627a8b4e006e9d050b47c22de20660185",
+          "CosyVoice-BlankEN/tokenizer_config.json": "482bd979881423375ca5414e4e0d94cd7c5349dbb17fffd46b4d36d71e62a1bc",
+          "CosyVoice-BlankEN/generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+        },
+        "peak_cuda_reserved_bytes": null,
+        "peak_cuda_allocated_bytes": null
+      },
+      "quality": {
+        "rms_dbfs": -31.171755,
+        "peak_dbfs": -13.753596,
+        "sample_count": 121920,
+        "silence_ratio": 0.0,
+        "clipping_ratio": 0.0,
+        "true_peak_dbtp": -13.65,
+        "integrated_lufs": -30.24,
+        "loudness_range_lu": 0.9,
+        "silence_duration_seconds": 0.0
+      },
+      "warnings": [],
+      "output_asset_id": "9a3681dc-34bc-5eab-9504-7c3b7f24b8f2",
+      "reference_quality": {
+        "rms_dbfs": -31.657777,
+        "peak_dbfs": -8.840232,
+        "sample_count": 160000,
+        "silence_ratio": 0.0,
+        "clipping_ratio": 0.0,
+        "true_peak_dbtp": -8.66,
+        "integrated_lufs": -31.77,
+        "loudness_range_lu": 4.6,
+        "silence_duration_seconds": 0.0
+      }
+    },
+    "created_at": "2026-10-12T05:01:33.226973Z"
+  }
+}

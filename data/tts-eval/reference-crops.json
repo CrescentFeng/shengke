@@ -1,0 +1,571 @@
+{
+  "audio_repository": "FluidInference/THCHS-30-tests",
+  "audio_revision": "cb125be05c3059f5ef7ad796dfd460a026508dff",
+  "alignment_repository": "anyspeech/THCHS-30-alignments",
+  "alignment_revision": "9bd41492e5dbc9d69a4cbea0acbc03b9b20375a4",
+  "alignment_sha256": "4686a0448eebc4177203c601d38bc27da152bfaa6e17875f25248cf80a778194",
+  "source": "https://www.openslr.org/18/",
+  "license": "Apache-2.0",
+  "note": "Crop original PCM at published word boundaries, no resampling, time stretching or added silence. Human review recorded on 2026-10-11; D12_991_10s has a user-requested transcript correction and a pronunciation uncertainty. Different durations use different utterances, so duration and content effects are confounded.",
+  "items": [
+    {
+      "id": "D11_798_3s",
+      "speaker": "D11",
+      "source_id": "D11_798",
+      "start_s": 6.49,
+      "end_s": 9.49,
+      "duration_s": 3,
+      "reference_text": "绕木桩钻铁丝网过独木桥。",
+      "aligned_words": [
+        {
+          "word": "绕",
+          "start_s": 6.56,
+          "end_s": 6.71
+        },
+        {
+          "word": "木桩",
+          "start_s": 6.71,
+          "end_s": 7.15
+        },
+        {
+          "word": "钻",
+          "start_s": 7.4,
+          "end_s": 7.63
+        },
+        {
+          "word": "铁丝网",
+          "start_s": 7.63,
+          "end_s": 8.19
+        },
+        {
+          "word": "过",
+          "start_s": 8.49,
+          "end_s": 8.7
+        },
+        {
+          "word": "独木桥。",
+          "start_s": 8.7,
+          "end_s": 9.35
+        }
+      ],
+      "human_transcript_verification": "verified",
+      "human_review": {
+        "reviewer": "project_owner",
+        "date": "2026-10-11",
+        "audio_sha256": "4fd8067284a9feece800a3f7c75ba1a9539fcc70dc5c9b52cadd92c8c75409a4",
+        "note": "用户报告已完成六份参考音频核对，未指出本片段存在问题。"
+      }
+    },
+    {
+      "id": "D11_792_5s",
+      "speaker": "D11",
+      "source_id": "D11_792",
+      "start_s": 0.97,
+      "end_s": 5.97,
+      "duration_s": 5,
+      "reference_text": "带着诸多疑问迎着和煦的春风我们走访了圆明园遗址。",
+      "aligned_words": [
+        {
+          "word": "带",
+          "start_s": 1.05,
+          "end_s": 1.2
+        },
+        {
+          "word": "着",
+          "start_s": 1.2,
+          "end_s": 1.3
+        },
+        {
+          "word": "诸多",
+          "start_s": 1.3,
+          "end_s": 1.67
+        },
+        {
+          "word": "疑问",
+          "start_s": 1.67,
+          "end_s": 2.13
+        },
+        {
+          "word": "迎",
+          "start_s": 2.51,
+          "end_s": 2.63
+        },
+        {
+          "word": "着",
+          "start_s": 2.63,
+          "end_s": 2.74
+        },
+        {
+          "word": "和煦",
+          "start_s": 2.74,
+          "end_s": 3.14
+        },
+        {
+          "word": "的",
+          "start_s": 3.14,
+          "end_s": 3.24
+        },
+        {
+          "word": "春风",
+          "start_s": 3.24,
+          "end_s": 3.74
+        },
+        {
+          "word": "我们",
+          "start_s": 4.14,
+          "end_s": 4.37
+        },
+        {
+          "word": "走访",
+          "start_s": 4.37,
+          "end_s": 4.77
+        },
+        {
+          "word": "了",
+          "start_s": 4.77,
+          "end_s": 4.86
+        },
+        {
+          "word": "圆明园",
+          "start_s": 4.86,
+          "end_s": 5.45
+        },
+        {
+          "word": "遗址。",
+          "start_s": 5.45,
+          "end_s": 5.89
+        }
+      ],
+      "human_transcript_verification": "verified",
+      "human_review": {
+        "reviewer": "project_owner",
+        "date": "2026-10-11",
+        "audio_sha256": "66215e2726b75bd487f43c5e28c78cf5a56d64411dafc9e75400674edc4b8812",
+        "note": "用户报告已完成六份参考音频核对，未指出本片段存在问题。"
+      }
+    },
+    {
+      "id": "D11_991_10s",
+      "speaker": "D11",
+      "source_id": "D11_991",
+      "start_s": 0.96,
+      "end_s": 10.96,
+      "duration_s": 10,
+      "reference_text": "发射约二十分钟后飞行样机打开降落伞溅落在北纬二十八度五十一分东经一百四十三度四十分的太平洋海面上。",
+      "aligned_words": [
+        {
+          "word": "发射",
+          "start_s": 1.1,
+          "end_s": 1.66
+        },
+        {
+          "word": "约",
+          "start_s": 1.66,
+          "end_s": 1.82
+        },
+        {
+          "word": "二",
+          "start_s": 2.01,
+          "end_s": 2.02
+        },
+        {
+          "word": "十分钟",
+          "start_s": 2.02,
+          "end_s": 2.39
+        },
+        {
+          "word": "后",
+          "start_s": 2.39,
+          "end_s": 2.71
+        },
+        {
+          "word": "飞行",
+          "start_s": 3.06,
+          "end_s": 3.41
+        },
+        {
+          "word": "样机",
+          "start_s": 3.41,
+          "end_s": 3.82
+        },
+        {
+          "word": "打开",
+          "start_s": 3.82,
+          "end_s": 4.09
+        },
+        {
+          "word": "降落伞",
+          "start_s": 4.09,
+          "end_s": 4.62
+        },
+        {
+          "word": "溅",
+          "start_s": 5.02,
+          "end_s": 5.21
+        },
+        {
+          "word": "落在",
+          "start_s": 5.21,
+          "end_s": 5.53
+        },
+        {
+          "word": "北纬",
+          "start_s": 5.53,
+          "end_s": 5.9
+        },
+        {
+          "word": "二十",
+          "start_s": 6.04,
+          "end_s": 6.18
+        },
+        {
+          "word": "八度",
+          "start_s": 6.18,
+          "end_s": 6.51
+        },
+        {
+          "word": "五",
+          "start_s": 6.51,
+          "end_s": 6.71
+        },
+        {
+          "word": "十一分",
+          "start_s": 6.71,
+          "end_s": 7.28
+        },
+        {
+          "word": "东经",
+          "start_s": 7.61,
+          "end_s": 8.1
+        },
+        {
+          "word": "一百四十",
+          "start_s": 8.1,
+          "end_s": 8.67
+        },
+        {
+          "word": "三度",
+          "start_s": 8.67,
+          "end_s": 9.12
+        },
+        {
+          "word": "四十分",
+          "start_s": 9.12,
+          "end_s": 9.58
+        },
+        {
+          "word": "的",
+          "start_s": 9.58,
+          "end_s": 9.66
+        },
+        {
+          "word": "太平洋",
+          "start_s": 9.66,
+          "end_s": 10.19
+        },
+        {
+          "word": "海",
+          "start_s": 10.19,
+          "end_s": 10.34
+        },
+        {
+          "word": "面上。",
+          "start_s": 10.37,
+          "end_s": 10.82
+        }
+      ],
+      "human_transcript_verification": "verified",
+      "human_review": {
+        "reviewer": "project_owner",
+        "date": "2026-10-11",
+        "audio_sha256": "491c0311cd6946b8bf1e1210d151b84f5ccd344fef1f8dd4f7a10d6019e8abca",
+        "note": "用户报告已完成六份参考音频核对，未指出本片段存在问题。"
+      }
+    },
+    {
+      "id": "D12_765_3s",
+      "speaker": "D12",
+      "source_id": "D12_765",
+      "start_s": 4.25,
+      "end_s": 7.25,
+      "duration_s": 3,
+      "reference_text": "唢呐和锣鼓从夜晚一直吹到天明。",
+      "aligned_words": [
+        {
+          "word": "唢呐",
+          "start_s": 4.36,
+          "end_s": 4.77
+        },
+        {
+          "word": "和",
+          "start_s": 4.77,
+          "end_s": 4.97
+        },
+        {
+          "word": "锣鼓",
+          "start_s": 4.97,
+          "end_s": 5.43
+        },
+        {
+          "word": "从",
+          "start_s": 5.43,
+          "end_s": 5.68
+        },
+        {
+          "word": "夜晚",
+          "start_s": 5.68,
+          "end_s": 6.05
+        },
+        {
+          "word": "一直",
+          "start_s": 6.05,
+          "end_s": 6.23
+        },
+        {
+          "word": "吹到",
+          "start_s": 6.23,
+          "end_s": 6.59
+        },
+        {
+          "word": "天明。",
+          "start_s": 6.59,
+          "end_s": 7.14
+        }
+      ],
+      "human_transcript_verification": "verified",
+      "human_review": {
+        "reviewer": "project_owner",
+        "date": "2026-10-11",
+        "audio_sha256": "d75565627af37eb0d67a690dcac91c657f6ca180acda22c3130243d85dc221b6",
+        "note": "用户报告已完成六份参考音频核对，未指出本片段存在问题。"
+      }
+    },
+    {
+      "id": "D12_792_5s",
+      "speaker": "D12",
+      "source_id": "D12_792",
+      "start_s": 0.3,
+      "end_s": 5.3,
+      "duration_s": 5,
+      "reference_text": "带着诸多疑问迎着和煦的春风我们走访了圆明园遗址。",
+      "aligned_words": [
+        {
+          "word": "带",
+          "start_s": 0.45,
+          "end_s": 0.62
+        },
+        {
+          "word": "着",
+          "start_s": 0.62,
+          "end_s": 0.82
+        },
+        {
+          "word": "诸多",
+          "start_s": 0.82,
+          "end_s": 1.22
+        },
+        {
+          "word": "疑问",
+          "start_s": 1.22,
+          "end_s": 1.62
+        },
+        {
+          "word": "迎",
+          "start_s": 1.81,
+          "end_s": 1.95
+        },
+        {
+          "word": "着",
+          "start_s": 1.95,
+          "end_s": 2.13
+        },
+        {
+          "word": "和煦",
+          "start_s": 2.13,
+          "end_s": 2.44
+        },
+        {
+          "word": "的",
+          "start_s": 2.44,
+          "end_s": 2.59
+        },
+        {
+          "word": "春风",
+          "start_s": 2.59,
+          "end_s": 3.11
+        },
+        {
+          "word": "我们",
+          "start_s": 3.34,
+          "end_s": 3.58
+        },
+        {
+          "word": "走访",
+          "start_s": 3.58,
+          "end_s": 3.92
+        },
+        {
+          "word": "了",
+          "start_s": 3.92,
+          "end_s": 4.03
+        },
+        {
+          "word": "圆明园",
+          "start_s": 4.03,
+          "end_s": 4.58
+        },
+        {
+          "word": "遗址。",
+          "start_s": 4.58,
+          "end_s": 5.01
+        }
+      ],
+      "human_transcript_verification": "verified",
+      "human_review": {
+        "reviewer": "project_owner",
+        "date": "2026-10-11",
+        "audio_sha256": "e163d1a39fab5768ec00ed9b2d1d020be28d8c607da71779e8db7b750abe985f",
+        "note": "用户报告已完成六份参考音频核对，未指出本片段存在问题。"
+      }
+    },
+    {
+      "id": "D12_991_10s",
+      "speaker": "D12",
+      "source_id": "D12_991",
+      "start_s": 0.48,
+      "end_s": 10.48,
+      "duration_s": 10,
+      "reference_text": "发射约二十分钟后飞行样机打开降落伞降落在北纬二十八度五十一分东经一百四十三度四十分的太平洋海面上。",
+      "aligned_words": [
+        {
+          "word": "发射",
+          "start_s": 0.78,
+          "end_s": 1.13
+        },
+        {
+          "word": "约",
+          "start_s": 1.13,
+          "end_s": 1.3
+        },
+        {
+          "word": "二",
+          "start_s": 1.44,
+          "end_s": 1.45
+        },
+        {
+          "word": "十分钟",
+          "start_s": 1.45,
+          "end_s": 1.9
+        },
+        {
+          "word": "后",
+          "start_s": 1.9,
+          "end_s": 2.17
+        },
+        {
+          "word": "飞行",
+          "start_s": 2.34,
+          "end_s": 2.77
+        },
+        {
+          "word": "样机",
+          "start_s": 2.77,
+          "end_s": 3.13
+        },
+        {
+          "word": "打开",
+          "start_s": 3.13,
+          "end_s": 3.49
+        },
+        {
+          "word": "降落伞",
+          "start_s": 3.49,
+          "end_s": 4.07
+        },
+        {
+          "word": "溅",
+          "start_s": 4.25,
+          "end_s": 4.46
+        },
+        {
+          "word": "落在",
+          "start_s": 4.46,
+          "end_s": 4.84
+        },
+        {
+          "word": "北纬",
+          "start_s": 4.84,
+          "end_s": 5.2
+        },
+        {
+          "word": "二十",
+          "start_s": 5.37,
+          "end_s": 5.46
+        },
+        {
+          "word": "八度",
+          "start_s": 5.46,
+          "end_s": 5.83
+        },
+        {
+          "word": "五",
+          "start_s": 5.83,
+          "end_s": 5.94
+        },
+        {
+          "word": "十一分",
+          "start_s": 5.94,
+          "end_s": 6.51
+        },
+        {
+          "word": "东经",
+          "start_s": 6.74,
+          "end_s": 7.19
+        },
+        {
+          "word": "一百四十",
+          "start_s": 7.19,
+          "end_s": 7.76
+        },
+        {
+          "word": "三度",
+          "start_s": 7.76,
+          "end_s": 8.19
+        },
+        {
+          "word": "四十分",
+          "start_s": 8.19,
+          "end_s": 8.82
+        },
+        {
+          "word": "的",
+          "start_s": 8.82,
+          "end_s": 8.97
+        },
+        {
+          "word": "太平洋",
+          "start_s": 8.97,
+          "end_s": 9.49
+        },
+        {
+          "word": "海",
+          "start_s": 9.49,
+          "end_s": 9.66
+        },
+        {
+          "word": "面上。",
+          "start_s": 9.66,
+          "end_s": 10.18
+        }
+      ],
+      "human_transcript_verification": "reviewed_with_correction",
+      "human_review": {
+        "reviewer": "project_owner",
+        "date": "2026-10-11",
+        "audio_sha256": "2fcb0b8fbe243fa5bc66bec5eab85f8329ca822f58410ab00d45c8303b914b49",
+        "note": "用户听后要求将“溅落”改为“降落”，并指出该处可能存在发音问题；发音原因尚未独立确认。",
+        "original_reference_text": "发射约二十分钟后飞行样机打开降落伞溅落在北纬二十八度五十一分东经一百四十三度四十分的太平洋海面上。"
+      }
+    }
+  ]
+}

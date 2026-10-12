@@ -1,0 +1,41 @@
+
+  vinext build  (Vite 8.0.13)
+
+[1/5] analyze client references...
+[2Ktransforming...✓ 226 modules transformed.
+rendering chunks...
+✓ built in 452ms
+[2/5] analyze server references...
+[2Ktransforming...✓ 136 modules transformed.
+rendering chunks...
+✓ built in 95ms
+[3/5] build rsc environment...
+[2Ktransforming...✓ 223 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 295ms
+[4/5] build client environment...
+[2Ktransforming...✓ 1937 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 1.04s
+[5/5] build ssr environment...
+[2Ktransforming...✓ 142 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 213ms
+[0m  Pre-rendering all routes (output: 'export')...
+[vinext] Production server for prerendering running at http://127.0.0.1:63617
+  Prerendered 2 routes (0 skipped).
+  Discovered 1 CDN warmup path(s).
+[0m
+  Route (app)
+  ─ ○ /
+
+  ○ Static
+
+  ○ Routes marked static were confirmed by speculative prerender (attempted render
+    succeeded without dynamic API usage).
+
+  Build complete. Run `vinext start` to start the production server.
+

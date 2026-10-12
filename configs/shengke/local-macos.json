@@ -1,0 +1,29 @@
+{
+  "platform_python": "/opt/anaconda3/envs/audio-ai/bin/python",
+  "ui_python": "/opt/anaconda3/envs/game_tts/bin/python",
+  "rhythm_python": "/opt/anaconda3/envs/game_tts/bin/python",
+  "rhythm_weights": "models/cache/whisper-openai/base.pt",
+  "ffmpeg_directory": "/opt/anaconda3/bin",
+  "models": {
+    "cosyvoice2": {
+      "python": "/opt/anaconda3/envs/game_tts/bin/python",
+      "repo": "~/Documents/ChatGPT/Game ·Audio/CosyVoice",
+      "weights": "~/Documents/ChatGPT/Game ·Audio/CosyVoice/pretrained_models/CosyVoice2-0.5B"
+    },
+    "gpt-sovits-v2": {
+      "python": "models/environments/gpt-sovits/bin/python",
+      "repo": "models/repos/GPT-SoVITS",
+      "weights": "models/shengke/gpt-sovits-v2"
+    },
+    "vits-csmsc": {
+      "python": "models/environments/espnet/bin/python",
+      "repo": "models/shengke/vits-csmsc",
+      "weights": "models/shengke/vits-csmsc"
+    },
+    "transformer-csmsc": {
+      "python": "models/environments/espnet/bin/python",
+      "repo": "models/shengke/transformer-csmsc",
+      "weights": "models/shengke/transformer-csmsc"
+    }
+  }
+}

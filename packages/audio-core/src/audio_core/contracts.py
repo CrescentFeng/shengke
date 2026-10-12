@@ -271,6 +271,18 @@ class CreateAudioJob(StrictModel):
     def operations_are_unique(self) -> CreateAudioJob:
         if len(set(self.operations)) != len(self.operations):
             raise ValueError("operations must not contain duplicates")
+        if Operation.SYNTHESIZE in self.operations:
+            from .tts import TtsSynthesisSpec
+
+            allowed = {Operation.PROBE, Operation.LOUDNESS, Operation.SYNTHESIZE}
+            if not set(self.operations) <= allowed:
+                raise ValueError("synthesize cannot be combined with other processing operations")
+            self.parameters = {
+                **self.parameters,
+                "tts": TtsSynthesisSpec.model_validate(
+                    self.parameters.get("tts", {})
+                ).model_dump(mode="json"),
+            }
         return self
 
 

@@ -1,0 +1,211 @@
+{
+  "report_uri": "s3://audio-artifacts/jobs/89e8ce5e-a870-4d92-95df-305e8980de53/tts/8d210f09f1b1cad31fd27a4f470d75ecc079cdad2c71d8e0662bf98471b49542.json",
+  "report": {
+    "id": "b71bda73-3c0f-5d4b-9246-5d5e78c29bdf",
+    "job_id": "89e8ce5e-a870-4d92-95df-305e8980de53",
+    "input_asset_id": "98090ef1-2f32-5d11-99d3-6f57a445ee5b",
+    "processing_chain_id": "shengke-tts-v1",
+    "assets": [
+      {
+        "id": "98090ef1-2f32-5d11-99d3-6f57a445ee5b",
+        "uri": "s3://audio-artifacts/tts/voices/c96637f6-3e88-4bef-9e7d-62b18e876c30/b6d52ece95c82ff1e849f24c3e622f789a2cba0ca202a9a3e90e0df6c7ad5f75.wav",
+        "filename": "reference.wav",
+        "sha256": "b6d52ece95c82ff1e849f24c3e622f789a2cba0ca202a9a3e90e0df6c7ad5f75",
+        "size_bytes": 151404,
+        "probe": {
+          "codec_name": "pcm_s16le",
+          "codec_long_name": "PCM signed 16-bit little-endian",
+          "sample_rate_hz": 16000,
+          "channels": 1,
+          "channel_layout": null,
+          "duration_seconds": 4.73,
+          "bit_rate": 256000,
+          "sample_format": "s16",
+          "media_format": {
+            "format_name": "wav",
+            "format_long_name": "WAV / WAVE (Waveform Audio)",
+            "duration_seconds": 4.73,
+            "bit_rate": 256074
+          }
+        },
+        "source_asset_id": null,
+        "created_at": "2026-10-12T04:23:47.908952Z"
+      },
+      {
+        "id": "e465be7a-19ad-5cff-8add-c9fbdf6d8194",
+        "uri": "s3://audio-artifacts/jobs/89e8ce5e-a870-4d92-95df-305e8980de53/tts/a64f6be622a5667378a67c10b8754bb161d263048d2991f5c0fccdcdd3278cb9.wav",
+        "filename": "speech.wav",
+        "sha256": "a64f6be622a5667378a67c10b8754bb161d263048d2991f5c0fccdcdd3278cb9",
+        "size_bytes": 148432,
+        "probe": {
+          "codec_name": "pcm_s16le",
+          "codec_long_name": "PCM signed 16-bit little-endian",
+          "sample_rate_hz": 24000,
+          "channels": 1,
+          "channel_layout": null,
+          "duration_seconds": 3.091417,
+          "bit_rate": 384000,
+          "sample_format": "s16",
+          "media_format": {
+            "format_name": "wav",
+            "format_long_name": "WAV / WAVE (Waveform Audio)",
+            "duration_seconds": 3.091417,
+            "bit_rate": 384113
+          }
+        },
+        "source_asset_id": "98090ef1-2f32-5d11-99d3-6f57a445ee5b",
+        "created_at": "2026-10-12T04:23:53.223807Z"
+      }
+    ],
+    "segments": [],
+    "tool_runs": [
+      {
+        "id": "bce615c8-e6ef-5b0a-96d2-d422b3a9fc8c",
+        "tool_name": "cosyvoice2",
+        "tool_version": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+        "operation": "synthesize",
+        "status": "succeeded",
+        "input_asset_ids": [
+          "98090ef1-2f32-5d11-99d3-6f57a445ee5b"
+        ],
+        "output_asset_ids": [
+          "e465be7a-19ad-5cff-8add-c9fbdf6d8194"
+        ],
+        "parameters": {
+          "text": "你终于回来了，我一直在这里等你。",
+          "model": "cosyvoice2",
+          "emotion": "happy",
+          "language": "zh",
+          "voice_id": "c96637f6-3e88-4bef-9e7d-62b18e876c30",
+          "reference_text": "好容易盼来一位望望这一片荒芜又扭身而去",
+          "weights_sha256": {
+            "llm.pt": "b144ef55b51ce8cfb79a73c90dbba0bdaba4e451c0ebcfab20f769264f84a608",
+            "flow.pt": "ff4c2f867674411e0a08cee702996df13fa67c1cd864c06108da88d16d088541",
+            "hift.pt": "3386cc880324d4e98e05987b99107f49e40ed925b8ecc87c1f4939432d429879",
+            "campplus.onnx": "a6ac6a63997761ae2997373e2ee1c47040854b4b759ea41ec48e4e42df0f4d73",
+            "flow.cache.pt": "3ebde248652c6eed855e08bb6a263af3847039a1361f8019bdb27f5f680a1dc4",
+            "speech_tokenizer_v2.onnx": "d43342aa12163a80bf07bffb94c9de2e120a8df2f9917cd2f642e7f4219c6f71",
+            "speech_tokenizer_v2.batch.onnx": "5b45a98572ed21e3a3ebf50201f3020567f7db40e9a57509b790b2982f5c07b7",
+            "flow.decoder.estimator.fp32.onnx": "cd54e4281701e6630730da64502d77b7e8b6e5c057cca65128bffb50f85cbf98",
+            "CosyVoice-BlankEN/model.safetensors": "130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96"
+          },
+          "inference_profile": "cosy_rhythm_v5"
+        },
+        "metrics": {
+          "rtf": 1.6384490387900401,
+          "seed": 42,
+          "model": "cosyvoice2",
+          "torch": "2.3.1",
+          "device": "cpu",
+          "python": "3.10.21",
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+          "precision": "fp32",
+          "device_name": "arm",
+          "inference_s": 5.065128665999509,
+          "cuda_version": null,
+          "load_seconds": 8.128797333978582,
+          "peak_rss_bytes": 3575054336,
+          "runtime_sha256": "c0e610532d558b37ffd181e81b6b49e64ef7a6107b61bf5696b80ebb7f42b118",
+          "sample_rate_hz": 24000,
+          "audio_duration_s": 3.0914166666666665,
+          "includes_vocoder": true,
+          "request_elapsed_s": 5.156195042014588,
+          "text_split_method": null,
+          "peak_cuda_reserved_bytes": null,
+          "peak_cuda_allocated_bytes": null
+        },
+        "started_at": "2026-10-12T04:23:47.753639Z",
+        "finished_at": "2026-10-12T04:23:53.223836Z",
+        "error_code": null,
+        "error_message": null
+      }
+    ],
+    "findings": [],
+    "summary": {
+      "tts": {
+        "rtf": 1.6384490387900401,
+        "seed": 42,
+        "model": "cosyvoice2",
+        "torch": "2.3.1",
+        "device": "cpu",
+        "python": "3.10.21",
+        "delivery": {
+          "speed": 1.0,
+          "instruction": "用开心的语气说这句话。<|endofprompt|>",
+          "postprocessing": {
+            "tempo": 0.85,
+            "method": "ffmpeg_atempo",
+            "ffmpeg_version": "ffmpeg version 6.1.1 Copyright (c) 2000-2023 the FFmpeg developers",
+            "input_wav_sha256": "8bf7d3520b8ceee6a05df7fc126a540b4e8f2288b34e8d6c27706f9bac89cc9a",
+            "output_wav_sha256": "0f050f4567df9087ece35f58adbea216e41da765c52a091e810ff821605711b8",
+            "input_audio_duration_s": 2.64,
+            "includes_postprocessing": true
+          },
+          "inference_profile": "cosy_rhythm_v5",
+          "postprocess_tempo": 0.85
+        },
+        "platform": "macOS-26.6.2-arm64-arm-64bit",
+        "revision": "074ca6dc9e80a2f424f1f74b48bdd7d3fea531cc",
+        "precision": "fp32",
+        "device_name": "arm",
+        "inference_s": 5.065128665999509,
+        "cuda_version": null,
+        "load_seconds": 8.128797333978582,
+        "peak_rss_bytes": 3575054336,
+        "runtime_sha256": "c0e610532d558b37ffd181e81b6b49e64ef7a6107b61bf5696b80ebb7f42b118",
+        "sample_rate_hz": 24000,
+        "weights_sha256": {
+          "llm.pt": "b144ef55b51ce8cfb79a73c90dbba0bdaba4e451c0ebcfab20f769264f84a608",
+          "flow.pt": "ff4c2f867674411e0a08cee702996df13fa67c1cd864c06108da88d16d088541",
+          "hift.pt": "3386cc880324d4e98e05987b99107f49e40ed925b8ecc87c1f4939432d429879",
+          "campplus.onnx": "a6ac6a63997761ae2997373e2ee1c47040854b4b759ea41ec48e4e42df0f4d73",
+          "flow.cache.pt": "3ebde248652c6eed855e08bb6a263af3847039a1361f8019bdb27f5f680a1dc4",
+          "speech_tokenizer_v2.onnx": "d43342aa12163a80bf07bffb94c9de2e120a8df2f9917cd2f642e7f4219c6f71",
+          "speech_tokenizer_v2.batch.onnx": "5b45a98572ed21e3a3ebf50201f3020567f7db40e9a57509b790b2982f5c07b7",
+          "flow.decoder.estimator.fp32.onnx": "cd54e4281701e6630730da64502d77b7e8b6e5c057cca65128bffb50f85cbf98",
+          "CosyVoice-BlankEN/model.safetensors": "130282af0dfa9fe5840737cc49a0d339d06075f83c5a315c3372c9a0740d0b96"
+        },
+        "audio_duration_s": 3.0914166666666665,
+        "includes_vocoder": true,
+        "request_elapsed_s": 5.156195042014588,
+        "text_split_method": null,
+        "configuration_sha256": {
+          "cosyvoice2.yaml": "0af2c0d010c477187c39f3e8fd5f1ae2e4e6f90ad03ba37c10ed6c6a87b05959",
+          "configuration.json": "c502b6328c67638b401df8dd05de89e9e8d1cff9cd0ada10dfbdbe13556c20de",
+          "CosyVoice-BlankEN/vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+          "CosyVoice-BlankEN/config.json": "168aa1bd401abc3bc262ba15ba4e499627a8b4e006e9d050b47c22de20660185",
+          "CosyVoice-BlankEN/tokenizer_config.json": "482bd979881423375ca5414e4e0d94cd7c5349dbb17fffd46b4d36d71e62a1bc",
+          "CosyVoice-BlankEN/generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+        },
+        "peak_cuda_reserved_bytes": null,
+        "peak_cuda_allocated_bytes": null
+      },
+      "quality": {
+        "rms_dbfs": -32.492749,
+        "peak_dbfs": -12.028221,
+        "sample_count": 74194,
+        "silence_ratio": 0.0,
+        "clipping_ratio": 0.0,
+        "true_peak_dbtp": -12.02,
+        "integrated_lufs": -30.97,
+        "loudness_range_lu": 1.3,
+        "silence_duration_seconds": 0.0
+      },
+      "warnings": [],
+      "output_asset_id": "e465be7a-19ad-5cff-8add-c9fbdf6d8194",
+      "reference_quality": {
+        "rms_dbfs": -31.040537,
+        "peak_dbfs": -12.088779,
+        "sample_count": 75680,
+        "silence_ratio": 0.0,
+        "clipping_ratio": 0.0,
+        "true_peak_dbtp": -12.07,
+        "integrated_lufs": -30.98,
+        "loudness_range_lu": 3.9,
+        "silence_duration_seconds": 0.0
+      }
+    },
+    "created_at": "2026-10-12T04:23:53.223871Z"
+  }
+}

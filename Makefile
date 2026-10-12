@@ -3,13 +3,13 @@ PYTHON ?= python3
 .PHONY: test check api worker up down smoke smoke-asr probe
 
 test:
-	PYTHONPATH=packages/audio-core/src:apps/platform-api/src:apps/ingest-worker/src:apps/asr-eval/src:apps/vad-eval/src:apps/diarization-eval/src $(PYTHON) -m unittest discover -s tests -v
+	PYTHONPATH=packages/audio-core/src:apps/platform-api/src:apps/ingest-worker/src:apps/asr-eval/src:apps/vad-eval/src:apps/diarization-eval/src:apps/tts-eval/src:apps/shengke-ui/src $(PYTHON) -m unittest discover -s tests -v
 
 check:
-	PYTHONPATH=packages/audio-core/src:apps/platform-api/src:apps/ingest-worker/src:apps/asr-eval/src:apps/vad-eval/src:apps/diarization-eval/src $(PYTHON) -m compileall -q packages apps tests
+	PYTHONPATH=packages/audio-core/src:apps/platform-api/src:apps/ingest-worker/src:apps/asr-eval/src:apps/vad-eval/src:apps/diarization-eval/src:apps/tts-eval/src:apps/shengke-ui/src $(PYTHON) -m compileall -q packages apps tests
 
 api:
-	PYTHONPATH=packages/audio-core/src:apps/platform-api/src $(PYTHON) -m platform_api.main
+	PYTHONPATH=packages/audio-core/src:apps/platform-api/src:apps/ingest-worker/src $(PYTHON) -m platform_api.main
 
 worker:
 	PYTHONPATH=packages/audio-core/src:apps/platform-api/src:apps/ingest-worker/src $(PYTHON) -m ingest_worker.main

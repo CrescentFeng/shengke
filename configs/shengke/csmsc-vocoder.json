@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/kan-bayashi/ParallelWaveGAN/blob/master/parallel_wavegan/utils/utils.py",
+  "download_url": "https://drive.google.com/uc?id=1QTOAokhD5dtRnqlMPTXTW91-CG7jf74e",
+  "archive_sha256": "843a9c71f925f4599044e38bf4f0471ad007af6aa0038f8b78493ed5f6d3aaef",
+  "weights_sha256": {
+    "checkpoint-400000steps.pkl": "11901572bc75682552c6b59e19e8339f78d7817043ccacb20bf4a32cb17404ed"
+  },
+  "configuration_sha256": {
+    "config.yml": "137f8d31d49bac49fb0acd0e9ba865639ac46a807b8ae8dfefda56543e14967b",
+    "stats.h5": "ca5549b80f394d860d381866f1369f471e955f8460cc2fb336c2f653ead7a958"
+  },
+  "feature_compatibility": "passed",
+  "runtime_verification": "passed_with_espnet_transformer_cpu"
+}

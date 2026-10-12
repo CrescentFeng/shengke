@@ -1,0 +1,1691 @@
+{
+  "previous_goal_turn": "progress: GPT rhythm implementation, real five-case tests and updated demo artifacts",
+  "benchmarks": [
+    {
+      "folder": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "8fe6f668-73f8-43c8-94f0-1125122e6bfb",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/8fe6f668-73f8-43c8-94f0-1125122e6bfb.wav",
+          "sha256": "000278bdf2d8896b491f942d220979f8334d418f7185005a3744d9447c125a17"
+        },
+        {
+          "job_id": "faadcd4e-bc90-45d2-b13f-a24004867e2d",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/faadcd4e-bc90-45d2-b13f-a24004867e2d.wav",
+          "sha256": "000278bdf2d8896b491f942d220979f8334d418f7185005a3744d9447c125a17"
+        },
+        {
+          "job_id": "5b7a459a-ebd7-484e-ae97-4e04928cf034",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/5b7a459a-ebd7-484e-ae97-4e04928cf034.wav",
+          "sha256": "000278bdf2d8896b491f942d220979f8334d418f7185005a3744d9447c125a17"
+        },
+        {
+          "job_id": "bc3b2c0c-0662-47e2-9a82-e28692cb83a9",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/bc3b2c0c-0662-47e2-9a82-e28692cb83a9.wav",
+          "sha256": "c636bbd2d57640f4ba62f262bf1a838900c185037d34043367c8fcabfb98fc5d"
+        },
+        {
+          "job_id": "e6f47a44-3a04-498b-ab60-ce766ea33350",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/e6f47a44-3a04-498b-ab60-ce766ea33350.wav",
+          "sha256": "c636bbd2d57640f4ba62f262bf1a838900c185037d34043367c8fcabfb98fc5d"
+        },
+        {
+          "job_id": "bffd94de-c7a3-4dae-995f-69f8da19592d",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/bffd94de-c7a3-4dae-995f-69f8da19592d.wav",
+          "sha256": "c636bbd2d57640f4ba62f262bf1a838900c185037d34043367c8fcabfb98fc5d"
+        },
+        {
+          "job_id": "0b49f6e0-cd49-4f40-8e57-3adfbc1eb7fd",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/0b49f6e0-cd49-4f40-8e57-3adfbc1eb7fd.wav",
+          "sha256": "062c3a0694a86fb45ee0a9d377d38f3ba722bc090ab65b9f4145b12b08d345f7"
+        },
+        {
+          "job_id": "4bf388e2-6c12-48d2-b773-bc76d8c998a4",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/4bf388e2-6c12-48d2-b773-bc76d8c998a4.wav",
+          "sha256": "062c3a0694a86fb45ee0a9d377d38f3ba722bc090ab65b9f4145b12b08d345f7"
+        },
+        {
+          "job_id": "18a9887c-0998-44ed-bfff-806f085767ab",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/18a9887c-0998-44ed-bfff-806f085767ab.wav",
+          "sha256": "062c3a0694a86fb45ee0a9d377d38f3ba722bc090ab65b9f4145b12b08d345f7"
+        },
+        {
+          "job_id": "9fc4d23b-99e7-4d12-b7e6-e930374163aa",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/9fc4d23b-99e7-4d12-b7e6-e930374163aa.wav",
+          "sha256": "8d2064802b8d57f3fec50616480e08b98ebc3a44111f47190dfdcb78677b97c6"
+        },
+        {
+          "job_id": "25919f2e-e3bd-47a2-9285-01c37abf79e4",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/25919f2e-e3bd-47a2-9285-01c37abf79e4.wav",
+          "sha256": "8d2064802b8d57f3fec50616480e08b98ebc3a44111f47190dfdcb78677b97c6"
+        },
+        {
+          "job_id": "2e467cdd-ef87-42aa-bebf-38558444dc9b",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/2e467cdd-ef87-42aa-bebf-38558444dc9b.wav",
+          "sha256": "8d2064802b8d57f3fec50616480e08b98ebc3a44111f47190dfdcb78677b97c6"
+        },
+        {
+          "job_id": "bdab48b7-7f65-40c8-8d8d-a242e026eb8c",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/bdab48b7-7f65-40c8-8d8d-a242e026eb8c.wav",
+          "sha256": "30a6dfb310b7f38b0e5637aeb9bd662240e6df2ae79d541b6f35ddea7eae17b5"
+        },
+        {
+          "job_id": "934dbd48-e17b-4fc9-aacc-ab6de6929dc8",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/934dbd48-e17b-4fc9-aacc-ab6de6929dc8.wav",
+          "sha256": "30a6dfb310b7f38b0e5637aeb9bd662240e6df2ae79d541b6f35ddea7eae17b5"
+        },
+        {
+          "job_id": "3a2d12f7-70a6-4a95-9d83-cdd29b405846",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/3a2d12f7-70a6-4a95-9d83-cdd29b405846.wav",
+          "sha256": "30a6dfb310b7f38b0e5637aeb9bd662240e6df2ae79d541b6f35ddea7eae17b5"
+        },
+        {
+          "job_id": "ade2e79c-db42-42b5-8d28-1d1382b9790a",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/ade2e79c-db42-42b5-8d28-1d1382b9790a.wav",
+          "sha256": "19eb96ae79f876a5e1144c8e9a94f1669a68f0656cdc15ae6f0594500081a0ed"
+        },
+        {
+          "job_id": "4caa9638-effc-4b29-8d8f-8e04e7c05c91",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/4caa9638-effc-4b29-8d8f-8e04e7c05c91.wav",
+          "sha256": "19eb96ae79f876a5e1144c8e9a94f1669a68f0656cdc15ae6f0594500081a0ed"
+        },
+        {
+          "job_id": "c3bf429d-b91f-49f2-8fb8-1adcf9b6193a",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/c3bf429d-b91f-49f2-8fb8-1adcf9b6193a.wav",
+          "sha256": "19eb96ae79f876a5e1144c8e9a94f1669a68f0656cdc15ae6f0594500081a0ed"
+        },
+        {
+          "job_id": "207b81b3-2ef2-4e7c-9560-eaef31a5fa4e",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/207b81b3-2ef2-4e7c-9560-eaef31a5fa4e.wav",
+          "sha256": "8d4c5afa46915012dcbd40db877ee768070c47ed3decb505284af936a373382f"
+        },
+        {
+          "job_id": "6431b5dd-ce73-4a78-84af-de1feadd867b",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/6431b5dd-ce73-4a78-84af-de1feadd867b.wav",
+          "sha256": "8d4c5afa46915012dcbd40db877ee768070c47ed3decb505284af936a373382f"
+        },
+        {
+          "job_id": "d15b8833-91c0-4a80-b494-4d0d7989f0a9",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/d15b8833-91c0-4a80-b494-4d0d7989f0a9.wav",
+          "sha256": "8d4c5afa46915012dcbd40db877ee768070c47ed3decb505284af936a373382f"
+        },
+        {
+          "job_id": "0d71161a-332f-4a7f-a344-d935ac46ca04",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/0d71161a-332f-4a7f-a344-d935ac46ca04.wav",
+          "sha256": "3832113d5b2997abeeb0f2de0be98e5ee96aa1a6dcabf06ff20c7c037fcf7933"
+        },
+        {
+          "job_id": "88d33279-cb4a-479f-ab04-23ad44f5dbd8",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/88d33279-cb4a-479f-ab04-23ad44f5dbd8.wav",
+          "sha256": "3832113d5b2997abeeb0f2de0be98e5ee96aa1a6dcabf06ff20c7c037fcf7933"
+        },
+        {
+          "job_id": "b4c4f7e1-eec3-4297-8645-41b883fd0ef9",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/b4c4f7e1-eec3-4297-8645-41b883fd0ef9.wav",
+          "sha256": "3832113d5b2997abeeb0f2de0be98e5ee96aa1a6dcabf06ff20c7c037fcf7933"
+        },
+        {
+          "job_id": "b3cae27c-e3c3-4dbb-8c7f-11ad59e3acde",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/b3cae27c-e3c3-4dbb-8c7f-11ad59e3acde.wav",
+          "sha256": "6f9c436b65d97feaa907aa413e3ab50fb48ce129bb85c9fa00ab35bc144e0fea"
+        },
+        {
+          "job_id": "d3d5b528-a861-4f84-a0c3-352e4eac685c",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/d3d5b528-a861-4f84-a0c3-352e4eac685c.wav",
+          "sha256": "6f9c436b65d97feaa907aa413e3ab50fb48ce129bb85c9fa00ab35bc144e0fea"
+        },
+        {
+          "job_id": "bf9f88ea-806f-43ea-8528-8aa2819fc792",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/bf9f88ea-806f-43ea-8528-8aa2819fc792.wav",
+          "sha256": "6f9c436b65d97feaa907aa413e3ab50fb48ce129bb85c9fa00ab35bc144e0fea"
+        },
+        {
+          "job_id": "5d34371f-da9f-48df-a8bc-04b3596ca873",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/5d34371f-da9f-48df-a8bc-04b3596ca873.wav",
+          "sha256": "fbe4e5a25246c645fc4dc7d3526a19f7713c52bcde352637fe1a0eb3146b14e7"
+        },
+        {
+          "job_id": "16daf7fa-e289-4641-91cf-ccb32d6e928a",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/16daf7fa-e289-4641-91cf-ccb32d6e928a.wav",
+          "sha256": "fbe4e5a25246c645fc4dc7d3526a19f7713c52bcde352637fe1a0eb3146b14e7"
+        },
+        {
+          "job_id": "6a2be228-db4d-4a80-b1ae-76dc12a8b990",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/6a2be228-db4d-4a80-b1ae-76dc12a8b990.wav",
+          "sha256": "fbe4e5a25246c645fc4dc7d3526a19f7713c52bcde352637fe1a0eb3146b14e7"
+        },
+        {
+          "job_id": "670f71a6-936b-4a77-90da-195b082eb576",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/670f71a6-936b-4a77-90da-195b082eb576.wav",
+          "sha256": "3c6936f084411078b569e15b833f8db83ef2910631cceb91b20c44316974f44a"
+        },
+        {
+          "job_id": "a75f6fe5-de51-47f7-a166-6b4209b7392a",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/a75f6fe5-de51-47f7-a166-6b4209b7392a.wav",
+          "sha256": "3c6936f084411078b569e15b833f8db83ef2910631cceb91b20c44316974f44a"
+        },
+        {
+          "job_id": "382e6ad0-8cd7-452e-9e47-6891a139b34d",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/382e6ad0-8cd7-452e-9e47-6891a139b34d.wav",
+          "sha256": "3c6936f084411078b569e15b833f8db83ef2910631cceb91b20c44316974f44a"
+        },
+        {
+          "job_id": "0d78d173-5fb0-4b67-9d85-64e0f483cfa8",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/0d78d173-5fb0-4b67-9d85-64e0f483cfa8.wav",
+          "sha256": "df704192a7959c21762337ad2cfed7aea27a3a1ec25926c81f007831ee5954d1"
+        },
+        {
+          "job_id": "952b603f-434c-43a8-a123-f51fdd5150e4",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/952b603f-434c-43a8-a123-f51fdd5150e4.wav",
+          "sha256": "df704192a7959c21762337ad2cfed7aea27a3a1ec25926c81f007831ee5954d1"
+        },
+        {
+          "job_id": "c1740f81-35ed-46a7-95ba-62930717898b",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-cpu-public-D12/c1740f81-35ed-46a7-95ba-62930717898b.wav",
+          "sha256": "df704192a7959c21762337ad2cfed7aea27a3a1ec25926c81f007831ee5954d1"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "7c3d0a56-cd7c-4079-9960-0ef088b67a3c",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/7c3d0a56-cd7c-4079-9960-0ef088b67a3c.wav",
+          "sha256": "8947771457392cd4c4e68fdd3fd12c933b919f043b7873b1b1056d320595c54b"
+        },
+        {
+          "job_id": "ee25a220-8a43-41e3-b588-dc84486f99b4",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/ee25a220-8a43-41e3-b588-dc84486f99b4.wav",
+          "sha256": "8947771457392cd4c4e68fdd3fd12c933b919f043b7873b1b1056d320595c54b"
+        },
+        {
+          "job_id": "a7e55310-2a00-4b48-82f7-1e57a985d244",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/a7e55310-2a00-4b48-82f7-1e57a985d244.wav",
+          "sha256": "8947771457392cd4c4e68fdd3fd12c933b919f043b7873b1b1056d320595c54b"
+        },
+        {
+          "job_id": "1bb1f1cf-b759-4da3-a140-80fae58d82f9",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/1bb1f1cf-b759-4da3-a140-80fae58d82f9.wav",
+          "sha256": "3f1ec65a03282eca952afdcb7dc1aa53ed29364106c69348c8d22c0dd49afa38"
+        },
+        {
+          "job_id": "f1472d39-bd81-440f-aa34-961ddebdfad8",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/f1472d39-bd81-440f-aa34-961ddebdfad8.wav",
+          "sha256": "3f1ec65a03282eca952afdcb7dc1aa53ed29364106c69348c8d22c0dd49afa38"
+        },
+        {
+          "job_id": "8f215c1f-4e5c-4d89-b77d-3ddcf660c69f",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/8f215c1f-4e5c-4d89-b77d-3ddcf660c69f.wav",
+          "sha256": "3f1ec65a03282eca952afdcb7dc1aa53ed29364106c69348c8d22c0dd49afa38"
+        },
+        {
+          "job_id": "c8c3d2ce-dc54-404e-ae75-bba6bfc5b55f",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/c8c3d2ce-dc54-404e-ae75-bba6bfc5b55f.wav",
+          "sha256": "0079481f7e5362825d68126d9c9f6705775f6234822ed7b06e9d4e09dd58fc9f"
+        },
+        {
+          "job_id": "cb7b6e7a-320f-4c0b-819e-b4c90b2b44ff",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/cb7b6e7a-320f-4c0b-819e-b4c90b2b44ff.wav",
+          "sha256": "0079481f7e5362825d68126d9c9f6705775f6234822ed7b06e9d4e09dd58fc9f"
+        },
+        {
+          "job_id": "c32090ae-a156-4efb-8847-59b52090789b",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/c32090ae-a156-4efb-8847-59b52090789b.wav",
+          "sha256": "0079481f7e5362825d68126d9c9f6705775f6234822ed7b06e9d4e09dd58fc9f"
+        },
+        {
+          "job_id": "8d9dd566-cdd5-4b30-812d-1b8f0d9f9e62",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/8d9dd566-cdd5-4b30-812d-1b8f0d9f9e62.wav",
+          "sha256": "270832c26534f5616d177078afd367d6df31aa593f2c3808ddcb3f6a60ea3daa"
+        },
+        {
+          "job_id": "96b1e2b4-af32-496a-8e79-54e24142e780",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/96b1e2b4-af32-496a-8e79-54e24142e780.wav",
+          "sha256": "270832c26534f5616d177078afd367d6df31aa593f2c3808ddcb3f6a60ea3daa"
+        },
+        {
+          "job_id": "b58b6fd7-dbf2-48f1-9161-31e02eefa335",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/b58b6fd7-dbf2-48f1-9161-31e02eefa335.wav",
+          "sha256": "270832c26534f5616d177078afd367d6df31aa593f2c3808ddcb3f6a60ea3daa"
+        },
+        {
+          "job_id": "ce8b569e-fb88-48cf-b46b-484f1c68ded6",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/ce8b569e-fb88-48cf-b46b-484f1c68ded6.wav",
+          "sha256": "53c629ffe3589ce67e7982c356f9789aeaa911d12efc3b6476d72d5323d2bd6f"
+        },
+        {
+          "job_id": "cd4050cf-46e2-428b-bf75-ee4f8917d635",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/cd4050cf-46e2-428b-bf75-ee4f8917d635.wav",
+          "sha256": "53c629ffe3589ce67e7982c356f9789aeaa911d12efc3b6476d72d5323d2bd6f"
+        },
+        {
+          "job_id": "7d7eb163-3a79-441d-be0e-6a452b5ccbb0",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/7d7eb163-3a79-441d-be0e-6a452b5ccbb0.wav",
+          "sha256": "53c629ffe3589ce67e7982c356f9789aeaa911d12efc3b6476d72d5323d2bd6f"
+        },
+        {
+          "job_id": "ac0f3a32-17ff-4132-90d0-4279e0e01a7d",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/ac0f3a32-17ff-4132-90d0-4279e0e01a7d.wav",
+          "sha256": "080f24b8fb7f8adb68c470e88b8ed3e307d85b24482f6bdf934e572d7e2c79ab"
+        },
+        {
+          "job_id": "7886b661-2855-4e90-9cd4-34ac5e73e9ca",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/7886b661-2855-4e90-9cd4-34ac5e73e9ca.wav",
+          "sha256": "080f24b8fb7f8adb68c470e88b8ed3e307d85b24482f6bdf934e572d7e2c79ab"
+        },
+        {
+          "job_id": "82cf371e-2ab5-4eb6-803f-c9738f25b998",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/82cf371e-2ab5-4eb6-803f-c9738f25b998.wav",
+          "sha256": "080f24b8fb7f8adb68c470e88b8ed3e307d85b24482f6bdf934e572d7e2c79ab"
+        },
+        {
+          "job_id": "d83104d2-b6bf-4b6d-afb5-c86d0de67388",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/d83104d2-b6bf-4b6d-afb5-c86d0de67388.wav",
+          "sha256": "8a9c62e0b5930b8a59b907b42a92cda6f7755e26e603e17bb27513daaf7745fc"
+        },
+        {
+          "job_id": "a1307d63-8bcf-4dbc-aca2-f8a8276331e5",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/a1307d63-8bcf-4dbc-aca2-f8a8276331e5.wav",
+          "sha256": "8a9c62e0b5930b8a59b907b42a92cda6f7755e26e603e17bb27513daaf7745fc"
+        },
+        {
+          "job_id": "167479d3-ae92-424b-9594-0ff6caa340a5",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/167479d3-ae92-424b-9594-0ff6caa340a5.wav",
+          "sha256": "8a9c62e0b5930b8a59b907b42a92cda6f7755e26e603e17bb27513daaf7745fc"
+        },
+        {
+          "job_id": "eedcb7d1-3a68-4ad6-838f-ad8c70aa3f80",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/eedcb7d1-3a68-4ad6-838f-ad8c70aa3f80.wav",
+          "sha256": "cfb51ae9088410fc8c2b978e18dcab320b016cdb5a33df8e6b32274fcbe6fea1"
+        },
+        {
+          "job_id": "7e4c6792-339f-4a58-abb5-16a788300c13",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/7e4c6792-339f-4a58-abb5-16a788300c13.wav",
+          "sha256": "cfb51ae9088410fc8c2b978e18dcab320b016cdb5a33df8e6b32274fcbe6fea1"
+        },
+        {
+          "job_id": "7ddc5221-113e-4fe3-98cf-79f94306f490",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/7ddc5221-113e-4fe3-98cf-79f94306f490.wav",
+          "sha256": "cfb51ae9088410fc8c2b978e18dcab320b016cdb5a33df8e6b32274fcbe6fea1"
+        },
+        {
+          "job_id": "54fbd34b-82b3-44c0-9b5d-556afc05d737",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/54fbd34b-82b3-44c0-9b5d-556afc05d737.wav",
+          "sha256": "305bea50f05667867e41eb3fdc20685c634fd51e734a73104cd82e1fe6d8d6bf"
+        },
+        {
+          "job_id": "0c239b64-b300-4b39-bd06-2d049aef1a77",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/0c239b64-b300-4b39-bd06-2d049aef1a77.wav",
+          "sha256": "305bea50f05667867e41eb3fdc20685c634fd51e734a73104cd82e1fe6d8d6bf"
+        },
+        {
+          "job_id": "ff586cc1-cae9-4f92-a55a-5674a81d407e",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/ff586cc1-cae9-4f92-a55a-5674a81d407e.wav",
+          "sha256": "305bea50f05667867e41eb3fdc20685c634fd51e734a73104cd82e1fe6d8d6bf"
+        },
+        {
+          "job_id": "4c46c52d-85e4-4e08-b747-911ad4e4af68",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/4c46c52d-85e4-4e08-b747-911ad4e4af68.wav",
+          "sha256": "69e2715f0c9e6d3822f0d3497620066d19e2a97ad77eed8e36d00b5aa4702edf"
+        },
+        {
+          "job_id": "beea48fa-cb9a-4930-a4f0-8ca84037816f",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/beea48fa-cb9a-4930-a4f0-8ca84037816f.wav",
+          "sha256": "69e2715f0c9e6d3822f0d3497620066d19e2a97ad77eed8e36d00b5aa4702edf"
+        },
+        {
+          "job_id": "0670e4e4-5021-43cf-ad57-17130509ee06",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/0670e4e4-5021-43cf-ad57-17130509ee06.wav",
+          "sha256": "69e2715f0c9e6d3822f0d3497620066d19e2a97ad77eed8e36d00b5aa4702edf"
+        },
+        {
+          "job_id": "6427306b-f105-454d-8591-95c04053c678",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/6427306b-f105-454d-8591-95c04053c678.wav",
+          "sha256": "e366265fe4d470e417c25d74171ebf8dded95c8b229dc1a7bfe1a32336e96d75"
+        },
+        {
+          "job_id": "555c50ca-8bc2-4ca4-9b8c-7a1af64a6f8c",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/555c50ca-8bc2-4ca4-9b8c-7a1af64a6f8c.wav",
+          "sha256": "e366265fe4d470e417c25d74171ebf8dded95c8b229dc1a7bfe1a32336e96d75"
+        },
+        {
+          "job_id": "799e61e7-e91f-48d2-bb1e-1a85435ca26e",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/799e61e7-e91f-48d2-bb1e-1a85435ca26e.wav",
+          "sha256": "e366265fe4d470e417c25d74171ebf8dded95c8b229dc1a7bfe1a32336e96d75"
+        },
+        {
+          "job_id": "61c4e35d-95a5-423d-89aa-2dff247e73b5",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/61c4e35d-95a5-423d-89aa-2dff247e73b5.wav",
+          "sha256": "7ef24e50cb750ab7fd4527b571180392da877e399d26551f1455ef5d4f322735"
+        },
+        {
+          "job_id": "c2f17060-3f32-4604-b8ef-fe055394ac18",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/c2f17060-3f32-4604-b8ef-fe055394ac18.wav",
+          "sha256": "7ef24e50cb750ab7fd4527b571180392da877e399d26551f1455ef5d4f322735"
+        },
+        {
+          "job_id": "af9a12cf-3901-4657-98e0-a39b9d3bdf67",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-cpu-public-D12/af9a12cf-3901-4657-98e0-a39b9d3bdf67.wav",
+          "sha256": "7ef24e50cb750ab7fd4527b571180392da877e399d26551f1455ef5d4f322735"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-vits-cpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "3e9faa16-8d50-439e-871e-14404707f25f",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/3e9faa16-8d50-439e-871e-14404707f25f.wav",
+          "sha256": "8573759c1ae5dbff27c065712111f0d5768714d50507da210808a16cd1c54db9"
+        },
+        {
+          "job_id": "771ca084-bbf6-46b2-b5f6-a74893376a75",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/771ca084-bbf6-46b2-b5f6-a74893376a75.wav",
+          "sha256": "8573759c1ae5dbff27c065712111f0d5768714d50507da210808a16cd1c54db9"
+        },
+        {
+          "job_id": "b8d17d82-8e5d-4660-ab1d-6fc8e441a69a",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/b8d17d82-8e5d-4660-ab1d-6fc8e441a69a.wav",
+          "sha256": "8573759c1ae5dbff27c065712111f0d5768714d50507da210808a16cd1c54db9"
+        },
+        {
+          "job_id": "f5e7e829-0d20-4757-8264-3a47aad3a1c9",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/f5e7e829-0d20-4757-8264-3a47aad3a1c9.wav",
+          "sha256": "6bde9e67ef7feda3d734fe1bc4b7b3a5b9db5c602cba22880c7d53c24b0da60a"
+        },
+        {
+          "job_id": "27d8a3cd-eaef-414b-a774-47c69b78db7e",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/27d8a3cd-eaef-414b-a774-47c69b78db7e.wav",
+          "sha256": "6bde9e67ef7feda3d734fe1bc4b7b3a5b9db5c602cba22880c7d53c24b0da60a"
+        },
+        {
+          "job_id": "f251ac49-78fe-48b2-a73d-07672e2d3cdc",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/f251ac49-78fe-48b2-a73d-07672e2d3cdc.wav",
+          "sha256": "6bde9e67ef7feda3d734fe1bc4b7b3a5b9db5c602cba22880c7d53c24b0da60a"
+        },
+        {
+          "job_id": "08ca5a14-a2bc-4c94-93db-f6bdd5986640",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/08ca5a14-a2bc-4c94-93db-f6bdd5986640.wav",
+          "sha256": "9e4a46aacbc9bdfff8e6e4a157e709addb23efed01d1185cfc4cb12a64a0e0e3"
+        },
+        {
+          "job_id": "d8589df4-eb5c-4283-9436-eecf65b563ae",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/d8589df4-eb5c-4283-9436-eecf65b563ae.wav",
+          "sha256": "9e4a46aacbc9bdfff8e6e4a157e709addb23efed01d1185cfc4cb12a64a0e0e3"
+        },
+        {
+          "job_id": "05c5751a-06f8-484a-a36d-bd82993e6e95",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/05c5751a-06f8-484a-a36d-bd82993e6e95.wav",
+          "sha256": "9e4a46aacbc9bdfff8e6e4a157e709addb23efed01d1185cfc4cb12a64a0e0e3"
+        },
+        {
+          "job_id": "507dad1d-8b86-4d9b-95e6-415995866d02",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/507dad1d-8b86-4d9b-95e6-415995866d02.wav",
+          "sha256": "5a8301d5ec5efd3e632fc8ce942989ce3f66ad6038753e5f90c2aa71d86d839f"
+        },
+        {
+          "job_id": "75483a2f-6658-4de7-8e41-43c636085425",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/75483a2f-6658-4de7-8e41-43c636085425.wav",
+          "sha256": "5a8301d5ec5efd3e632fc8ce942989ce3f66ad6038753e5f90c2aa71d86d839f"
+        },
+        {
+          "job_id": "f22e142e-eeb9-443f-9920-0008a3dd4469",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/f22e142e-eeb9-443f-9920-0008a3dd4469.wav",
+          "sha256": "5a8301d5ec5efd3e632fc8ce942989ce3f66ad6038753e5f90c2aa71d86d839f"
+        },
+        {
+          "job_id": "c0f4bf1c-08e9-41a7-bbb0-2c833dc47612",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/c0f4bf1c-08e9-41a7-bbb0-2c833dc47612.wav",
+          "sha256": "861274abe5d2a0ed4e42ff265fcf4ed649fb9c24489d53a152a6a65b0efba7a0"
+        },
+        {
+          "job_id": "88811a16-074a-42c7-bfa3-4f7a477da862",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/88811a16-074a-42c7-bfa3-4f7a477da862.wav",
+          "sha256": "861274abe5d2a0ed4e42ff265fcf4ed649fb9c24489d53a152a6a65b0efba7a0"
+        },
+        {
+          "job_id": "20a18f98-41e3-4922-9393-b079e9891e71",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/20a18f98-41e3-4922-9393-b079e9891e71.wav",
+          "sha256": "861274abe5d2a0ed4e42ff265fcf4ed649fb9c24489d53a152a6a65b0efba7a0"
+        },
+        {
+          "job_id": "9eb92694-2f37-4183-96ac-1a4bea137783",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/9eb92694-2f37-4183-96ac-1a4bea137783.wav",
+          "sha256": "42e5a9ed5066c3b8d8461f47e64fb4bdfa6dbb09ef8cae1f9e1db59820b33d92"
+        },
+        {
+          "job_id": "453b68aa-8576-4bd8-8df4-188f4ae0e6c9",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/453b68aa-8576-4bd8-8df4-188f4ae0e6c9.wav",
+          "sha256": "42e5a9ed5066c3b8d8461f47e64fb4bdfa6dbb09ef8cae1f9e1db59820b33d92"
+        },
+        {
+          "job_id": "4af3c58c-e6c2-4686-9fd8-c325d1bea36a",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/4af3c58c-e6c2-4686-9fd8-c325d1bea36a.wav",
+          "sha256": "42e5a9ed5066c3b8d8461f47e64fb4bdfa6dbb09ef8cae1f9e1db59820b33d92"
+        },
+        {
+          "job_id": "41f104b4-3cbb-4704-b3b4-673e398e7104",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/41f104b4-3cbb-4704-b3b4-673e398e7104.wav",
+          "sha256": "b792059aa06676186a5334f1cddae19fe9e89f190e528758931b63fe93125310"
+        },
+        {
+          "job_id": "ab87560e-5742-46cd-a708-43a6fe268147",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/ab87560e-5742-46cd-a708-43a6fe268147.wav",
+          "sha256": "b792059aa06676186a5334f1cddae19fe9e89f190e528758931b63fe93125310"
+        },
+        {
+          "job_id": "b023b9b1-5049-4a26-883b-65ef0c5e3be0",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/b023b9b1-5049-4a26-883b-65ef0c5e3be0.wav",
+          "sha256": "b792059aa06676186a5334f1cddae19fe9e89f190e528758931b63fe93125310"
+        },
+        {
+          "job_id": "73aedcbf-737a-4b99-aa9d-9a6671a5578d",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/73aedcbf-737a-4b99-aa9d-9a6671a5578d.wav",
+          "sha256": "b86dd631f69667b97f68d62f2abfd9bde97c5328b1fdecd3ca24b0458ca186b9"
+        },
+        {
+          "job_id": "f74ffc5f-5e44-4c44-b1d8-55d7dd7accd8",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/f74ffc5f-5e44-4c44-b1d8-55d7dd7accd8.wav",
+          "sha256": "b86dd631f69667b97f68d62f2abfd9bde97c5328b1fdecd3ca24b0458ca186b9"
+        },
+        {
+          "job_id": "d475aa01-b22d-46a7-bf0b-7b67f036fde1",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/d475aa01-b22d-46a7-bf0b-7b67f036fde1.wav",
+          "sha256": "b86dd631f69667b97f68d62f2abfd9bde97c5328b1fdecd3ca24b0458ca186b9"
+        },
+        {
+          "job_id": "1dc63619-46a8-4793-ab42-34e9e893f9ee",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/1dc63619-46a8-4793-ab42-34e9e893f9ee.wav",
+          "sha256": "13d24b54d8dfc37cd0739c1d64312f3f9ff5d017476ad5857cb9fc6b32833b29"
+        },
+        {
+          "job_id": "280dbca0-d580-4c40-930d-0a738a8d0cfa",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/280dbca0-d580-4c40-930d-0a738a8d0cfa.wav",
+          "sha256": "13d24b54d8dfc37cd0739c1d64312f3f9ff5d017476ad5857cb9fc6b32833b29"
+        },
+        {
+          "job_id": "efe2d799-5d4c-40f1-a769-bfb407518a1e",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/efe2d799-5d4c-40f1-a769-bfb407518a1e.wav",
+          "sha256": "13d24b54d8dfc37cd0739c1d64312f3f9ff5d017476ad5857cb9fc6b32833b29"
+        },
+        {
+          "job_id": "2f7419af-265b-4eeb-8962-050921630ad1",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/2f7419af-265b-4eeb-8962-050921630ad1.wav",
+          "sha256": "03a0fb2eb51a1cb04b01a8daab0ee6a85bf9a1e115a8d05d4fad433337c8215f"
+        },
+        {
+          "job_id": "07b12ec7-6be3-4080-8762-25f023966b75",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/07b12ec7-6be3-4080-8762-25f023966b75.wav",
+          "sha256": "03a0fb2eb51a1cb04b01a8daab0ee6a85bf9a1e115a8d05d4fad433337c8215f"
+        },
+        {
+          "job_id": "a83a014e-4e48-4ee9-8701-df334d567fe7",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/a83a014e-4e48-4ee9-8701-df334d567fe7.wav",
+          "sha256": "03a0fb2eb51a1cb04b01a8daab0ee6a85bf9a1e115a8d05d4fad433337c8215f"
+        },
+        {
+          "job_id": "6013f4cd-f396-4453-bbb6-37b280c46e52",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/6013f4cd-f396-4453-bbb6-37b280c46e52.wav",
+          "sha256": "da9f0ebb3cd5bde062aae0259cf70ae750ea13b8e1c63e00b030cff412799cf1"
+        },
+        {
+          "job_id": "86ff3b70-37aa-451f-bbb6-b7565e493d89",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/86ff3b70-37aa-451f-bbb6-b7565e493d89.wav",
+          "sha256": "da9f0ebb3cd5bde062aae0259cf70ae750ea13b8e1c63e00b030cff412799cf1"
+        },
+        {
+          "job_id": "15549bf9-fb7b-46bc-a659-2c594a2b8aa6",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/15549bf9-fb7b-46bc-a659-2c594a2b8aa6.wav",
+          "sha256": "da9f0ebb3cd5bde062aae0259cf70ae750ea13b8e1c63e00b030cff412799cf1"
+        },
+        {
+          "job_id": "3a2fcb9f-ca8f-438a-bda9-01e5b2484cc6",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/3a2fcb9f-ca8f-438a-bda9-01e5b2484cc6.wav",
+          "sha256": "7ef25d5f4c8cfd54f9d1deda25d70189e533329c84c8641e8ca15794a1b3e214"
+        },
+        {
+          "job_id": "f4272631-7f0b-437f-bb6c-5a77189e36cc",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/f4272631-7f0b-437f-bb6c-5a77189e36cc.wav",
+          "sha256": "7ef25d5f4c8cfd54f9d1deda25d70189e533329c84c8641e8ca15794a1b3e214"
+        },
+        {
+          "job_id": "54ea6d96-50ea-4345-a6d3-89b1cf64595e",
+          "audio": "artifacts/shengke/benchmark-vits-cpu-public-D12/54ea6d96-50ea-4345-a6d3-89b1cf64595e.wav",
+          "sha256": "7ef25d5f4c8cfd54f9d1deda25d70189e533329c84c8641e8ca15794a1b3e214"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-transformer-cpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "163b7755-4299-4885-802c-ea391deb0f62",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/163b7755-4299-4885-802c-ea391deb0f62.wav",
+          "sha256": "bb2e1ffd81fb242bf0c9ee9d2beb95d1a8354e5aa5f64fda163e62a0c3adb699"
+        },
+        {
+          "job_id": "f26c817b-f6dd-4ac1-af05-eabad3a25f04",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/f26c817b-f6dd-4ac1-af05-eabad3a25f04.wav",
+          "sha256": "bb2e1ffd81fb242bf0c9ee9d2beb95d1a8354e5aa5f64fda163e62a0c3adb699"
+        },
+        {
+          "job_id": "ccffad8b-aa90-4780-825c-6a6ea296a79e",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/ccffad8b-aa90-4780-825c-6a6ea296a79e.wav",
+          "sha256": "bb2e1ffd81fb242bf0c9ee9d2beb95d1a8354e5aa5f64fda163e62a0c3adb699"
+        },
+        {
+          "job_id": "3bbf3570-b39b-4420-b4fa-0c6770bba577",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/3bbf3570-b39b-4420-b4fa-0c6770bba577.wav",
+          "sha256": "33a1ca14bc8751129efaa83c71338ad1db31abd98c2333d923674f0d8b98d3c9"
+        },
+        {
+          "job_id": "61c86f65-13bd-447b-94d6-0021b6169b4e",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/61c86f65-13bd-447b-94d6-0021b6169b4e.wav",
+          "sha256": "33a1ca14bc8751129efaa83c71338ad1db31abd98c2333d923674f0d8b98d3c9"
+        },
+        {
+          "job_id": "323134c7-7b5a-463f-8830-70786f21571d",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/323134c7-7b5a-463f-8830-70786f21571d.wav",
+          "sha256": "33a1ca14bc8751129efaa83c71338ad1db31abd98c2333d923674f0d8b98d3c9"
+        },
+        {
+          "job_id": "2ab0f353-92a2-4ebe-91f3-91e56f50d018",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/2ab0f353-92a2-4ebe-91f3-91e56f50d018.wav",
+          "sha256": "4d43fda03b280eaf8062cf2e1ff39ceb93e02fbfdc6c8e60652b739500b6bbe6"
+        },
+        {
+          "job_id": "be2f7ce3-3c4a-45f1-812f-93cdf625d7bc",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/be2f7ce3-3c4a-45f1-812f-93cdf625d7bc.wav",
+          "sha256": "4d43fda03b280eaf8062cf2e1ff39ceb93e02fbfdc6c8e60652b739500b6bbe6"
+        },
+        {
+          "job_id": "d769c7cb-13b1-49a3-875c-2773cdcaf59f",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/d769c7cb-13b1-49a3-875c-2773cdcaf59f.wav",
+          "sha256": "4d43fda03b280eaf8062cf2e1ff39ceb93e02fbfdc6c8e60652b739500b6bbe6"
+        },
+        {
+          "job_id": "a448e647-dd52-4e15-9ca5-4001bef9a0c7",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/a448e647-dd52-4e15-9ca5-4001bef9a0c7.wav",
+          "sha256": "0d62ea439e85cf0d0f3f42d519816f339ebe818b5cb7f1266449e47ba1e1f238"
+        },
+        {
+          "job_id": "b406977b-3d66-40b5-947b-a1062f74126f",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/b406977b-3d66-40b5-947b-a1062f74126f.wav",
+          "sha256": "0d62ea439e85cf0d0f3f42d519816f339ebe818b5cb7f1266449e47ba1e1f238"
+        },
+        {
+          "job_id": "fb8431cb-fd1c-40be-a112-af7136b66ba1",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/fb8431cb-fd1c-40be-a112-af7136b66ba1.wav",
+          "sha256": "0d62ea439e85cf0d0f3f42d519816f339ebe818b5cb7f1266449e47ba1e1f238"
+        },
+        {
+          "job_id": "168e5feb-016d-420f-a405-4e257954208e",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/168e5feb-016d-420f-a405-4e257954208e.wav",
+          "sha256": "33ea4c1e212af847a6316712a8508ec456b5e86fe9465af03cf74d28d4b8b17c"
+        },
+        {
+          "job_id": "015b014f-9499-4abc-8f5e-28b20edf1ddf",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/015b014f-9499-4abc-8f5e-28b20edf1ddf.wav",
+          "sha256": "33ea4c1e212af847a6316712a8508ec456b5e86fe9465af03cf74d28d4b8b17c"
+        },
+        {
+          "job_id": "cf35e371-195c-4074-940d-fcbb5ed89b6f",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/cf35e371-195c-4074-940d-fcbb5ed89b6f.wav",
+          "sha256": "33ea4c1e212af847a6316712a8508ec456b5e86fe9465af03cf74d28d4b8b17c"
+        },
+        {
+          "job_id": "3c90abcd-c14b-430d-8d00-e053c6578ec9",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/3c90abcd-c14b-430d-8d00-e053c6578ec9.wav",
+          "sha256": "c3851cbb51904bf836e181a4bbd4193e4c87c8290fb4a076d7df37047232249c"
+        },
+        {
+          "job_id": "0e5a5338-a1ed-480f-98ac-d236b0a92a69",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/0e5a5338-a1ed-480f-98ac-d236b0a92a69.wav",
+          "sha256": "c3851cbb51904bf836e181a4bbd4193e4c87c8290fb4a076d7df37047232249c"
+        },
+        {
+          "job_id": "e177d2ec-9ff7-414d-9440-2aeba85892c0",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/e177d2ec-9ff7-414d-9440-2aeba85892c0.wav",
+          "sha256": "c3851cbb51904bf836e181a4bbd4193e4c87c8290fb4a076d7df37047232249c"
+        },
+        {
+          "job_id": "3b49c0c3-708c-4340-b0a5-a7122c8c07b6",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/3b49c0c3-708c-4340-b0a5-a7122c8c07b6.wav",
+          "sha256": "4dc9bccf642e02541a231c3361b461a76e67435e89af28dd90f45a8dc212ebbc"
+        },
+        {
+          "job_id": "220e903f-4c90-4cf5-b723-1d2083763fa0",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/220e903f-4c90-4cf5-b723-1d2083763fa0.wav",
+          "sha256": "4dc9bccf642e02541a231c3361b461a76e67435e89af28dd90f45a8dc212ebbc"
+        },
+        {
+          "job_id": "df24100e-353f-4d7c-8fc5-59d8ef257d3f",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/df24100e-353f-4d7c-8fc5-59d8ef257d3f.wav",
+          "sha256": "4dc9bccf642e02541a231c3361b461a76e67435e89af28dd90f45a8dc212ebbc"
+        },
+        {
+          "job_id": "14dab0d1-3fb4-4a3b-9505-378f22d37803",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/14dab0d1-3fb4-4a3b-9505-378f22d37803.wav",
+          "sha256": "070caa6f67d731b9bdead5611613e5be3f7c8841281cfc1b2310e6fe2ed74e24"
+        },
+        {
+          "job_id": "a3ee5079-dac4-4cfa-86a4-87d66b46f1ec",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/a3ee5079-dac4-4cfa-86a4-87d66b46f1ec.wav",
+          "sha256": "070caa6f67d731b9bdead5611613e5be3f7c8841281cfc1b2310e6fe2ed74e24"
+        },
+        {
+          "job_id": "e870b1b9-fa5c-43b1-ab08-21f5185e3a6d",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/e870b1b9-fa5c-43b1-ab08-21f5185e3a6d.wav",
+          "sha256": "070caa6f67d731b9bdead5611613e5be3f7c8841281cfc1b2310e6fe2ed74e24"
+        },
+        {
+          "job_id": "bac0a185-7ef8-4da4-b125-d92b0c67f78a",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/bac0a185-7ef8-4da4-b125-d92b0c67f78a.wav",
+          "sha256": "94550f9663719f0ed887504d75499b04ccf14b83da9c6b73bea52bf68d28ba43"
+        },
+        {
+          "job_id": "59f6bf35-927f-417b-9368-99bcfdc2aeab",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/59f6bf35-927f-417b-9368-99bcfdc2aeab.wav",
+          "sha256": "94550f9663719f0ed887504d75499b04ccf14b83da9c6b73bea52bf68d28ba43"
+        },
+        {
+          "job_id": "379c0529-4ea7-49af-8028-6ab6fc3a3a8e",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/379c0529-4ea7-49af-8028-6ab6fc3a3a8e.wav",
+          "sha256": "94550f9663719f0ed887504d75499b04ccf14b83da9c6b73bea52bf68d28ba43"
+        },
+        {
+          "job_id": "8cdeaeeb-a4dd-4858-abe5-222cb941e8c3",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/8cdeaeeb-a4dd-4858-abe5-222cb941e8c3.wav",
+          "sha256": "0c44709b844bc8009b119cf728535791eae6d858dfec315816e4eaa790a5eeb8"
+        },
+        {
+          "job_id": "7ef5648c-801f-49f3-8793-27f5ab59f5d5",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/7ef5648c-801f-49f3-8793-27f5ab59f5d5.wav",
+          "sha256": "0c44709b844bc8009b119cf728535791eae6d858dfec315816e4eaa790a5eeb8"
+        },
+        {
+          "job_id": "f6cdf863-6e65-46d5-b842-7c0e1543c5bb",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/f6cdf863-6e65-46d5-b842-7c0e1543c5bb.wav",
+          "sha256": "0c44709b844bc8009b119cf728535791eae6d858dfec315816e4eaa790a5eeb8"
+        },
+        {
+          "job_id": "6730098c-9e00-439d-9e73-2bbf9df74bff",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/6730098c-9e00-439d-9e73-2bbf9df74bff.wav",
+          "sha256": "35ab5ead329da7056396106ea1a2f9ec0b7e588e3e59a5e95c1e658884e6b9da"
+        },
+        {
+          "job_id": "35932731-71dd-420e-bf9f-501ac634ef72",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/35932731-71dd-420e-bf9f-501ac634ef72.wav",
+          "sha256": "35ab5ead329da7056396106ea1a2f9ec0b7e588e3e59a5e95c1e658884e6b9da"
+        },
+        {
+          "job_id": "28f672ab-1cf1-407b-b84e-b44fb612b75c",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/28f672ab-1cf1-407b-b84e-b44fb612b75c.wav",
+          "sha256": "35ab5ead329da7056396106ea1a2f9ec0b7e588e3e59a5e95c1e658884e6b9da"
+        },
+        {
+          "job_id": "a5bf339d-4b3e-40b5-a132-98406532a216",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/a5bf339d-4b3e-40b5-a132-98406532a216.wav",
+          "sha256": "fc139b52b2643698450ad4fe9b968b2b18e839222bc172efe960abb544bd2ce0"
+        },
+        {
+          "job_id": "bd2780bb-cb79-4a5d-8835-fc0bcbeaf800",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/bd2780bb-cb79-4a5d-8835-fc0bcbeaf800.wav",
+          "sha256": "fc139b52b2643698450ad4fe9b968b2b18e839222bc172efe960abb544bd2ce0"
+        },
+        {
+          "job_id": "b2238425-fd0d-47ed-83e0-8062eb912896",
+          "audio": "artifacts/shengke/benchmark-transformer-cpu-public-D12/b2238425-fd0d-47ed-83e0-8062eb912896.wav",
+          "sha256": "fc139b52b2643698450ad4fe9b968b2b18e839222bc172efe960abb544bd2ce0"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "de52e6ad-9848-4717-b8fb-acd2f6f2ae4e",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/de52e6ad-9848-4717-b8fb-acd2f6f2ae4e.wav",
+          "sha256": "d01db757bbbb593e4bdbd40d62461217ae4a710bc68ecd022bedd079953cf108"
+        },
+        {
+          "job_id": "a3da661c-813b-4662-9d13-affa8410ae1b",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/a3da661c-813b-4662-9d13-affa8410ae1b.wav",
+          "sha256": "d01db757bbbb593e4bdbd40d62461217ae4a710bc68ecd022bedd079953cf108"
+        },
+        {
+          "job_id": "21ef3623-5dda-495d-bf45-1323acae39fe",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/21ef3623-5dda-495d-bf45-1323acae39fe.wav",
+          "sha256": "d01db757bbbb593e4bdbd40d62461217ae4a710bc68ecd022bedd079953cf108"
+        },
+        {
+          "job_id": "4776da75-90ef-4166-a9e0-546130427d45",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/4776da75-90ef-4166-a9e0-546130427d45.wav",
+          "sha256": "120cdcad61f31c82483796532aa152db7e45f81bab06b8e6db70b432e4cfd1b1"
+        },
+        {
+          "job_id": "33c99eda-08be-4b9a-bca3-a7b6f0beb623",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/33c99eda-08be-4b9a-bca3-a7b6f0beb623.wav",
+          "sha256": "120cdcad61f31c82483796532aa152db7e45f81bab06b8e6db70b432e4cfd1b1"
+        },
+        {
+          "job_id": "6391bb10-adc8-4296-9111-d8afe93cccb8",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/6391bb10-adc8-4296-9111-d8afe93cccb8.wav",
+          "sha256": "120cdcad61f31c82483796532aa152db7e45f81bab06b8e6db70b432e4cfd1b1"
+        },
+        {
+          "job_id": "276dbe19-bc6e-4d2a-9609-e653361cab56",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/276dbe19-bc6e-4d2a-9609-e653361cab56.wav",
+          "sha256": "ec0212179035a97672525c94ff3a3bef4a96def1c6985f729cd123e55f6b81c7"
+        },
+        {
+          "job_id": "f060b12c-2032-4ef0-ae6d-dfcac913b8fb",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/f060b12c-2032-4ef0-ae6d-dfcac913b8fb.wav",
+          "sha256": "ec0212179035a97672525c94ff3a3bef4a96def1c6985f729cd123e55f6b81c7"
+        },
+        {
+          "job_id": "bfbee666-ad54-4ae7-bcea-d07324680fa6",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/bfbee666-ad54-4ae7-bcea-d07324680fa6.wav",
+          "sha256": "ec0212179035a97672525c94ff3a3bef4a96def1c6985f729cd123e55f6b81c7"
+        },
+        {
+          "job_id": "146df478-e41f-4394-aad1-c4af2c54b90c",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/146df478-e41f-4394-aad1-c4af2c54b90c.wav",
+          "sha256": "90451235d8d4783d6d48486fc4b2b25f63ad05305efbb8905fb3bc10855620fe"
+        },
+        {
+          "job_id": "064a244a-92c7-477f-8b71-8a34a31ae649",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/064a244a-92c7-477f-8b71-8a34a31ae649.wav",
+          "sha256": "90451235d8d4783d6d48486fc4b2b25f63ad05305efbb8905fb3bc10855620fe"
+        },
+        {
+          "job_id": "f6115a96-bbc2-45da-9ab4-2e9de74a3a99",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/f6115a96-bbc2-45da-9ab4-2e9de74a3a99.wav",
+          "sha256": "90451235d8d4783d6d48486fc4b2b25f63ad05305efbb8905fb3bc10855620fe"
+        },
+        {
+          "job_id": "cf60e7b1-462f-413a-89ca-a84c7fad2e89",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/cf60e7b1-462f-413a-89ca-a84c7fad2e89.wav",
+          "sha256": "521cb9a864cf767a518fbc5a9143ad7a875b5af95be119f96c069a6853711bf0"
+        },
+        {
+          "job_id": "a2f54620-25ca-4af0-9258-25f8fadc0d1e",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/a2f54620-25ca-4af0-9258-25f8fadc0d1e.wav",
+          "sha256": "521cb9a864cf767a518fbc5a9143ad7a875b5af95be119f96c069a6853711bf0"
+        },
+        {
+          "job_id": "992a98d2-366e-44d9-ac2b-305b9c360423",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/992a98d2-366e-44d9-ac2b-305b9c360423.wav",
+          "sha256": "521cb9a864cf767a518fbc5a9143ad7a875b5af95be119f96c069a6853711bf0"
+        },
+        {
+          "job_id": "ac795b0e-181d-47fe-92a8-17b0bd3ec9ee",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/ac795b0e-181d-47fe-92a8-17b0bd3ec9ee.wav",
+          "sha256": "c4e58408341d10db99c546407a2cc6d96a29501555b5a93a067d89afaf669b26"
+        },
+        {
+          "job_id": "3ad9668d-3452-44c0-81b5-307aa1ccc696",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/3ad9668d-3452-44c0-81b5-307aa1ccc696.wav",
+          "sha256": "c4e58408341d10db99c546407a2cc6d96a29501555b5a93a067d89afaf669b26"
+        },
+        {
+          "job_id": "b8bc758c-8bc2-4f49-b9de-d50994d27572",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/b8bc758c-8bc2-4f49-b9de-d50994d27572.wav",
+          "sha256": "c4e58408341d10db99c546407a2cc6d96a29501555b5a93a067d89afaf669b26"
+        },
+        {
+          "job_id": "d8a13e2d-6713-4b82-8cb8-c252a1aa753e",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/d8a13e2d-6713-4b82-8cb8-c252a1aa753e.wav",
+          "sha256": "93ac38fe1cefd8c25b17065f620530bd3a6be14631306ee15723717cf9a15e5d"
+        },
+        {
+          "job_id": "72a780c3-7005-4e1c-9b39-ad83141adc31",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/72a780c3-7005-4e1c-9b39-ad83141adc31.wav",
+          "sha256": "93ac38fe1cefd8c25b17065f620530bd3a6be14631306ee15723717cf9a15e5d"
+        },
+        {
+          "job_id": "1e23eb8f-543e-4de2-abb8-766d6d6a2bca",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/1e23eb8f-543e-4de2-abb8-766d6d6a2bca.wav",
+          "sha256": "93ac38fe1cefd8c25b17065f620530bd3a6be14631306ee15723717cf9a15e5d"
+        },
+        {
+          "job_id": "63af5eee-e87b-4bc3-9791-0ff51c28b0b2",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/63af5eee-e87b-4bc3-9791-0ff51c28b0b2.wav",
+          "sha256": "32ad992d27e9e32ebd743c378e5a73222db1e38caf20ad86002e31ec5c73a0ae"
+        },
+        {
+          "job_id": "6b22d30a-91a1-4e0b-959b-6a0f2c9d3b8c",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/6b22d30a-91a1-4e0b-959b-6a0f2c9d3b8c.wav",
+          "sha256": "32ad992d27e9e32ebd743c378e5a73222db1e38caf20ad86002e31ec5c73a0ae"
+        },
+        {
+          "job_id": "216a6788-04e5-4944-a8d6-d2cb8f85a520",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/216a6788-04e5-4944-a8d6-d2cb8f85a520.wav",
+          "sha256": "32ad992d27e9e32ebd743c378e5a73222db1e38caf20ad86002e31ec5c73a0ae"
+        },
+        {
+          "job_id": "ee130598-2e41-4054-9165-72dbfecba4fd",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/ee130598-2e41-4054-9165-72dbfecba4fd.wav",
+          "sha256": "4b6f81e678af91c684d914ef9217ef9ef09619bdd35c4bdf88657e53c3d9a927"
+        },
+        {
+          "job_id": "4d7044c3-9ec2-45f4-a234-b45251818bc5",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/4d7044c3-9ec2-45f4-a234-b45251818bc5.wav",
+          "sha256": "4b6f81e678af91c684d914ef9217ef9ef09619bdd35c4bdf88657e53c3d9a927"
+        },
+        {
+          "job_id": "97e33be0-81d3-4f85-b168-8fe879d24529",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/97e33be0-81d3-4f85-b168-8fe879d24529.wav",
+          "sha256": "4b6f81e678af91c684d914ef9217ef9ef09619bdd35c4bdf88657e53c3d9a927"
+        },
+        {
+          "job_id": "ca691ca2-b0c5-40f3-9ccd-a219bfc10f40",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/ca691ca2-b0c5-40f3-9ccd-a219bfc10f40.wav",
+          "sha256": "33ad8531876ffd465a9ef8e41957a475a50d55e939e368554542692f952f9a76"
+        },
+        {
+          "job_id": "30312273-9fa3-41d4-8d8d-2f123d2ea110",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/30312273-9fa3-41d4-8d8d-2f123d2ea110.wav",
+          "sha256": "33ad8531876ffd465a9ef8e41957a475a50d55e939e368554542692f952f9a76"
+        },
+        {
+          "job_id": "af2c193b-34fc-437a-942f-60ee071842aa",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/af2c193b-34fc-437a-942f-60ee071842aa.wav",
+          "sha256": "33ad8531876ffd465a9ef8e41957a475a50d55e939e368554542692f952f9a76"
+        },
+        {
+          "job_id": "5c020d55-1b49-4e7d-bfbd-5cc9249bd922",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/5c020d55-1b49-4e7d-bfbd-5cc9249bd922.wav",
+          "sha256": "f397ee947d4f71409e81a33385282a8f588551cf23039d6f5f2557afcb9645b2"
+        },
+        {
+          "job_id": "4b025bed-e714-46f0-8bac-b21cf55f818f",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/4b025bed-e714-46f0-8bac-b21cf55f818f.wav",
+          "sha256": "f397ee947d4f71409e81a33385282a8f588551cf23039d6f5f2557afcb9645b2"
+        },
+        {
+          "job_id": "96178b99-b37f-4de6-a5f7-fbf6c1b1afeb",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/96178b99-b37f-4de6-a5f7-fbf6c1b1afeb.wav",
+          "sha256": "f397ee947d4f71409e81a33385282a8f588551cf23039d6f5f2557afcb9645b2"
+        },
+        {
+          "job_id": "2c4c14ec-7687-4f7b-9a9e-9ab61f93c3b7",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/2c4c14ec-7687-4f7b-9a9e-9ab61f93c3b7.wav",
+          "sha256": "37a88943e734f96cc42f95ddbb7d0ca4606ec7231787395a9e88c45d34cff042"
+        },
+        {
+          "job_id": "27f0eabc-6569-4efb-80e6-87ef4fd07ff4",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/27f0eabc-6569-4efb-80e6-87ef4fd07ff4.wav",
+          "sha256": "37a88943e734f96cc42f95ddbb7d0ca4606ec7231787395a9e88c45d34cff042"
+        },
+        {
+          "job_id": "ee0d16a5-5567-4748-9521-2a3c45b70ce5",
+          "audio": "artifacts/shengke/benchmark-cosyvoice2-gpu-public-D12/ee0d16a5-5567-4748-9521-2a3c45b70ce5.wav",
+          "sha256": "37a88943e734f96cc42f95ddbb7d0ca4606ec7231787395a9e88c45d34cff042"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "c30373c9-9f30-4a78-9b22-d72041b1ca88",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/c30373c9-9f30-4a78-9b22-d72041b1ca88.wav",
+          "sha256": "79f12f636f3d347bd342239024d412b912ce02db9d6e2dda598f4a46df91c757"
+        },
+        {
+          "job_id": "3fd8b31b-c375-42eb-8b64-8f40d78eb795",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/3fd8b31b-c375-42eb-8b64-8f40d78eb795.wav",
+          "sha256": "13cad1b6213df9b080559edf81d452f18208328f92cb2a3c5f798861453c7fd7"
+        },
+        {
+          "job_id": "0835683f-5ab5-4400-a7b3-035f07b3c820",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/0835683f-5ab5-4400-a7b3-035f07b3c820.wav",
+          "sha256": "30f821ddac78134460d8824da919b1d19032d50e0958e058c5241dba7942fd04"
+        },
+        {
+          "job_id": "526c87d1-e080-4753-bb76-a9896b5de371",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/526c87d1-e080-4753-bb76-a9896b5de371.wav",
+          "sha256": "127e69791e0f6a4f53a4febd228352b9706e4e244854b3a3dbf6a7b1f79ec958"
+        },
+        {
+          "job_id": "01be1df9-fdb0-4e6c-9170-48cbf19280fa",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/01be1df9-fdb0-4e6c-9170-48cbf19280fa.wav",
+          "sha256": "301976c2daa336340b2eab5e75703aa4bcc3d7ed2e47f066455fce7475aed0bd"
+        },
+        {
+          "job_id": "574aa2d1-3cf1-4b6f-ae66-f5a5f98ba35a",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/574aa2d1-3cf1-4b6f-ae66-f5a5f98ba35a.wav",
+          "sha256": "ebe03d9aa1463ed4fe07cb4dd78f14c27120a6d38b7931c97fbc891ea94f6280"
+        },
+        {
+          "job_id": "e0d6c4ed-6a15-4e00-a94c-b756e827c227",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/e0d6c4ed-6a15-4e00-a94c-b756e827c227.wav",
+          "sha256": "3e7e08a3d968b74f1a414ab096af8f211e62fbf9e8edc3adb27d03da7410ef56"
+        },
+        {
+          "job_id": "01cea66a-c6c8-4001-980c-9b2f5922adf9",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/01cea66a-c6c8-4001-980c-9b2f5922adf9.wav",
+          "sha256": "411175f0412fd5427a855910b3394fb95e40a4a108c439ceb9f338575884a73b"
+        },
+        {
+          "job_id": "1b894326-a813-4306-a8aa-ed897a3ec642",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/1b894326-a813-4306-a8aa-ed897a3ec642.wav",
+          "sha256": "9c85ff068f5b6d6604184e296d5e222a24628e7dba2303d33526c0d1badc5d97"
+        },
+        {
+          "job_id": "9803ec51-6cd9-4a63-8c53-ca6be80e8766",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/9803ec51-6cd9-4a63-8c53-ca6be80e8766.wav",
+          "sha256": "ed453560f2651267e93b7cdeb0344e3dcac27f99cfa20493d9fd0ecabbcf44e3"
+        },
+        {
+          "job_id": "73539432-0efc-404b-9bbf-74fc406a9df4",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/73539432-0efc-404b-9bbf-74fc406a9df4.wav",
+          "sha256": "3fe62819ca6a3b873474414e213d144848322e06a261b6472a32aa35cc25222e"
+        },
+        {
+          "job_id": "5c1a77f2-08af-4277-9ea8-8445e20d304a",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/5c1a77f2-08af-4277-9ea8-8445e20d304a.wav",
+          "sha256": "4b78e4e643a112385fb5414a45f8b9297bd6e500761fff2ecb36a54d8ab6b6c2"
+        },
+        {
+          "job_id": "413e6100-ec54-48f8-bc8d-9f1b30c0bcc2",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/413e6100-ec54-48f8-bc8d-9f1b30c0bcc2.wav",
+          "sha256": "be05dc384de155dc017149280875ab696d56331a396f04822a9b667623c9f837"
+        },
+        {
+          "job_id": "d2e3aeea-ba96-4d2c-885d-a4fc699511ea",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/d2e3aeea-ba96-4d2c-885d-a4fc699511ea.wav",
+          "sha256": "94af28e3d92fac9bafbbab8fc6472bace9960ab94d56e8b8d8907cc2a9076589"
+        },
+        {
+          "job_id": "2335e9b0-d723-4ad1-8137-368e9251c270",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/2335e9b0-d723-4ad1-8137-368e9251c270.wav",
+          "sha256": "475012e3b90a0db79e72cf4122e94f7ec79ba4a4921bbc660b07167ecdf527fd"
+        },
+        {
+          "job_id": "ec737162-2d66-4370-bc32-2fd4d22f63dd",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/ec737162-2d66-4370-bc32-2fd4d22f63dd.wav",
+          "sha256": "024603680d67f775060fcaf5f4591a50cd559af26cdb0f170533b1ea7eadc16b"
+        },
+        {
+          "job_id": "255dbffa-922a-4c62-962e-75912bc9f8f6",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/255dbffa-922a-4c62-962e-75912bc9f8f6.wav",
+          "sha256": "e5d50a0026203fc9167ee9aa2dee3c0089d1d02e8a12727d2c8423bf17254671"
+        },
+        {
+          "job_id": "5a60fa71-0af3-4afe-996f-cbf41b5d636a",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/5a60fa71-0af3-4afe-996f-cbf41b5d636a.wav",
+          "sha256": "8e719a04315b7d782f6bf0fd0c67a25689970f731a2014fdd5f31fab02c49580"
+        },
+        {
+          "job_id": "64ca0356-f928-4b53-bd35-1fa1ebfd1b1e",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/64ca0356-f928-4b53-bd35-1fa1ebfd1b1e.wav",
+          "sha256": "b2531968a80184b80144506f6ae7c248053dd8b14e5703aecd2ba36779533690"
+        },
+        {
+          "job_id": "89168bd0-a795-42cc-a83f-041cb1c90c89",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/89168bd0-a795-42cc-a83f-041cb1c90c89.wav",
+          "sha256": "08e6f30ccf09d6e2498bf08094eea30a6c58a36eb7636451e83d86f25d879b86"
+        },
+        {
+          "job_id": "abca7e3b-17e8-4a2e-a3b4-89f9b644db88",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/abca7e3b-17e8-4a2e-a3b4-89f9b644db88.wav",
+          "sha256": "2c0c6eb14ee22a061d1a67afb02da0df88941970ececbf2afc6e3c75798573f9"
+        },
+        {
+          "job_id": "ffbf07ff-4df3-468e-9589-0e5b99283dc4",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/ffbf07ff-4df3-468e-9589-0e5b99283dc4.wav",
+          "sha256": "75f84d580b9832c3e6f8cd3ad8b21714430079394dee722b4b3f94345bac7994"
+        },
+        {
+          "job_id": "380fa870-cdb3-4673-901d-fe95835d6e6d",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/380fa870-cdb3-4673-901d-fe95835d6e6d.wav",
+          "sha256": "081d1fb722e8fe1821cbdf21114c335b613db88e58f355c5c03abd7959fe9715"
+        },
+        {
+          "job_id": "6f406465-5058-42dd-9646-11e47b137843",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/6f406465-5058-42dd-9646-11e47b137843.wav",
+          "sha256": "b2dccfb3ef1cca5e3430ed4a5900cde91d44d76ae1b5944bb27f235cf991ed39"
+        },
+        {
+          "job_id": "f7fe6d82-38ce-4b08-8ec1-678fa15dae66",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/f7fe6d82-38ce-4b08-8ec1-678fa15dae66.wav",
+          "sha256": "839d27ce3554a83514b7c72904b6f219b249888752a547374fb02f902bf30cf2"
+        },
+        {
+          "job_id": "55cea628-a056-448a-89a5-a36149f47505",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/55cea628-a056-448a-89a5-a36149f47505.wav",
+          "sha256": "208a84d8f334ae2a0bcb5de0d3ea201b9841271f966b69f087f41c03995bd2d2"
+        },
+        {
+          "job_id": "fc0d5be0-32c4-4f21-b77e-81279a9fb42a",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/fc0d5be0-32c4-4f21-b77e-81279a9fb42a.wav",
+          "sha256": "57ba6664673752fc60f63a501bdec45ea3d2cc85336b5b50f6c347e2321a46a6"
+        },
+        {
+          "job_id": "3c03aab8-71eb-41d7-990f-5c78f1ad25d2",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/3c03aab8-71eb-41d7-990f-5c78f1ad25d2.wav",
+          "sha256": "43458622d9dcc35f4ea580d0a68a15d343b8835bc2de241cb33941cc0805f1fd"
+        },
+        {
+          "job_id": "197b9f95-a9fc-4b2f-a15e-8294c777205a",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/197b9f95-a9fc-4b2f-a15e-8294c777205a.wav",
+          "sha256": "c9936af17dd1ba1e0109d84e9beca1da7b82103dd1b3c31b8cf7350b2d20883d"
+        },
+        {
+          "job_id": "883964ee-95e3-49c6-ad1e-bffa0a7e01e5",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/883964ee-95e3-49c6-ad1e-bffa0a7e01e5.wav",
+          "sha256": "e71f0c62767910c3faea44a273f5f86ac1e4bd50246b5f6cead6908418e8b208"
+        },
+        {
+          "job_id": "a8755414-6bb7-4d0f-a955-e930c5fc2446",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/a8755414-6bb7-4d0f-a955-e930c5fc2446.wav",
+          "sha256": "4c798b55ae76c794fce7aa22aee2f1cecc89f0b6718639ea763cae52df7023b2"
+        },
+        {
+          "job_id": "a9f91be6-e49f-4a9b-9c6d-d293abefe47d",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/a9f91be6-e49f-4a9b-9c6d-d293abefe47d.wav",
+          "sha256": "e2fe7f1d542cb6c15c3b4c6a290bdb57bd64df13fe58eef9fe35a709913ada4a"
+        },
+        {
+          "job_id": "a5ac88ea-df38-4cf4-928f-c15e940cd62c",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/a5ac88ea-df38-4cf4-928f-c15e940cd62c.wav",
+          "sha256": "e5feb88ba686c75a03fa4f0895c217d4d9172368fdec17c037fe19f734f2673b"
+        },
+        {
+          "job_id": "ecf1d62a-ef5e-4447-a4f8-66322af7a6f6",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/ecf1d62a-ef5e-4447-a4f8-66322af7a6f6.wav",
+          "sha256": "6dcd25ae86b57f8d42f316da1d54e024ded795760378bfcdc94e8eb9ceae9231"
+        },
+        {
+          "job_id": "9d77b2d3-3f06-4fcf-af9f-d4f1b7f3ba45",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/9d77b2d3-3f06-4fcf-af9f-d4f1b7f3ba45.wav",
+          "sha256": "bf4555465b71febb86c0c501c52e5042765c7ab25c659b06753de2feedcc42e6"
+        },
+        {
+          "job_id": "2ab800b1-f27c-4f2f-9452-387fafd08788",
+          "audio": "artifacts/shengke/benchmark-gpt-v2-gpu-public-D12/2ab800b1-f27c-4f2f-9452-387fafd08788.wav",
+          "sha256": "a0a6f341052ac3926adfce0a459582aed8f3968b10cdd488515b7ea8349f711a"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-vits-gpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "56aa417c-3049-4550-a550-10eecf958e21",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/56aa417c-3049-4550-a550-10eecf958e21.wav",
+          "sha256": "47518da5fc4130f1f657d53bbc9fdede69f731649aeb140c4ac3974a8337ba1e"
+        },
+        {
+          "job_id": "7532099d-5c70-4643-b3a4-d8f2079f7efe",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/7532099d-5c70-4643-b3a4-d8f2079f7efe.wav",
+          "sha256": "47518da5fc4130f1f657d53bbc9fdede69f731649aeb140c4ac3974a8337ba1e"
+        },
+        {
+          "job_id": "674bc444-c8c7-4355-827e-e1663b572481",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/674bc444-c8c7-4355-827e-e1663b572481.wav",
+          "sha256": "47518da5fc4130f1f657d53bbc9fdede69f731649aeb140c4ac3974a8337ba1e"
+        },
+        {
+          "job_id": "65c8e4de-a9c7-4055-83ce-0ce305de6733",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/65c8e4de-a9c7-4055-83ce-0ce305de6733.wav",
+          "sha256": "d581125b81fc7c033eaa13721897ace00fc153b35ec1e98c940591f869ec21bb"
+        },
+        {
+          "job_id": "1282bc5d-1bfe-473f-a61b-60b284e08813",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/1282bc5d-1bfe-473f-a61b-60b284e08813.wav",
+          "sha256": "d581125b81fc7c033eaa13721897ace00fc153b35ec1e98c940591f869ec21bb"
+        },
+        {
+          "job_id": "5bfdcd9b-6cc5-4b20-844f-1b3e5c1756d2",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/5bfdcd9b-6cc5-4b20-844f-1b3e5c1756d2.wav",
+          "sha256": "d581125b81fc7c033eaa13721897ace00fc153b35ec1e98c940591f869ec21bb"
+        },
+        {
+          "job_id": "9e5faa28-c7a9-40f2-9a2d-508c8858f344",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/9e5faa28-c7a9-40f2-9a2d-508c8858f344.wav",
+          "sha256": "a8db37dbcccb678708650d664ac0b07dd0bfc52dab4f31eacf6e634142ee6282"
+        },
+        {
+          "job_id": "579a64cf-e81c-4ce2-bab3-70ea44e5a167",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/579a64cf-e81c-4ce2-bab3-70ea44e5a167.wav",
+          "sha256": "a8db37dbcccb678708650d664ac0b07dd0bfc52dab4f31eacf6e634142ee6282"
+        },
+        {
+          "job_id": "9bd9fee2-bd66-43d4-a1e5-870f58d8e0c2",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/9bd9fee2-bd66-43d4-a1e5-870f58d8e0c2.wav",
+          "sha256": "a8db37dbcccb678708650d664ac0b07dd0bfc52dab4f31eacf6e634142ee6282"
+        },
+        {
+          "job_id": "f50754d1-c3e1-49d1-b7d1-a139cc8ab76a",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/f50754d1-c3e1-49d1-b7d1-a139cc8ab76a.wav",
+          "sha256": "08a0de144fbfad609cd758def15cd979ac40db85f1514e53c250f1173d02a341"
+        },
+        {
+          "job_id": "8b4e7232-0120-457c-bd5f-07c3303f6e2a",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/8b4e7232-0120-457c-bd5f-07c3303f6e2a.wav",
+          "sha256": "08a0de144fbfad609cd758def15cd979ac40db85f1514e53c250f1173d02a341"
+        },
+        {
+          "job_id": "4a36ffab-0c6c-4533-a87b-e9d66e29a349",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/4a36ffab-0c6c-4533-a87b-e9d66e29a349.wav",
+          "sha256": "08a0de144fbfad609cd758def15cd979ac40db85f1514e53c250f1173d02a341"
+        },
+        {
+          "job_id": "c7e16973-bf85-4d52-b7af-328e158e674a",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/c7e16973-bf85-4d52-b7af-328e158e674a.wav",
+          "sha256": "4fa6bd880c1ae7190d0e4442bf88a53a6b9f87e6d696fd8334a82795700dc645"
+        },
+        {
+          "job_id": "d758a8e8-8551-493a-b393-dc8e79baeb57",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/d758a8e8-8551-493a-b393-dc8e79baeb57.wav",
+          "sha256": "4fa6bd880c1ae7190d0e4442bf88a53a6b9f87e6d696fd8334a82795700dc645"
+        },
+        {
+          "job_id": "f433c9c4-c5ce-4794-af67-41d4bc4910bb",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/f433c9c4-c5ce-4794-af67-41d4bc4910bb.wav",
+          "sha256": "4fa6bd880c1ae7190d0e4442bf88a53a6b9f87e6d696fd8334a82795700dc645"
+        },
+        {
+          "job_id": "626c0349-daef-484a-b6fb-e866128ee58a",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/626c0349-daef-484a-b6fb-e866128ee58a.wav",
+          "sha256": "2d85ef0b223095a84726480d28331dfb1cb3118e114213432ab33ed7c37ab4dd"
+        },
+        {
+          "job_id": "52a45add-a8a6-4089-b3ef-78ad45eae55e",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/52a45add-a8a6-4089-b3ef-78ad45eae55e.wav",
+          "sha256": "2d85ef0b223095a84726480d28331dfb1cb3118e114213432ab33ed7c37ab4dd"
+        },
+        {
+          "job_id": "22420603-c04f-48c0-9b8f-844620fdf51e",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/22420603-c04f-48c0-9b8f-844620fdf51e.wav",
+          "sha256": "2d85ef0b223095a84726480d28331dfb1cb3118e114213432ab33ed7c37ab4dd"
+        },
+        {
+          "job_id": "c3c1e602-a350-4897-94d8-7220419549be",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/c3c1e602-a350-4897-94d8-7220419549be.wav",
+          "sha256": "b23e1928bf3a27570c2dcb64bec7e7021a9d71cb681ca53c6a8dc52a673f8462"
+        },
+        {
+          "job_id": "07649293-ae04-44b0-8f97-b05b6a6e51aa",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/07649293-ae04-44b0-8f97-b05b6a6e51aa.wav",
+          "sha256": "b23e1928bf3a27570c2dcb64bec7e7021a9d71cb681ca53c6a8dc52a673f8462"
+        },
+        {
+          "job_id": "3297bd74-a31f-40ed-9ff6-75ca1dce978d",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/3297bd74-a31f-40ed-9ff6-75ca1dce978d.wav",
+          "sha256": "b23e1928bf3a27570c2dcb64bec7e7021a9d71cb681ca53c6a8dc52a673f8462"
+        },
+        {
+          "job_id": "c89669df-f4a9-4142-94cb-4eed4acf8b18",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/c89669df-f4a9-4142-94cb-4eed4acf8b18.wav",
+          "sha256": "67f475fe846498e2b9c0edca6d5e6f1a8eeadbfe68c057a64c1c1bec45ce738d"
+        },
+        {
+          "job_id": "0901cd2a-7a8f-4159-897d-781a05845c8c",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/0901cd2a-7a8f-4159-897d-781a05845c8c.wav",
+          "sha256": "67f475fe846498e2b9c0edca6d5e6f1a8eeadbfe68c057a64c1c1bec45ce738d"
+        },
+        {
+          "job_id": "659f67fa-5785-4d5c-96b7-fc017a7a4c0d",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/659f67fa-5785-4d5c-96b7-fc017a7a4c0d.wav",
+          "sha256": "67f475fe846498e2b9c0edca6d5e6f1a8eeadbfe68c057a64c1c1bec45ce738d"
+        },
+        {
+          "job_id": "405e8c3c-1162-403d-9c19-70f036710ca0",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/405e8c3c-1162-403d-9c19-70f036710ca0.wav",
+          "sha256": "9984991ab08460aac5752f14e65d00c1cdd26269da9b60089b9b21dbfa15fffe"
+        },
+        {
+          "job_id": "0370f835-0cba-4cc5-8ca7-4cf1f3d76492",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/0370f835-0cba-4cc5-8ca7-4cf1f3d76492.wav",
+          "sha256": "9984991ab08460aac5752f14e65d00c1cdd26269da9b60089b9b21dbfa15fffe"
+        },
+        {
+          "job_id": "c27da182-b883-40f7-96a0-b8d56febc8b3",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/c27da182-b883-40f7-96a0-b8d56febc8b3.wav",
+          "sha256": "9984991ab08460aac5752f14e65d00c1cdd26269da9b60089b9b21dbfa15fffe"
+        },
+        {
+          "job_id": "28413504-1735-45fc-a571-8ac5cba675ff",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/28413504-1735-45fc-a571-8ac5cba675ff.wav",
+          "sha256": "f986eda32790d8c1f576a4fd6e02cd021df244dd356e6357aec09701ea603f57"
+        },
+        {
+          "job_id": "34be5305-57bf-4d79-b3bd-b711424f7bc0",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/34be5305-57bf-4d79-b3bd-b711424f7bc0.wav",
+          "sha256": "f986eda32790d8c1f576a4fd6e02cd021df244dd356e6357aec09701ea603f57"
+        },
+        {
+          "job_id": "fe5e029f-fb2b-4490-ba13-cdaa41c20114",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/fe5e029f-fb2b-4490-ba13-cdaa41c20114.wav",
+          "sha256": "f986eda32790d8c1f576a4fd6e02cd021df244dd356e6357aec09701ea603f57"
+        },
+        {
+          "job_id": "4011e3c9-5855-44d3-b3b7-8b86b2af7fe7",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/4011e3c9-5855-44d3-b3b7-8b86b2af7fe7.wav",
+          "sha256": "d0803110bcd7047bc181ac7f37803a0836cae1c1d8446c6d458d1a48c89928df"
+        },
+        {
+          "job_id": "925bd1a2-8719-49ca-bc07-dba018f5fa41",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/925bd1a2-8719-49ca-bc07-dba018f5fa41.wav",
+          "sha256": "d0803110bcd7047bc181ac7f37803a0836cae1c1d8446c6d458d1a48c89928df"
+        },
+        {
+          "job_id": "0557e4e9-8e66-4cf6-b5f5-744ae80ec007",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/0557e4e9-8e66-4cf6-b5f5-744ae80ec007.wav",
+          "sha256": "d0803110bcd7047bc181ac7f37803a0836cae1c1d8446c6d458d1a48c89928df"
+        },
+        {
+          "job_id": "9de6a43f-2346-490f-a2c3-047966bc55ee",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/9de6a43f-2346-490f-a2c3-047966bc55ee.wav",
+          "sha256": "3c8dcf5414cd61302e5d708bd1990ecb71ac928e2ee713616bb79e7d601118b6"
+        },
+        {
+          "job_id": "0324aa08-ab86-497d-beed-e8cbbc3b060b",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/0324aa08-ab86-497d-beed-e8cbbc3b060b.wav",
+          "sha256": "3c8dcf5414cd61302e5d708bd1990ecb71ac928e2ee713616bb79e7d601118b6"
+        },
+        {
+          "job_id": "adacfcf8-5c12-4ba9-b059-a0276f54ccd6",
+          "audio": "artifacts/shengke/benchmark-vits-gpu-public-D12/adacfcf8-5c12-4ba9-b059-a0276f54ccd6.wav",
+          "sha256": "3c8dcf5414cd61302e5d708bd1990ecb71ac928e2ee713616bb79e7d601118b6"
+        }
+      ]
+    },
+    {
+      "folder": "artifacts/shengke/benchmark-transformer-gpu-public-D12",
+      "formal_successes": 36,
+      "audio": [
+        {
+          "job_id": "8e6e57d2-b945-493d-a44a-626af4a52c6a",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/8e6e57d2-b945-493d-a44a-626af4a52c6a.wav",
+          "sha256": "6df135a6e1183c928b32228ddae9309ef8bd0ca5088e3159d38043dcb76c507e"
+        },
+        {
+          "job_id": "7d060f42-0453-42d8-845f-92170dfbbf96",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/7d060f42-0453-42d8-845f-92170dfbbf96.wav",
+          "sha256": "6df135a6e1183c928b32228ddae9309ef8bd0ca5088e3159d38043dcb76c507e"
+        },
+        {
+          "job_id": "37b47323-d30f-41d8-8d8e-2452fd7fa2e1",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/37b47323-d30f-41d8-8d8e-2452fd7fa2e1.wav",
+          "sha256": "6df135a6e1183c928b32228ddae9309ef8bd0ca5088e3159d38043dcb76c507e"
+        },
+        {
+          "job_id": "75d010e1-b73f-4246-8260-a1eaefd289ad",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/75d010e1-b73f-4246-8260-a1eaefd289ad.wav",
+          "sha256": "aafc21697c127c762ac67bbb5202f6058e34e6ebcd2e7f3615110386fdbbefa1"
+        },
+        {
+          "job_id": "295dea76-8fa8-41ab-8e25-cb6f4ce14597",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/295dea76-8fa8-41ab-8e25-cb6f4ce14597.wav",
+          "sha256": "aafc21697c127c762ac67bbb5202f6058e34e6ebcd2e7f3615110386fdbbefa1"
+        },
+        {
+          "job_id": "abfcddd4-7a62-4a08-a666-e15c990360bc",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/abfcddd4-7a62-4a08-a666-e15c990360bc.wav",
+          "sha256": "aafc21697c127c762ac67bbb5202f6058e34e6ebcd2e7f3615110386fdbbefa1"
+        },
+        {
+          "job_id": "0236f526-4bde-4f7c-8650-b9cae22e53c7",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/0236f526-4bde-4f7c-8650-b9cae22e53c7.wav",
+          "sha256": "2310336c417082a4a1b2cc18ee922a95991eb37cd4527dd24d43beb19f25cfc4"
+        },
+        {
+          "job_id": "6edeac43-eb4f-458e-bd0d-2009b6ae6cca",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/6edeac43-eb4f-458e-bd0d-2009b6ae6cca.wav",
+          "sha256": "2310336c417082a4a1b2cc18ee922a95991eb37cd4527dd24d43beb19f25cfc4"
+        },
+        {
+          "job_id": "bb1cbac0-675f-4ca3-922a-755902c59fc3",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/bb1cbac0-675f-4ca3-922a-755902c59fc3.wav",
+          "sha256": "2310336c417082a4a1b2cc18ee922a95991eb37cd4527dd24d43beb19f25cfc4"
+        },
+        {
+          "job_id": "56bca777-b95a-46e9-8db4-90fd2585eb08",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/56bca777-b95a-46e9-8db4-90fd2585eb08.wav",
+          "sha256": "ae6d543ea9746fc9169d2e21d6d10db5fae0636a68e6379a19ef33d9de68a575"
+        },
+        {
+          "job_id": "037f24a6-51c5-42af-a403-4dce507d009e",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/037f24a6-51c5-42af-a403-4dce507d009e.wav",
+          "sha256": "ae6d543ea9746fc9169d2e21d6d10db5fae0636a68e6379a19ef33d9de68a575"
+        },
+        {
+          "job_id": "657c6534-1281-47c9-9156-be3c574acee8",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/657c6534-1281-47c9-9156-be3c574acee8.wav",
+          "sha256": "ae6d543ea9746fc9169d2e21d6d10db5fae0636a68e6379a19ef33d9de68a575"
+        },
+        {
+          "job_id": "5ab02356-83f1-4657-acdf-71aaa17ee5e2",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/5ab02356-83f1-4657-acdf-71aaa17ee5e2.wav",
+          "sha256": "c29e1229df43018003fb98c3664037c998fa9d463dd473a0b63a9de259b08700"
+        },
+        {
+          "job_id": "e2ae97f8-d862-46e0-b4d9-5998aa227170",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/e2ae97f8-d862-46e0-b4d9-5998aa227170.wav",
+          "sha256": "c29e1229df43018003fb98c3664037c998fa9d463dd473a0b63a9de259b08700"
+        },
+        {
+          "job_id": "4ccadcc4-4b06-417c-a5bc-f11f7e54387d",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/4ccadcc4-4b06-417c-a5bc-f11f7e54387d.wav",
+          "sha256": "c29e1229df43018003fb98c3664037c998fa9d463dd473a0b63a9de259b08700"
+        },
+        {
+          "job_id": "b0d592ae-59b9-4dfc-835a-fc5a9e7b8903",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/b0d592ae-59b9-4dfc-835a-fc5a9e7b8903.wav",
+          "sha256": "f44a79aea11e4b55aa34fbc6cbba05fa043112228602867a0f6c0941d1e2974b"
+        },
+        {
+          "job_id": "53fc2113-9a85-4b0c-8c6b-486e40cee40d",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/53fc2113-9a85-4b0c-8c6b-486e40cee40d.wav",
+          "sha256": "f44a79aea11e4b55aa34fbc6cbba05fa043112228602867a0f6c0941d1e2974b"
+        },
+        {
+          "job_id": "58a96e54-0885-4535-b0af-8670941a380e",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/58a96e54-0885-4535-b0af-8670941a380e.wav",
+          "sha256": "f44a79aea11e4b55aa34fbc6cbba05fa043112228602867a0f6c0941d1e2974b"
+        },
+        {
+          "job_id": "b3e6de1f-2a79-4ccd-b9f9-93eae82dd7bf",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/b3e6de1f-2a79-4ccd-b9f9-93eae82dd7bf.wav",
+          "sha256": "4a536e87e58486be12bc85ed9c1a0d22a02be9627003ed4151877ea2987587fd"
+        },
+        {
+          "job_id": "23a16ade-ca40-48ec-ae0c-aca5cdfbf789",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/23a16ade-ca40-48ec-ae0c-aca5cdfbf789.wav",
+          "sha256": "4a536e87e58486be12bc85ed9c1a0d22a02be9627003ed4151877ea2987587fd"
+        },
+        {
+          "job_id": "2de5b0f3-5b6c-4f06-83d2-0667ee80aec4",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/2de5b0f3-5b6c-4f06-83d2-0667ee80aec4.wav",
+          "sha256": "4a536e87e58486be12bc85ed9c1a0d22a02be9627003ed4151877ea2987587fd"
+        },
+        {
+          "job_id": "573c3eaa-aa0e-4fcc-9067-bbac7d251708",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/573c3eaa-aa0e-4fcc-9067-bbac7d251708.wav",
+          "sha256": "db3f90f93bd05c5e89f863d2fc5fc562a5d0ab700df1e32d3d8f1b207226c17f"
+        },
+        {
+          "job_id": "a3571b44-cd1a-4b45-ad39-10cd8d5d6ad0",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/a3571b44-cd1a-4b45-ad39-10cd8d5d6ad0.wav",
+          "sha256": "db3f90f93bd05c5e89f863d2fc5fc562a5d0ab700df1e32d3d8f1b207226c17f"
+        },
+        {
+          "job_id": "09e671e1-92c3-4dc1-9d4c-4c0bcbe98102",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/09e671e1-92c3-4dc1-9d4c-4c0bcbe98102.wav",
+          "sha256": "db3f90f93bd05c5e89f863d2fc5fc562a5d0ab700df1e32d3d8f1b207226c17f"
+        },
+        {
+          "job_id": "1a4974f3-ded7-4c5d-85a8-d3049bbf415f",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/1a4974f3-ded7-4c5d-85a8-d3049bbf415f.wav",
+          "sha256": "4aef48bc5d64aefaa8ea4bc8ed25c150b5ec3791b578c1ee07495cbbcc0bc8cb"
+        },
+        {
+          "job_id": "2531b003-7e32-4d03-a12a-d91a2677d16f",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/2531b003-7e32-4d03-a12a-d91a2677d16f.wav",
+          "sha256": "4aef48bc5d64aefaa8ea4bc8ed25c150b5ec3791b578c1ee07495cbbcc0bc8cb"
+        },
+        {
+          "job_id": "cda95a88-5d2d-4b42-ab7f-875113da383d",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/cda95a88-5d2d-4b42-ab7f-875113da383d.wav",
+          "sha256": "4aef48bc5d64aefaa8ea4bc8ed25c150b5ec3791b578c1ee07495cbbcc0bc8cb"
+        },
+        {
+          "job_id": "b7b54a27-285a-4822-92c9-3406286c92b1",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/b7b54a27-285a-4822-92c9-3406286c92b1.wav",
+          "sha256": "1f25e2f87d086c03a5f05db3c4aea9a53671e288688e16b83371abbb7e5630cd"
+        },
+        {
+          "job_id": "e5b27322-205d-4f50-95d9-807fc6e1b5ae",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/e5b27322-205d-4f50-95d9-807fc6e1b5ae.wav",
+          "sha256": "1f25e2f87d086c03a5f05db3c4aea9a53671e288688e16b83371abbb7e5630cd"
+        },
+        {
+          "job_id": "3f5cd760-a0fa-483a-9f5f-b123720986aa",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/3f5cd760-a0fa-483a-9f5f-b123720986aa.wav",
+          "sha256": "1f25e2f87d086c03a5f05db3c4aea9a53671e288688e16b83371abbb7e5630cd"
+        },
+        {
+          "job_id": "4f8d9213-2634-4d46-9e1d-9b51bb356549",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/4f8d9213-2634-4d46-9e1d-9b51bb356549.wav",
+          "sha256": "c27cc37d1ff3cfd87383f12a7a073bbe4b7af4cd52f51d54f6ad047d2baa6c58"
+        },
+        {
+          "job_id": "ffa13b48-0219-4686-8090-8815325bcd00",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/ffa13b48-0219-4686-8090-8815325bcd00.wav",
+          "sha256": "c27cc37d1ff3cfd87383f12a7a073bbe4b7af4cd52f51d54f6ad047d2baa6c58"
+        },
+        {
+          "job_id": "3d69ee91-18fe-444c-938b-42967e83762f",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/3d69ee91-18fe-444c-938b-42967e83762f.wav",
+          "sha256": "c27cc37d1ff3cfd87383f12a7a073bbe4b7af4cd52f51d54f6ad047d2baa6c58"
+        },
+        {
+          "job_id": "adb21a08-195a-46ad-a98e-10f80282bbea",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/adb21a08-195a-46ad-a98e-10f80282bbea.wav",
+          "sha256": "69f20db0fdb04af2d1267cf0fe80c820fbc35a0b1c46014aae6d50546a966dea"
+        },
+        {
+          "job_id": "843bbbb0-25d9-4e13-800a-2d29c37ee314",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/843bbbb0-25d9-4e13-800a-2d29c37ee314.wav",
+          "sha256": "69f20db0fdb04af2d1267cf0fe80c820fbc35a0b1c46014aae6d50546a966dea"
+        },
+        {
+          "job_id": "22c63bc9-32a6-4356-9c65-1a98b0a24181",
+          "audio": "artifacts/shengke/benchmark-transformer-gpu-public-D12/22c63bc9-32a6-4356-9c65-1a98b0a24181.wav",
+          "sha256": "69f20db0fdb04af2d1267cf0fe80c820fbc35a0b1c46014aae6d50546a966dea"
+        }
+      ]
+    }
+  ],
+  "reference_range": [
+    {
+      "model": "cosyvoice2",
+      "reference": "D11_798_3s",
+      "audio": [
+        {
+          "job_id": "a9ab031e-2b83-4d39-9677-55e0a35f54c5",
+          "audio": "artifacts/shengke/reference-range-cosyvoice2/D11_798_3s/a9ab031e-2b83-4d39-9677-55e0a35f54c5.wav",
+          "sha256": "06286a7950fcfef5882b00187ca9ed04818b616ca92b6fb5c1762e31f5a720ab"
+        }
+      ]
+    },
+    {
+      "model": "cosyvoice2",
+      "reference": "D12_991_10s",
+      "audio": [
+        {
+          "job_id": "e0ec3e73-0200-49ba-b4f6-053f7b2ece1e",
+          "audio": "artifacts/shengke/reference-range-cosyvoice2/D12_991_10s/e0ec3e73-0200-49ba-b4f6-053f7b2ece1e.wav",
+          "sha256": "5ae3a59aa1f9e7ea5af555f2c6737b716450a070689d4246e348b31781c19d07"
+        }
+      ]
+    },
+    {
+      "model": "cosyvoice2",
+      "reference": "D11_991_10s",
+      "audio": [
+        {
+          "job_id": "062444fa-c8dc-481d-9754-24721c0d04db",
+          "audio": "artifacts/shengke/reference-range-cosyvoice2/D11_991_10s/062444fa-c8dc-481d-9754-24721c0d04db.wav",
+          "sha256": "72ed14754b1310f984663a9a959864c08a68af80389f8bc73cbe41263a3a7434"
+        }
+      ]
+    },
+    {
+      "model": "cosyvoice2",
+      "reference": "D12_792_5s",
+      "audio": [
+        {
+          "job_id": "15dd6b28-2bfa-4021-b4b6-e8d1ff97e944",
+          "audio": "artifacts/shengke/reference-range-cosyvoice2/D12_792_5s/15dd6b28-2bfa-4021-b4b6-e8d1ff97e944.wav",
+          "sha256": "8a0e73371c2cac0b533d2df6589a373f0920f7b81126a723974c8b4517400f76"
+        }
+      ]
+    },
+    {
+      "model": "cosyvoice2",
+      "reference": "D11_792_5s",
+      "audio": [
+        {
+          "job_id": "fd4746ff-a131-4a03-b98f-5cc00f82e006",
+          "audio": "artifacts/shengke/reference-range-cosyvoice2/D11_792_5s/fd4746ff-a131-4a03-b98f-5cc00f82e006.wav",
+          "sha256": "2e912c6d6f2c19c83e7a6a4c38fc161243582f04e5c82fb18d7bbcb48034249d"
+        }
+      ]
+    },
+    {
+      "model": "cosyvoice2",
+      "reference": "D12_765_3s",
+      "audio": [
+        {
+          "job_id": "bcb42a3b-cff5-423e-ab4c-8e3569876082",
+          "audio": "artifacts/shengke/reference-range-cosyvoice2/D12_765_3s/bcb42a3b-cff5-423e-ab4c-8e3569876082.wav",
+          "sha256": "c5ef7650b1bd18ce24271ec25997cba7e231c48876d658e0116355c60a6ab966"
+        }
+      ]
+    },
+    {
+      "model": "gpt-v2",
+      "reference": "D11_798_3s",
+      "audio": [
+        {
+          "job_id": "d77a48df-85b0-4825-ad39-e325bbe28459",
+          "audio": "artifacts/shengke/reference-range-gpt-v2/D11_798_3s/d77a48df-85b0-4825-ad39-e325bbe28459.wav",
+          "sha256": "bd4ae60dd86f14b1d16db4613277c181f25441558e860763c1532b03ef7caed0"
+        }
+      ]
+    },
+    {
+      "model": "gpt-v2",
+      "reference": "D12_991_10s",
+      "audio": [
+        {
+          "job_id": "d2563568-44ac-47ce-9b6c-ead45d83e8ca",
+          "audio": "artifacts/shengke/reference-range-gpt-v2/D12_991_10s/d2563568-44ac-47ce-9b6c-ead45d83e8ca.wav",
+          "sha256": "099c48dc4743e39fb7f7e402f757ca98bbd9b99a393f56978f2f5fd5bc039005"
+        }
+      ]
+    },
+    {
+      "model": "gpt-v2",
+      "reference": "D11_991_10s",
+      "audio": [
+        {
+          "job_id": "1c858fec-a3d2-4945-b8dd-af0a17b67e88",
+          "audio": "artifacts/shengke/reference-range-gpt-v2/D11_991_10s/1c858fec-a3d2-4945-b8dd-af0a17b67e88.wav",
+          "sha256": "4bc2da2566e3891685aa141a387036977d98eec601cc85383f5aa27ba1bd65e2"
+        }
+      ]
+    },
+    {
+      "model": "gpt-v2",
+      "reference": "D12_792_5s",
+      "audio": [
+        {
+          "job_id": "a709f532-aa33-437f-9448-79e99fbec538",
+          "audio": "artifacts/shengke/reference-range-gpt-v2/D12_792_5s/a709f532-aa33-437f-9448-79e99fbec538.wav",
+          "sha256": "4015f120a42da1cc608e361e57c5b5daf9585ca060288ea34ebc064dd5d5371c"
+        }
+      ]
+    },
+    {
+      "model": "gpt-v2",
+      "reference": "D11_792_5s",
+      "audio": [
+        {
+          "job_id": "4349f5ff-8b46-4f19-8490-e0922fed3393",
+          "audio": "artifacts/shengke/reference-range-gpt-v2/D11_792_5s/4349f5ff-8b46-4f19-8490-e0922fed3393.wav",
+          "sha256": "5098d513363cccc131ac998d246b8102e88e57b86f21cba326bb0d048f65a6e3"
+        }
+      ]
+    },
+    {
+      "model": "gpt-v2",
+      "reference": "D12_765_3s",
+      "audio": [
+        {
+          "job_id": "cd64126d-102e-438d-bedd-cecddb43911a",
+          "audio": "artifacts/shengke/reference-range-gpt-v2/D12_765_3s/cd64126d-102e-438d-bedd-cecddb43911a.wav",
+          "sha256": "bd5ee4444a127f09e6a80c85888e88812196d11829c4f87f2530194a13169af6"
+        }
+      ]
+    }
+  ],
+  "emotions": [
+    {
+      "job_id": "e10d899c-9682-4aa9-b981-d7893d7478c2",
+      "audio": "artifacts/shengke/emotion-cosyvoice2-public-D12/e10d899c-9682-4aa9-b981-d7893d7478c2.wav",
+      "sha256": "456cdf022cd8db542890bc402036c3e91bed937abb16233b87995d5c1a07930f"
+    },
+    {
+      "job_id": "2cc38ce6-c745-4ae0-8c89-82bc4745a929",
+      "audio": "artifacts/shengke/emotion-cosyvoice2-public-D12/2cc38ce6-c745-4ae0-8c89-82bc4745a929.wav",
+      "sha256": "6ccae1e9579b9ec360537543283be5a9696e527fd861ffbce8fe418f9854529a"
+    },
+    {
+      "job_id": "f7078c69-a795-4ba7-9dad-35399a3ddb68",
+      "audio": "artifacts/shengke/emotion-cosyvoice2-public-D12/f7078c69-a795-4ba7-9dad-35399a3ddb68.wav",
+      "sha256": "e84c7f4089a1bd98ad1878d9fda76fc9d638bbf122bc88fc43763fae90b6552d"
+    },
+    {
+      "job_id": "bef8ce5b-af39-4ed8-88d5-64dcc2cecf38",
+      "audio": "artifacts/shengke/emotion-cosyvoice2-public-D12/bef8ce5b-af39-4ed8-88d5-64dcc2cecf38.wav",
+      "sha256": "cb5948bcdf471febe12fde025457069b08fe33405e2b4cbf4151487db802ee95"
+    }
+  ],
+  "references": [
+    {
+      "id": "D11_798_3s",
+      "sha256": "4fd8067284a9feece800a3f7c75ba1a9539fcc70dc5c9b52cadd92c8c75409a4",
+      "review": "verified"
+    },
+    {
+      "id": "D11_792_5s",
+      "sha256": "66215e2726b75bd487f43c5e28c78cf5a56d64411dafc9e75400674edc4b8812",
+      "review": "verified"
+    },
+    {
+      "id": "D11_991_10s",
+      "sha256": "491c0311cd6946b8bf1e1210d151b84f5ccd344fef1f8dd4f7a10d6019e8abca",
+      "review": "verified"
+    },
+    {
+      "id": "D12_765_3s",
+      "sha256": "d75565627af37eb0d67a690dcac91c657f6ca180acda22c3130243d85dc221b6",
+      "review": "verified"
+    },
+    {
+      "id": "D12_792_5s",
+      "sha256": "e163d1a39fab5768ec00ed9b2d1d020be28d8c607da71779e8db7b750abe985f",
+      "review": "verified"
+    },
+    {
+      "id": "D12_991_10s",
+      "sha256": "2fcb0b8fbe243fa5bc66bec5eab85f8329ca822f58410ab00d45c8303b914b49",
+      "review": "reviewed_with_correction"
+    }
+  ],
+  "limitations": [
+    "This audit verifies implementation artifacts, not new human listening scores.",
+    "Happy emotion strength remains a recorded quality limitation."
+  ],
+  "totals": {
+    "benchmark_successes": 288,
+    "reference_conditions": 12,
+    "emotions": 4,
+    "public_reference_clips": 6
+  }
+}

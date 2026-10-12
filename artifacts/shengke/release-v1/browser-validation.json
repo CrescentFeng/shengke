@@ -1,0 +1,25 @@
+{
+  "browser_checks": {
+    "example_fills_without_submission": true,
+    "generate_disabled_while_running": true,
+    "cosy_and_gpt_real_synthesis": true,
+    "history_audio_playback": true,
+    "wav_and_json_download": true,
+    "restore_preserves_gpt_rhythm_without_submission": true,
+    "reference_upload_qc_duration_s": 3,
+    "reference_upload_warnings": [],
+    "legacy_evaluation_deep_link": "770bd22b-103d-4259-9b3f-0f27930b33bc",
+    "legacy_evaluation_progress": "3/3"
+  },
+  "download_job": "b4a81d95-f110-46e5-98f9-3c7b85cd8b56",
+  "download_duration_s": 5.7588125,
+  "download_sha256": "ee530689c7002caf3725a9bb3b9526f4585707c8105ded89a9a8f96028a07fbb",
+  "website": {
+    "page_matches_source": true,
+    "homepage_version_link": true,
+    "audio_duration_s": 5.758813,
+    "readyState": 4,
+    "error": null
+  },
+  "human_listening_performed": false
+}

@@ -1,0 +1,64 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "listener_id": {
+      "maxLength": 64,
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_-]+$",
+      "title": "Listener Id",
+      "type": "string"
+    },
+    "sample_id": {
+      "format": "uuid",
+      "title": "Sample Id",
+      "type": "string"
+    },
+    "naturalness": {
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Naturalness",
+      "type": "integer"
+    },
+    "similarity": {
+      "anyOf": [
+        {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Similarity"
+    },
+    "emotion_match": {
+      "anyOf": [
+        {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Emotion Match"
+    },
+    "comment": {
+      "default": "",
+      "maxLength": 1000,
+      "title": "Comment",
+      "type": "string"
+    }
+  },
+  "required": [
+    "listener_id",
+    "sample_id",
+    "naturalness"
+  ],
+  "title": "ListeningScore",
+  "type": "object"
+}

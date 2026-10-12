@@ -15,6 +15,7 @@ from audio_core.contracts import (
     ToolRun,
     TranscriptDocument,
 )
+from audio_core.tts import ListeningScore, TtsSynthesisSpec, VoiceProfile
 from diarization_eval.models import (
     DiarizationBenchmarkMatrixReport,
     DiarizationBenchmarkReport,
@@ -24,6 +25,9 @@ from vad_eval.models import VadBenchmarkReport
 
 def main() -> None:
     schemas = {
+        "tts_synthesis_spec.schema.json": TtsSynthesisSpec,
+        "tts_voice_profile.schema.json": VoiceProfile,
+        "tts_listening_score.schema.json": ListeningScore,
         "audio_asset.schema.json": AudioAsset,
         "audio_job.schema.json": AudioJob,
         "audio_quality_metrics.schema.json": AudioQualityMetrics,

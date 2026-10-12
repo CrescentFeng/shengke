@@ -21,3 +21,12 @@ data/diarization-eval/sources/*
 models/
 artifacts/
 !data/**/.gitkeep
+
+# Keep the compact, reviewed v1.0 release evidence in Git. Runtime logs,
+# benchmarks, model outputs, and user audio remain ignored.
+!artifacts/
+artifacts/*
+!artifacts/shengke/
+artifacts/shengke/*
+!artifacts/shengke/release-v1/
+!artifacts/shengke/release-v1/**

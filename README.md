@@ -6,6 +6,17 @@
 - `听析`：ASR、分类、RAG 与 Agent 编排；
 - `声刻`：参考音频质检、语音克隆与情感 TTS。
 
+声刻 **1.0.0 工程验证版**：[日常使用与发布说明](docs/shengke-v1-release.md)。
+
+GitHub 归档范围、未提交的大型本地资产和恢复方式见
+[仓库归档说明](docs/shengke-repository.md)。
+
+声刻开发入口：[MVP 使用与验证状态](docs/shengke-mvp.md)、[独立模型服务部署](docs/shengke-runtime.md)。CosyVoice2、GPT-SoVITS v2、中文 VITS 和 Transformer TTS 均已完成本机真实合成与 CPU 基准；四轮 N=1 自听共 21 份评分已保存，RTX 4090D 正式测试 144/144 通过并已关机。GPT 当前样本节奏获用户接受，CosyVoice 机械感减轻；开心强度与跨文本听感仍有改进空间。本机可双击 [启动声刻](scripts/启动声刻.command)，统一启动四模型与工作台。
+
+完整交付状态见 [验收清单](docs/shengke-acceptance.md)；演示可按 [五分钟演示稿](docs/shengke-demo.md) 进行，GPU 操作见 [运行手册](docs/shengke-gpu-runbook.md)。
+
+网站与推理采用分离部署：[个人网站展示与本地后端方案](docs/shengke-web-deployment.md)。展示页源文件在 `apps/shengke-showcase/`，已接入个人作品集的本地版本；实时生成继续使用 Mac 工作台，GPU 按需通过 SSH 隧道接入。
+
 当前版本 `v0.9.0` 已建立可持久化 ingest、可插拔 VAD 与校准、说话人分离及 DER/JER 评测、带 speaker 和术语热词的 ASR 时间轴、音质分析及可重复模型评测闭环：
 
 `API 创建作业 -> PostgreSQL 排队 -> worker 原子抢占 -> S3/MinIO 拉取 -> SHA-256 / ffprobe -> VAD/切片 -> Pyannote 说话人时间轴 -> Faster-Whisper/FunASR -> speaker 归属与全局时间戳合并 -> 音质分析/归一化 -> 制品与报告落库`

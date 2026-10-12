@@ -42,6 +42,8 @@ class JobStore(Protocol):
 
     def get(self, job_id: UUID) -> AudioJob: ...
 
+    def list_tts_jobs(self, limit: int, offset: int) -> dict: ...
+
     def transition(
         self,
         job_id: UUID,
@@ -79,6 +81,26 @@ class InMemoryJobStore:
 
     def ping(self) -> bool:
         return True
+
+    def list_tts_jobs(self, limit: int, offset: int) -> dict:
+        from audio_core.shengke_release import job_summary
+
+        with self._lock:
+            jobs = sorted(
+                (
+                    j
+                    for j in self._jobs.values()
+                    if "tts" in j.parameters and "synthesize" in j.operations
+                ),
+                key=lambda j: (j.created_at, str(j.id)),
+                reverse=True,
+            )
+            return {
+                "items": [job_summary(j) for j in jobs[offset : offset + limit]],
+                "total": len(jobs),
+                "limit": limit,
+                "offset": offset,
+            }
 
     def create(self, request: CreateAudioJob) -> tuple[AudioJob, bool]:
         with self._lock:

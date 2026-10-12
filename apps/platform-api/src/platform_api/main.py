@@ -19,12 +19,14 @@ from fastapi import Depends, FastAPI, Header, HTTPException, Response, status
 from .dependencies import get_store
 from .service import submit_job
 from .store import JobNotFound, JobStore, ResultStore
+from .tts_routes import router as tts_router
 
 app = FastAPI(
     title="Audio AI Platform",
     version="0.9.0",
     description="Shared job and contract layer for audio understanding, QC, and TTS.",
 )
+app.include_router(tts_router)
 
 
 @app.get("/healthz", tags=["system"])
