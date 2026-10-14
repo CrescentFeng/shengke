@@ -1,0 +1,23 @@
+Shengke / 声刻 — attribution notice
+
+Original project contributions: Copyright (c) 2026 Crescent Feng (CrescentFeng).
+
+THCHS-30: A Free Chinese Speech Corpus, released by the Center for Speech and
+Language Technology (CSLT), Tsinghua University. Dataset authors listed by
+OpenSLR: Dong Wang, Xuewei Zhang and Zhiyong Zhang (2015).
+Source: https://www.openslr.org/18/
+Declared dataset licence: Apache License 2.0; copy in LICENSES/Apache-2.0.txt.
+
+Reference acquisition: FluidInference/THCHS-30-tests, revision
+cb125be05c3059f5ef7ad796dfd460a026508dff.
+Alignment source: anyspeech/THCHS-30-alignments, revision
+9bd41492e5dbc9d69a4cbea0acbc03b9b20375a4.
+
+Project transformations: original speech is referenced by hashes and transcripts;
+3/5/10-second crop recipes and a documented transcript correction are retained.
+Bundled demonstration WAVs are synthesized outputs, not original speaker
+recordings. Some GPT-SoVITS outputs include documented pause and tempo changes.
+See data/tts-eval/README.md and docs/ASSET_PROVENANCE.md for exact boundaries.
+
+This attribution notice does not replace upstream notices, transfer ownership,
+or imply the endorsement of a speaker, author, university or model developer.

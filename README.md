@@ -1,4 +1,10 @@
-# 共享音频底座
+# 声刻 Shengke
+
+少样本语音克隆、情绪与音色控制、四模型评测及本地工作台。当前为 **v1.0.0 工程验证版**，共享音频底座包版本为 0.9.0。
+
+原创内容保留权利；公开展示不等于开源授权。使用前请阅读 [LICENSE](LICENSE)、[版权与授权](COPYRIGHT.md)、[第三方声明](THIRD_PARTY_NOTICES.md) 和 [素材来源](docs/ASSET_PROVENANCE.md)。
+
+## 共享音频底座
 
 服务于三个上层产品的共同基础设施：
 
@@ -233,3 +239,11 @@ audio-core normalize sample.wav artifacts/sample.wav --sample-rate 16000 --chann
 ## 当前未包含
 
 VAD 已提供 `adaptive_energy_v1` 与可选 `webrtc_v1` 后端及统一校准框架；ASR 已提供 Faster-Whisper、FunASR、术语热词及统一评测框架；说话人分离已提供 Pyannote 4.x 适配器、持久化时间轴和帧级 DER/JER 评测。模型权重、访问授权和业务指标仍需经审校数据集验证。租户权限、跨文件 speaker linking 与完整迁移框架仍在后续里程碑。未配置 `AUDIO_PLATFORM_DATABASE_URL` 时 API 仍可使用内存 Store 进行轻量开发，但生产环境必须使用 PostgreSQL。
+
+## Public repository / 公开仓库
+
+- [公开范围与恢复说明](docs/shengke-repository.md)
+- [署名与授权申请](COPYRIGHT.md)、[引用信息](CITATION.cff)
+- [贡献约定](CONTRIBUTING.md)、[安全报告](SECURITY.md)
+
+仓库中的语音演示为合成内容，不代表参考说话人实际说过这些话或为项目背书。模型权重、原始语料和用户上传不随源码授权。搭建命令是技术说明，不构成额外许可。已有标签为历史快照，适用其中的许可及第三方条款。
